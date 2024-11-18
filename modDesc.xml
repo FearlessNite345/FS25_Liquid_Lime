@@ -9,30 +9,39 @@
 	</title>
 	
 	<description>
-	<en><![CDATA[Liquid Lime
+		<en><![CDATA[**Liquid Lime**  
 
-Adds Liquid Lime to the game for Sprayers.
+	Enhance your farming experience with Liquid Lime, specially designed for use with sprayers.  
 
-Liquid Lime Tank:
-- Capacity: 2000
-- Price: 1800]]>
-	</en>
-	<de><![CDATA[Flüssigkalk
+	**Features:**  
+	- **Liquid Lime Tank:**  
+	- Capacity: 2000 liters  
+	- Price: $1800  
 
-Fügt Flüssigkalk zum Spiel für Sprühgeräte hinzu.
+	This mod aims to replicate the properties of real liquid lime as closely as possible.]]>
+		</en>
+		<de><![CDATA[**Flüssigkalk**  
 
-Flüssigkalk-Tank:
-- Kapazität: 2000
-- Preis: 1800]]>
-  </de>
-  <fr><![CDATA[Chaux liquide
+	Verbessern Sie Ihr Farming-Erlebnis mit Flüssigkalk, speziell entwickelt für den Einsatz mit Sprühgeräten.  
 
-Ajoute de la chaux liquide au jeu pour les pulvérisateurs.
+	**Eigenschaften:**  
+	- **Flüssigkalk-Tank:**  
+	- Kapazität: 2000 Liter  
+	- Preis: 1800 €  
 
-Réservoir de chaux liquide:
-- Capacité : 2000
-- Prix : 1800]]>
-  </fr>
+	Dieses Mod wurde entwickelt, um die Eigenschaften von echtem Flüssigkalk so genau wie möglich nachzubilden.]]>
+		</de>
+		<fr><![CDATA[**Chaux liquide**  
+
+	Améliorez votre expérience agricole avec de la chaux liquide, spécialement conçue pour les pulvérisateurs.  
+
+	**Caractéristiques :**  
+	- **Réservoir de chaux liquide :**  
+	- Capacité : 2000 litres  
+	- Prix : 1800 €  
+
+	Ce mod vise à reproduire au plus près les propriétés de la véritable chaux liquide.]]>
+		</fr>
 	</description>
 	
 	<iconFilename>modIcon.dds</iconFilename>
