@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="defCanister" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="9.0.3"/>
+  </Asset>
+
+  <Files>
+    <File fileId="5" filename="LL2.dds"/>
+    <File fileId="2" filename="$data/maps/textures/shared/props/canister_diffuse.dds"/>
+    <File fileId="3" filename="$data/maps/textures/shared/props/canister_normal.dds"/>
+    <File fileId="4" filename="$data/maps/textures/shared/props/canister_specular.dds"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="canister_mat" materialId="4">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+    </Material>
+    <Material name="defDecal_mat" materialId="5">
+      <Texture fileId="5"/>
+    </Material>
+    <Material name="lambert1" materialId="6" diffuseColor="0.494118 0.494118 0.494118 1">
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="LL_Canister.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+      <Shape shapeId="1" name="LL_Canister" dynamic="true" collisionMask="2105599" density="0.0001" clipDistance="50" nodeId="14" materialIds="6" castsShadows="true" receiveShadows="true" nonRenderable="true">
+        <Shape shapeId="2" name="visual" clipDistance="80" nodeId="15" materialIds="4" castsShadows="true" receiveShadows="true">
+          <TransformGroup name="decals" nodeId="16">
+            <Shape shapeId="3" name="decal_LL" translation="0 0.335 0.213" rotation="90 -0 0" scale="1.5 1 1.5" nodeId="17" materialIds="5" distanceBlending="false"/>
+            <Shape shapeId="3" name="decal_LL" translation="0 0.335 -0.213" rotation="-90 -5.57735e-05 180" scale="1.5 1 1.5" nodeId="18" materialIds="5" distanceBlending="false"/>
+          </TransformGroup>
+        </Shape>
+        <Shape shapeId="4" name="dynamicMountTrigger" translation="0 0.123619 0" kinematic="true" trigger="true" collisionMask="8192" nodeId="19" materialIds="6" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        <TransformGroup name="fillUnit" nodeId="20">
+          <Shape shapeId="5" name="fillVolume" translation="0 0.249821 0" visibility="false" nodeId="21" materialIds="6" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="5" name="exactFillRootNode" translation="0 0.249821 0" visibility="false" kinematic="true" compound="true" collisionMask="1073741824" nodeId="22" materialIds="6" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+          <Shape shapeId="6" name="fillTrigger" translation="0 0.348315 0" visibility="false" kinematic="true" compound="true" trigger="true" collisionMask="1080033280" clipDistance="300" nodeId="23" materialIds="6" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        </TransformGroup>
+      </Shape>
+  </Scene>
+
+</i3D>

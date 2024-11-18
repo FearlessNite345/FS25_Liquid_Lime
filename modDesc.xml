@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="92">
+	<author>FearlessStudios</author>
+	<version>1.0.0.0</version>
+	<title>	
+		<en>Liquid Lime</en>
+		<de>Flüssigkalk</de>
+		<fr>Chaux Liquide</fr>
+	</title>
+	
+	<description>
+	<en><![CDATA[Liquid Lime
+
+Adds Liquid Lime to the game for Sprayers.
+
+Liquid Lime Tank:
+- Capacity: 2000
+- Price: 1800]]>
+	</en>
+	<de><![CDATA[Flüssigkalk
+
+Fügt Flüssigkalk zum Spiel für Sprühgeräte hinzu.
+
+Flüssigkalk-Tank:
+- Kapazität: 2000
+- Preis: 1800]]>
+  </de>
+  <fr><![CDATA[Chaux liquide
+
+Ajoute de la chaux liquide au jeu pour les pulvérisateurs.
+
+Réservoir de chaux liquide:
+- Capacité : 2000
+- Prix : 1800]]>
+  </fr>
+	</description>
+	
+	<iconFilename>modIcon.dds</iconFilename>
+	
+	<multiplayer supported="true" />
+
+	<l10n>
+		<text name="filltype_liquidlime">
+			<en>Liquid Lime</en>
+		</text>
+		<text name="function_liquidlimepallet">
+			<en>Liquid Lime Tank allows you to fill sprayers with LiquidLime.</en>
+		</text>
+	</l10n>
+
+	<extraSourceFiles>
+		<sourceFile filename="src/main.lua" />
+	</extraSourceFiles>
+
+	<storeItems>
+		<storeItem xmlFilename="objects/LiquidLimeTank/multiPurchaseLiquidTank_liquidLimeTank.xml" />
+		<storeItem xmlFilename="objects/LiquidLimeTank/liquidLimeTank.xml" />
+	</storeItems>
+
+	<brands>
+		<brand name="FEARLESSMODDING" title="Fearless Modding" image="brand/brand_FM.dds" />
+	</brands>
+
+	<fillTypes filename="xml/fillTypes.xml" />
+</modDesc>

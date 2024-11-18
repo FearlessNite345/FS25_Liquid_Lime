@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<map xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../shared/xml/schema/fillTypes.xsd">
+
+    <fillTypes>
+		<fillType name="LIQUIDLIME" title="$l10n_filltype_liquidlime" showOnPriceTable="true">
+			<physics massPerLiter="1.0" maxPhysicalSurfaceAngle="0" />
+            <image hud     ="hud/liquidlime.dds" />
+			<pallet filename="objects/LiquidLimeTank/liquidLimeTank.xml" />
+			<economy pricePerLiter="0.90" />
+		</fillType>
+    </fillTypes>
+
+    <fillTypeCategories>      
+        <fillTypeCategory name="SPRAYER">LIQUIDLIME</fillTypeCategory>
+        <fillTypeCategory name="LIQUID">LIQUIDLIME</fillTypeCategory>
+    </fillTypeCategories>
+
+    <fillTypeSounds>
+        <fillTypeSound fillTypes="LIQUIDLIME">
+            <sound template="defaultRefuelSound"/>
+        </fillTypeSound>
+    </fillTypeSounds>
+</map>

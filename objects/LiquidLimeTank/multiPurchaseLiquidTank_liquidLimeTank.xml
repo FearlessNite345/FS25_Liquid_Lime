@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="multipleItemPurchase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>$l10n_filltype_liquidlime</name>
+        <functions>
+            <function>$l10n_function_liquidlimepallet</function>
+        </functions>
+        <specs>
+            <weight ignore="true"/>
+        </specs>
+        <image>objects/LiquidLimeTank/liquidLimeTank.dds</image>
+        <price>1800</price>
+        <allowLeasing>false</allowLeasing>
+        <canBeSold>false</canBeSold>
+        <rotation>0</rotation>
+        <shopHeight>2</shopHeight>
+        <brand>FEARLESSMODDING</brand>
+        <category>ibc palletFertilizerHerbicide</category>
+        <financeCategory>OTHER</financeCategory>
+        <storeIconRendering>
+            <settings cameraXRot="-15" cameraYRot="25" />
+        </storeIconRendering>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_pallet</typeDesc>
+        <filename>$data/objects/multiPurchaseItem/multiPurchaseItem.i3d</filename>
+        <size width="2.9" length="6.1" height="1.6" lengthOffset="0.1"/>
+        <input allowed="false"/>
+        <canBeReset>false</canBeReset>
+        <components maxMass="850">
+            <component centerOfMass="0 0.1 0" solverIterationCount="10" mass="100" />
+        </components>
+        <showInVehicleMenu>false</showInVehicleMenu>
+        <mapHotspot available="false" />
+    </base>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypes="LIQUIDLIME" capacity="2000" />
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+    <multipleItemPurchase filename="objects/LiquidLimeTank/liquidLimeTank.xml" isVehicle="true">
+        <offsets>
+            <offset amount="2" offset="0.775 0 0"/>
+            <offset amount="3" offset="0.775 0 0.8"/>
+            <offset amount="5" offset="0.775 0 1.6"/>
+            <offset amount="7" offset="0.775 0 2.4"/>
+        </offsets>
+        <itemPositions>
+            <itemPosition position="0 0 0" rotation="0 0 0"/>
+            <itemPosition position="-1.55 0 0" rotation="0 0 0"/>
+            <itemPosition position="0 0 -1.55" rotation="0 0 0"/>
+            <itemPosition position="-1.55 0 -1.55" rotation="0 0 0"/>
+
+            <itemPosition position="0 0 -3.1" rotation="0 0 0"/>
+            <itemPosition position="-1.55 0 -3.1" rotation="0 0 0"/>
+            <itemPosition position="0 0 -4.65" rotation="0 0 0"/>
+            <itemPosition position="-1.55 0 -4.65" rotation="0 0 0"/>
+        </itemPositions>
+    </multipleItemPurchase>
+
+    <multipleItemPurchaseAmountConfigurations>
+        <multipleItemPurchaseAmountConfiguration name="1" price="0"/>
+        <multipleItemPurchaseAmountConfiguration name="2" price="1800"/>
+        <multipleItemPurchaseAmountConfiguration name="3" price="3600"/>
+        <multipleItemPurchaseAmountConfiguration name="4" price="5400"/>
+        <multipleItemPurchaseAmountConfiguration name="5" price="7200"/>
+        <multipleItemPurchaseAmountConfiguration name="6" price="9000"/>
+        <multipleItemPurchaseAmountConfiguration name="7" price="10800"/>
+        <multipleItemPurchaseAmountConfiguration name="8" price="12600"/>
+    </multipleItemPurchaseAmountConfigurations>
+</vehicle>

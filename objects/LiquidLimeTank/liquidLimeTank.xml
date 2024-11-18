@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="pallet" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>$l10n_filltype_liquidlime</name>
+        <functions>
+            <function>$l10n_function_liquidlimepallet</function>
+        </functions>
+        <specs>
+            <capacity>2000</capacity>
+            <fillTypes>liquidLime</fillTypes>
+            <weight ignore="true"/>
+        </specs>
+        <image>objects/LiquidLimeTank/liquidLimeTank.dds</image>
+        <price>1800</price>
+        <allowLeasing>false</allowLeasing>
+        <canBeSold>false</canBeSold>
+        <showInStore>false</showInStore>
+        <rotation>0</rotation>
+        <shopHeight>2</shopHeight>
+        <brand>FEARLESSMODDING</brand>
+        <category>ibc palletFertilizerHerbicide</category>
+        <financeCategory>OTHER</financeCategory>
+        <storeIconRendering>
+            <settings cameraXRot="-15" cameraYRot="25" />
+        </storeIconRendering>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_pallet</typeDesc>
+        <filename>objects/LiquidLimeTank/liquidLimeTank.i3d</filename>
+        <size width="1.35" length="1.35" height="1.35" />
+        <input allowed="false"/>
+        <canBeReset>false</canBeReset>
+        <components maxMass="850">
+            <component centerOfMass="0 0.1 0" solverIterationCount="10" mass="100" />
+        </components>
+        <showInVehicleMenu>false</showInVehicleMenu>
+        <mapHotspot available="false" />
+    </base>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits removeVehicleIfEmpty="true">
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypes="LIQUIDLIME" capacity="2000" startFillType="LIQUIDLIME" startFillLevel="2000" ignoreFillLimit="true">
+                        <fillRootNode node="0>" />
+                    </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+    <fillTriggerVehicle triggerNode="fillTrigger" fillUnitIndex="1" litersPerSecond="200"/>
+
+    <dynamicMount triggerNode="dynamicMountTrigger" triggerForceAcceleration="5" additionalMountDistance="1.5" jointTransY="0.11" jointLimitToRotY="true"/>
+
+    <dischargeable requiresTipOcclusionArea="false" />
+
+    <tensionBeltObject>
+        <meshNodes>
+            <meshNode node="fertilizerTank_vis"/>
+        </meshNodes>
+    </tensionBeltObject>
+
+    <i3dMappings>
+        <i3dMapping id="dynamicMountTrigger" node="0>0|0" />
+        <i3dMapping id="fillTrigger" node="0>0|1" />
+        <i3dMapping id="fertilizerTank_vis" node="0>2|0" />
+        <i3dMapping id="materialHerbicide" node="0>2|1" />
+    </i3dMappings>
+</vehicle>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="silo" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>$l10n_name_liquidlimesilo</name>
+        <functions>
+            <function>$l10n_function_liquidlimesilo</function>
+        </functions>
+        <image>$data/placeables/meridian/liquidFlatBottomTank1630/store_liquidFlatBottomTank1630.png</image>
+        <price>46500</price>
+        <dailyUpkeep>100</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>MERIDIAN</brand>
+        <species>placeable</species>
+        <category>fillableTanks</category>
+        <brush>
+            <type>placeable</type>
+            <category>buildings</category>
+            <tab>containers</tab>
+        </brush>
+    </storeData>
+
+    <base>
+        <filename>objects/LiquidLimeSilo/liquidLimeSilo.i3d</filename>
+        <canBeRenamed>true</canBeRenamed>
+    </base>
+
+    <placement useRandomYRotation="false" useManualYRotation="true"  >
+        <testAreas>
+            <testArea startNode="testArea1Start" endNode="testArea1End" />
+        </testAreas>
+
+        <sounds>
+            <place template="siloImp" pitchScale="1.2"/>
+        </sounds>
+    </placement>
+
+    <clearAreas>
+        <clearArea startNode="clearArea1Start" widthNode="clearArea1Width" heightNode="clearArea1Height"/>
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="3" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+            <levelArea startNode="levelArea1Start" widthNode="levelArea1Width" heightNode="levelArea1Height" groundType="asphalt"/>
+        </levelAreas>
+    </leveling>
+
+    <indoorAreas/>
+
+    <tipOcclusionUpdateAreas>
+        <tipOcclusionUpdateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+    </tipOcclusionUpdateAreas>
+
+    <ai>
+        <updateAreas>
+            <updateArea startNode="tipOcclusionUpdateArea1Start" endNode="tipOcclusionUpdateArea1End" />
+        </updateAreas>
+    </ai>
+
+    <infoTrigger triggerNode="infoTrigger"/>
+
+    <silo playerActionTrigger="refillPlayerTrigger">
+        <loadingStation node="loadingTrigger" supportsExtension="false" >
+            <loadTrigger triggerNode="loadingTrigger" aiNode="loadingTriggerAINode" fillLitersPerSecond="200" fillTypes="LIQUIDLIME"/>
+        </loadingStation>
+
+        <unloadingStation supportsExtension="false" >
+            <unloadTrigger exactFillRootNode="exactFillRootNode" aiNode="unloadingStationAINode" fillTypes="LIQUIDLIME"/>
+        </unloadingStation>
+
+        <storages>
+            <storage node="storage" fillTypes="LIQUIDLIME" capacity="173500" isExtension="false">
+                <startFillLevel fillType="LIQUIDLIME" fillLevel="0" />
+            </storage>
+        </storages>
+    </silo>
+
+    <hotspots>
+        <hotspot type="LOADING" linkNode="mapPosition" teleportNode="refillTriggerMarker"/>
+    </hotspots>
+
+    <triggerMarkers>
+        <triggerMarker node="markerLoading"       filename="$data/shared/assets/marker/markerIcons.xml" id="LOAD" />
+        <triggerMarker node="refillTriggerMarker" filename="$data/shared/assets/marker/markerIcons.xml" id="WRENCH" />
+    </triggerMarkers>
+
+    <i3dMappings>
+        <i3dMapping id="storage" node="0>1|0" />
+        <i3dMapping id="mapPosition" node="0>1|1" />
+        <i3dMapping id="exactFillRootNode" node="0>1|2|0" />
+        <i3dMapping id="unloadingStationAINode" node="0>1|2|1" />
+        <i3dMapping id="loadingTrigger" node="0>1|3|0" />
+        <i3dMapping id="loadingTriggerAINode" node="0>1|3|1" />
+        <i3dMapping id="infoTrigger" node="0>1|4" />
+        <i3dMapping id="refillPlayerTrigger" node="0>1|5" />
+        <i3dMapping id="refillTriggerMarker" node="0>1|5|0" />
+        <i3dMapping id="clearArea1Start" node="0>2|0" />
+        <i3dMapping id="clearArea1Width" node="0>2|0|0" />
+        <i3dMapping id="clearArea1Height" node="0>2|0|1" />
+        <i3dMapping id="levelArea1Start" node="0>3|0" />
+        <i3dMapping id="levelArea1Width" node="0>3|0|0" />
+        <i3dMapping id="levelArea1Height" node="0>3|0|1" />
+        <i3dMapping id="testArea1Start" node="0>4|0" />
+        <i3dMapping id="testArea1End" node="0>4|0|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1Start" node="0>5|0" />
+        <i3dMapping id="tipOcclusionUpdateArea1End" node="0>5|0|0" />
+        <i3dMapping id="markerLoading" node="0>6" />
+    </i3dMappings>
+</placeable>
