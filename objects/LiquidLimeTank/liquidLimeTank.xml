@@ -12,7 +12,7 @@
             <fillTypes>liquidLime</fillTypes>
             <weight ignore="true"/>
         </specs>
-        <image>objects/LiquidLimeTank/liquidLimeTank.dds</image>
+        <image>objects/LiquidLimeTank/store_liquidLimeTank.dds</image>
         <price>1800</price>
         <allowLeasing>false</allowLeasing>
         <canBeSold>false</canBeSold>

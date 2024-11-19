@@ -1,74 +1,108 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="92">
-	<author>FearlessStudios</author>
-	<version>1.1.0.0</version>
-	<title>	
-		<en>Liquid Lime</en>
-		<de>Flüssigkalk</de>
-		<fr>Chaux Liquide</fr>
-	</title>
-	
-	<description>
-		<en><![CDATA[**Liquid Lime**  
+  <author>FearlessStudios</author>
+  <version>1.2.0.0</version>
+  <title>
+    <en>Liquid Lime</en>
+    <de>Flüssigkalk</de>
+    <fr>Chaux Liquide</fr>
+  </title>
+  
+  <description>
+    <en><![CDATA[Liquid Lime  
 
-	Enhance your farming experience with Liquid Lime, specially designed for use with sprayers.  
+Revolutionize your farming experience with Liquid Lime, specially formulated for use with sprayers.  
 
-	**Features:**  
-	- **Liquid Lime Tank:**  
-	- Capacity: 2000 liters  
-	- Price: $1800  
+Key Features:  
+- Liquid Lime Tank:  
+  - Capacity: 2000 liters  
+  - Price: $1800  
+- Liquid Lime Silo:  
+  - Capacity: 140000 liters  
+  - Price: $46500  
 
-	This mod aims to replicate the properties of real liquid lime as closely as possible.]]>
-		</en>
-		<de><![CDATA[**Flüssigkalk**  
+Liquid Lime provides a practical and efficient solution for soil treatment, aiming to replicate the characteristics of real liquid lime as closely as possible.  
 
-	Verbessern Sie Ihr Farming-Erlebnis mit Flüssigkalk, speziell entwickelt für den Einsatz mit Sprühgeräten.  
+Changelog for v1.2.0.0:  
+- Fixed issues with textures  
+- Fixed mipmaps for improved visual quality  
+- Added a silo for Liquid Lime]]>
+    </en>
+    <de><![CDATA[Flüssigkalk  
 
-	**Eigenschaften:**  
-	- **Flüssigkalk-Tank:**  
-	- Kapazität: 2000 Liter  
-	- Preis: 1800 €  
+Revolutionieren Sie Ihr Farming-Erlebnis mit Flüssigkalk, speziell entwickelt für den Einsatz mit Sprühgeräten.  
 
-	Dieses Mod wurde entwickelt, um die Eigenschaften von echtem Flüssigkalk so genau wie möglich nachzubilden.]]>
-		</de>
-		<fr><![CDATA[**Chaux liquide**  
+Hauptmerkmale:  
+- Flüssigkalk-Tank:  
+  - Kapazität: 2000 Liter  
+  - Preis: 1800 €  
+- Flüssigkalk-Silo:  
+  - Kapazität: 140000 Liter  
+  - Preis: 46500 €  
 
-	Améliorez votre expérience agricole avec de la chaux liquide, spécialement conçue pour les pulvérisateurs.  
+Flüssigkalk bietet eine praktische und effiziente Lösung zur Bodenbehandlung und wurde entwickelt, um die Eigenschaften von echtem Flüssigkalk so genau wie möglich nachzubilden.  
 
-	**Caractéristiques :**  
-	- **Réservoir de chaux liquide :**  
-	- Capacité : 2000 litres  
-	- Prix : 1800 €  
+Änderungsprotokoll für v1.2.0.0:  
+- Behobene Probleme mit Texturen  
+- Korrigierte Mipmaps für verbesserte visuelle Qualität  
+- Hinzugefügtes Silo für Flüssigkalk]]>
+    </de>
+    <fr><![CDATA[Chaux liquide  
 
-	Ce mod vise à reproduire au plus près les propriétés de la véritable chaux liquide.]]>
-		</fr>
-	</description>
-	
-	<iconFilename>modIcon.dds</iconFilename>
-	
-	<multiplayer supported="true" />
+Révolutionnez votre expérience agricole avec de la chaux liquide, spécialement conçue pour les pulvérisateurs.  
 
-	<l10n>
-		<text name="filltype_liquidlime">
-			<en>Liquid Lime</en>
-		</text>
-		<text name="function_liquidlimepallet">
-			<en>Liquid Lime Tank allows you to fill sprayers with LiquidLime.</en>
-		</text>
-	</l10n>
+Caractéristiques clés :  
+- Réservoir de chaux liquide :  
+  - Capacité : 2000 litres  
+  - Prix : 1800 €  
+- Silo à chaux liquide :  
+  - Capacité : 140000 litres  
+  - Prix : 46500 €  
 
-	<extraSourceFiles>
-		<sourceFile filename="src/main.lua" />
-	</extraSourceFiles>
+La chaux liquide offre une solution pratique et efficace pour le traitement des sols, reproduisant les caractéristiques de la véritable chaux liquide avec précision.  
 
-	<storeItems>
-		<storeItem xmlFilename="objects/LiquidLimeTank/multiPurchaseLiquidTank_liquidLimeTank.xml" />
-		<storeItem xmlFilename="objects/LiquidLimeTank/liquidLimeTank.xml" />
-	</storeItems>
+Journal des modifications pour v1.2.0.0 :  
+- Correction des problèmes de textures  
+- Correction des mipmaps pour une meilleure qualité visuelle  
+- Ajout d’un silo pour la chaux liquide]]>
+    </fr>
+  </description>
+  
+  <iconFilename>icon_liquidLime.dds</iconFilename>
+  
+  <multiplayer supported="true" />
 
-	<brands>
-		<brand name="FEARLESSMODDING" title="Fearless Modding" image="brand/brand_FM.dds" />
-	</brands>
+  <l10n>
+    <text name="filltype_liquidlime">
+      <en>Liquid Lime</en>
+      <de>Flüssigkalk</de>
+      <fr>Chaux Liquide</fr>
+    </text>
+    <text name="function_liquidlimepallet">
+      <en>Liquid Lime Tank allows you to fill sprayers with Liquid Lime.</en>
+      <de>Flüssigkalk-Tank ermöglicht das Befüllen von Sprühgeräten mit Flüssigkalk.</de>
+      <fr>Le réservoir de chaux liquide permet de remplir les pulvérisateurs avec de la chaux liquide.</fr>
+    </text>
+    <text name="function_liquidlimesilo">
+      <en>Liquid Lime Silo provides storage and refill capabilities for Liquid Lime.</en>
+      <de>Flüssigkalk-Silo bietet Lagerung und Nachfüllmöglichkeiten für Flüssigkalk.</de>
+      <fr>Le silo à chaux liquide offre des capacités de stockage et de remplissage pour la chaux liquide.</fr>
+    </text>
+  </l10n>
 
-	<fillTypes filename="xml/fillTypes.xml" />
+  <extraSourceFiles>
+    <sourceFile filename="src/main.lua" />
+  </extraSourceFiles>
+
+  <storeItems>
+    <storeItem xmlFilename="objects/LiquidLimeTank/multiPurchaseLiquidTank_liquidLimeTank.xml" />
+    <storeItem xmlFilename="objects/LiquidLimeTank/liquidLimeTank.xml" />
+    <storeItem xmlFilename="objects/LiquidLimeSilo/liquidLimeSilo.xml" />
+  </storeItems>
+
+  <brands>
+    <brand name="FEARLESSMODDING" title="Fearless Modding" image="brand/brand_FM.dds" />
+  </brands>
+
+  <fillTypes filename="xml/fillTypes.xml" />
 </modDesc>
