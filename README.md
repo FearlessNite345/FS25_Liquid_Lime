@@ -1,4 +1,4 @@
-# **Liquid Lime Mod - Beta v1.1**
+# **Liquid Lime Mod - v1.2.0.0**
 
 ![Github All Releases](https://img.shields.io/github/downloads/FearlessNite345/FS25_Liquid_Lime/total.svg?style=for-the-badge)
 ![GitHub Downloads (all assets, latest release)](https://img.shields.io/github/downloads/fearlessnite345/FS25_Liquid_Lime/latest/total?style=for-the-badge)
@@ -6,9 +6,22 @@
 Welcome to the **Liquid Lime Mod**! This mod introduces **Liquid Lime**, a sprayer-compatible material designed to enhance your farming experience with added realism.  
 
 ## **Features**  
-- **Tank Capacity**: 2000 liters  
-- **Price**: $1800  
-- Designed to closely replicate the properties of real liquid lime for a more authentic gameplay experience.
+- **Liquid Lime Fill Type**:  
+  - Adds Liquid Lime to the game as a new material compatible with sprayers.  
+  - Designed to closely replicate the properties of real liquid lime for a more authentic gameplay experience.
+
+---
+
+## **Items**  
+- **Liquid Lime Tank**:  
+  - **Capacity**: 2000 liters  
+  - **Price**: $1800  
+  - Allows you to fill sprayers with Liquid Lime.  
+
+- **Liquid Lime Silo**:  
+  - **Capacity**: 140,000 liters  
+  - **Price**: $46,500  
+  - Provides storage and refill capabilities for Liquid Lime.
 
 ---
 
@@ -19,14 +32,15 @@ We value your feedback! If you encounter any bugs or have suggestions to improve
 - Use the **[Issues tab](../../issues)** on GitHub to report bugs or share your ideas.  
 - Provide as much detail as possible to help us resolve issues quickly.  
 
-Your input is crucial for refining this mod during its beta phase!
+Your input is crucial for refining this mod and ensuring the best possible experience for everyone!
 
 ---
 
 ## **Future Plans**  
-- Introducing additional ways to purchase Liquid Lime for added convenience.  
+- Expanding features to include additional ways to purchase Liquid Lime.  
+- Continuing to optimize performance and compatibility.  
 - Preparing the mod for release on the official Mod Hub.  
 
 ---
 
-Thank you for supporting this mod! Together, we can make it even better.  
+Thank you for supporting this mod! Together, we can make it even better. Happy farming! 🌾
