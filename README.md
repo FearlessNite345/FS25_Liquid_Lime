@@ -1,4 +1,4 @@
-# **Liquid Lime Mod - Beta v1.0**
+# **Liquid Lime Mod - Beta v1.1**
 
 Welcome to the **Liquid Lime Mod**! This mod introduces **Liquid Lime**, a sprayer-compatible material designed to enhance your farming experience with added realism.  
 
