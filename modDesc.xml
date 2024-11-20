@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="92">
   <author>FearlessStudios</author>
-  <version>1.2.0.0</version>
+  <version>1.2.1.0</version>
   <title>
     <en>Liquid Lime</en>
     <de>Flüssigkalk</de>
@@ -14,57 +14,63 @@
 Revolutionize your farming experience with Liquid Lime, specially formulated for use with sprayers.  
 
 Key Features:  
+- Liquid Lime Fill Type:  
+  - Adds Liquid Lime to the game as a new material compatible with sprayers.  
+
+Items:  
 - Liquid Lime Tank:  
   - Capacity: 2000 liters  
   - Price: $1800  
 - Liquid Lime Silo:  
-  - Capacity: 140000 liters  
-  - Price: $46500  
+  - Capacity: 140,000 liters  
+  - Price: $46,500  
 
 Liquid Lime provides a practical and efficient solution for soil treatment, aiming to replicate the characteristics of real liquid lime as closely as possible.  
 
-Changelog for v1.2.0.0:  
-- Fixed issues with textures  
-- Fixed mipmaps for improved visual quality  
-- Added a silo for Liquid Lime]]>
+Changelog for v1.2.1.0:  
+- Fixed an issue where the Liquid Lime Silo did not allow storing Liquid Lime.]]>
     </en>
     <de><![CDATA[Flüssigkalk  
 
 Revolutionieren Sie Ihr Farming-Erlebnis mit Flüssigkalk, speziell entwickelt für den Einsatz mit Sprühgeräten.  
 
 Hauptmerkmale:  
+- Flüssigkalk-Fülltyp:  
+  - Fügt Flüssigkalk als neues Material hinzu, das mit Sprühgeräten kompatibel ist.  
+
+Objekte:  
 - Flüssigkalk-Tank:  
   - Kapazität: 2000 Liter  
   - Preis: 1800 €  
 - Flüssigkalk-Silo:  
-  - Kapazität: 140000 Liter  
-  - Preis: 46500 €  
+  - Kapazität: 140.000 Liter  
+  - Preis: 46.500 €  
 
 Flüssigkalk bietet eine praktische und effiziente Lösung zur Bodenbehandlung und wurde entwickelt, um die Eigenschaften von echtem Flüssigkalk so genau wie möglich nachzubilden.  
 
-Änderungsprotokoll für v1.2.0.0:  
-- Behobene Probleme mit Texturen  
-- Korrigierte Mipmaps für verbesserte visuelle Qualität  
-- Hinzugefügtes Silo für Flüssigkalk]]>
+Änderungsprotokoll für v1.2.1.0:  
+- Behoben: Das Flüssigkalk-Silo erlaubte es nicht, Flüssigkalk zu lagern.]]>
     </de>
     <fr><![CDATA[Chaux liquide  
 
 Révolutionnez votre expérience agricole avec de la chaux liquide, spécialement conçue pour les pulvérisateurs.  
 
 Caractéristiques clés :  
+- Type de remplissage de chaux liquide :  
+  - Ajoute de la chaux liquide au jeu en tant que nouveau matériau compatible avec les pulvérisateurs.  
+
+Objets :  
 - Réservoir de chaux liquide :  
   - Capacité : 2000 litres  
   - Prix : 1800 €  
 - Silo à chaux liquide :  
-  - Capacité : 140000 litres  
-  - Prix : 46500 €  
+  - Capacité : 140 000 litres  
+  - Prix : 46 500 €  
 
 La chaux liquide offre une solution pratique et efficace pour le traitement des sols, reproduisant les caractéristiques de la véritable chaux liquide avec précision.  
 
-Journal des modifications pour v1.2.0.0 :  
-- Correction des problèmes de textures  
-- Correction des mipmaps pour une meilleure qualité visuelle  
-- Ajout d’un silo pour la chaux liquide]]>
+Journal des modifications pour v1.2.1.0 :  
+- Correction d’un problème où le silo à chaux liquide ne permettait pas de stocker de la chaux liquide.]]>
     </fr>
   </description>
   
