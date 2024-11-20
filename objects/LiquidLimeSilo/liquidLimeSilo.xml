@@ -67,11 +67,11 @@
 
     <silo playerActionTrigger="refillPlayerTrigger">
         <loadingStation node="loadingTrigger" supportsExtension="false" >
-            <loadTrigger triggerNode="loadingTrigger" aiNode="loadingTriggerAINode" fillLitersPerSecond="200" fillTypes="LIQUIDFERTILIZER"/>
+            <loadTrigger triggerNode="loadingTrigger" aiNode="loadingTriggerAINode" fillLitersPerSecond="200" fillTypes="LIQUIDLIME"/>
         </loadingStation>
 
         <unloadingStation supportsExtension="false" >
-            <unloadTrigger exactFillRootNode="exactFillRootNode" aiNode="unloadingStationAINode" fillTypes="LIQUIDFERTILIZER"/>
+            <unloadTrigger exactFillRootNode="exactFillRootNode" aiNode="unloadingStationAINode" fillTypes="LIQUIDLIME"/>
         </unloadingStation>
 
         <storages>
