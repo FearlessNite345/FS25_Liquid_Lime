@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="92">
   <author>FearlessStudios</author>
-  <version>1.2.1.0</version>
+  <version>1.2.2.0</version>
   <title>
     <en>Liquid Lime</en>
     <de>Flüssigkalk</de>
@@ -21,15 +21,20 @@ Key Features:
 Items:  
 - Liquid Lime Tank:  
   - Capacity: 2000 liters  
-  - Price: $1800  
+  - Price: $900  
 - Liquid Lime Silo:  
   - Capacity: 140,000 liters  
   - Price: $46,500  
 
 Liquid Lime provides a practical and efficient solution for soil treatment, aiming to replicate the characteristics of real liquid lime as closely as possible.  
 
-Changelog for v1.2.1.0:  
-- Fixed an issue where the Liquid Lime Silo did not allow storing Liquid Lime.]]>
+Changelog for v1.2.2.0:  
+- Fixed mod icon.  
+- Updated brand name to TRUEEDGE.  
+- Replaced brand logo with a new design.  
+- Lowered Liquid Lime price per liter for better balance.  
+- Reduced Liquid Lime spray rate to improve balance and realism.  
+- Reduced Liquid Lime Tank price to $900.]]>
     </en>
     <de><![CDATA[Flüssigkalk  
 
@@ -42,15 +47,20 @@ Hauptmerkmale:
 Objekte:  
 - Flüssigkalk-Tank:  
   - Kapazität: 2000 Liter  
-  - Preis: 1800 €  
+  - Preis: 900 €  
 - Flüssigkalk-Silo:  
   - Kapazität: 140.000 Liter  
   - Preis: 46.500 €  
 
 Flüssigkalk bietet eine praktische und effiziente Lösung zur Bodenbehandlung und wurde entwickelt, um die Eigenschaften von echtem Flüssigkalk so genau wie möglich nachzubilden.  
 
-Änderungsprotokoll für v1.2.1.0:  
-- Behoben: Das Flüssigkalk-Silo erlaubte es nicht, Flüssigkalk zu lagern.]]>
+Änderungsprotokoll für v1.2.2.0:  
+- Mod-Symbol behoben.  
+- Markenname zu TRUEEDGE aktualisiert.  
+- Markenlogo durch ein neues Design ersetzt.  
+- Preis pro Liter Flüssigkalk gesenkt, um das Spiel besser auszugleichen.  
+- Reduzierte Sprührate für Flüssigkalk, um Balance und Realismus zu verbessern.  
+- Preis des Flüssigkalk-Tanks auf 900 € reduziert.]]>
     </de>
     <fr><![CDATA[Chaux liquide  
 
@@ -63,15 +73,20 @@ Caractéristiques clés :
 Objets :  
 - Réservoir de chaux liquide :  
   - Capacité : 2000 litres  
-  - Prix : 1800 €  
+  - Prix : 900 €  
 - Silo à chaux liquide :  
   - Capacité : 140 000 litres  
   - Prix : 46 500 €  
 
 La chaux liquide offre une solution pratique et efficace pour le traitement des sols, reproduisant les caractéristiques de la véritable chaux liquide avec précision.  
 
-Journal des modifications pour v1.2.1.0 :  
-- Correction d’un problème où le silo à chaux liquide ne permettait pas de stocker de la chaux liquide.]]>
+Journal des modifications pour v1.2.2.0 :  
+- Icône du mod corrigée.  
+- Nom de marque mis à jour en TRUEEDGE.  
+- Logo de la marque remplacé par un nouveau design.  
+- Prix par litre de chaux liquide réduit pour un meilleur équilibre.  
+- Taux de pulvérisation de la chaux liquide réduit pour améliorer l'équilibre et le réalisme.  
+- Prix du réservoir de chaux liquide réduit à 900 €.]]>
     </fr>
   </description>
   
@@ -111,7 +126,7 @@ Journal des modifications pour v1.2.1.0 :
   </storeItems>
 
   <brands>
-    <brand name="FEARLESSMODDING" title="Fearless Modding" image="brand/brand_FM.dds" />
+    <brand name="TRUEEDGE" title="TrueEdge" image="brand/brand_TRUEEDGE.dds" />
   </brands>
 
   <fillTypes filename="xml/fillTypes.xml" />

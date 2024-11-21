@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <map>
     <sprayTypes>
-        <sprayType name="LIQUIDLIME" litersPerSecond="0.0900" type="LIME" sprayGroundType="LIME" />
+        <sprayType name="LIQUIDLIME" litersPerSecond="0.0840" type="LIME" sprayGroundType="LIME" />
     </sprayTypes>
 </map>

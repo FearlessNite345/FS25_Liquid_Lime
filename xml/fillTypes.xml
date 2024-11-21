@@ -6,7 +6,7 @@
 			<physics massPerLiter="1.0" maxPhysicalSurfaceAngle="0" />
             <image hud     ="hud/liquidlime.dds" />
 			<pallet filename="objects/LiquidLimeTank/liquidLimeTank.xml" />
-			<economy pricePerLiter="0.90" />
+			<economy pricePerLiter="0.45" />
 		</fillType>
     </fillTypes>
 
