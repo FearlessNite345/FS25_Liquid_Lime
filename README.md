@@ -5,6 +5,8 @@
 
 Welcome to the **Liquid Lime Mod**! This mod introduces **Liquid Lime**, a sprayer-compatible material designed to enhance your farming experience with added realism.  
 
+![fsScreen_2024_11_20_19_27_44](https://github.com/user-attachments/assets/369f874b-1533-4049-bd0c-478e5be199d1)
+
 ## **Features**  
 - **Liquid Lime Fill Type**:  
   - Adds Liquid Lime to the game as a new material compatible with sprayers.  
