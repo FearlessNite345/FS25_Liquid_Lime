@@ -1,4 +1,4 @@
-# **Liquid Lime Mod - v1.2.1.0**
+# **Liquid Lime Mod - v1.2.2.0**
 
 ![Github All Releases](https://img.shields.io/github/downloads/FearlessNite345/FS25_Liquid_Lime/total.svg?style=for-the-badge)
 ![GitHub Downloads (all assets, latest release)](https://img.shields.io/github/downloads/fearlessnite345/FS25_Liquid_Lime/latest/total?style=for-the-badge)
@@ -17,7 +17,7 @@ Welcome to the **Liquid Lime Mod**! This mod introduces **Liquid Lime**, a spray
 ## **Items**  
 - **Liquid Lime Tank**:  
   - **Capacity**: 2000 liters  
-  - **Price**: $1800  
+  - **Price**: $900  
   - Allows you to fill sprayers with Liquid Lime.  
 
 - **Liquid Lime Silo**:  
@@ -39,8 +39,7 @@ Your input is crucial for refining this mod and ensuring the best possible exper
 ---
 
 ## **Future Plans**  
-- Expanding features to include additional ways to purchase Liquid Lime.  
-- Continuing to optimize performance and compatibility.  
+- Expanding features to include additional ways to purchase Liquid Lime.
 - Preparing the mod for release on the official Mod Hub.  
 
 ---
