@@ -6,6 +6,7 @@
     <en>Liquid Lime</en>
     <de>Flüssigkalk</de>
     <fr>Chaux Liquide</fr>
+    <cz>Tekuté vápno</cz>
   </title>
   
   <description>
@@ -83,16 +84,19 @@ Journal des modifications pour v1.2.1.0 :
       <en>Liquid Lime</en>
       <de>Flüssigkalk</de>
       <fr>Chaux Liquide</fr>
+      <cz>Tekuté vápno</cz>
     </text>
     <text name="function_liquidlimepallet">
       <en>Liquid Lime Tank allows you to fill sprayers with Liquid Lime.</en>
       <de>Flüssigkalk-Tank ermöglicht das Befüllen von Sprühgeräten mit Flüssigkalk.</de>
       <fr>Le réservoir de chaux liquide permet de remplir les pulvérisateurs avec de la chaux liquide.</fr>
+      <cz>Nádrž na tekuté vápno umožňuje plnit postřikovače tekutým vápnem.</cz>
     </text>
     <text name="function_liquidlimesilo">
       <en>Liquid Lime Silo provides storage and refill capabilities for Liquid Lime.</en>
       <de>Flüssigkalk-Silo bietet Lagerung und Nachfüllmöglichkeiten für Flüssigkalk.</de>
       <fr>Le silo à chaux liquide offre des capacités de stockage et de remplissage pour la chaux liquide.</fr>
+      <cz>Silo na tekuté vápno poskytuje možnosti skladování a doplňování tekutého vápna.</cz>
     </text>
   </l10n>
 
