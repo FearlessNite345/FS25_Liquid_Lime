@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
-<i3D name="sprayerMeshes_materialHolder" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+<i3D name="liquidLime_materialHolder.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
   <Asset>
-    <Export program="GIANTS Editor 64bit" version="9.0.3"/>
+    <Export program="GIANTS Editor 64bit" version="10.0.1"/>
   </Asset>
 
   <Files>
@@ -14,12 +14,10 @@
 
 
   <Materials>
-    <Material name="water_mat" materialId="4" alphaBlending="true" customShaderId="4">
+    <Material name="water_mat" materialId="33" alphaBlending="true" customShaderId="4">
       <Texture fileId="1"/>
       <Normalmap fileId="2"/>
       <Glossmap fileId="3"/>
-      <CustomParameter name="fadeProgress" value="1 1 0 0"/>
-      <CustomParameter name="offsetUV" value="0 0 0 0"/>
     </Material>
   </Materials>
 
@@ -27,20 +25,16 @@
   <Shapes externalShapesFile="liquidLime_materialHolder.i3d.shapes">
   </Shapes>
 
-
-  <Dynamics>
-  </Dynamics>
-
   <Scene>
-      <TransformGroup name="sprayerEffects" nodeId="7">
-        <TransformGroup name="materials" nodeId="8">
-          <Shape shapeId="1" name="liquidLime_materialHolder" clipDistance="10" nodeId="9" materialIds="4" castsShadows="true" receiveShadows="true"/>
-        </TransformGroup>
+    <TransformGroup name="sprayerEffects" nodeId="36">
+      <TransformGroup name="materials" nodeId="37">
+        <Shape name="liquidLime_materialHolder" shapeId="1" clipDistance="10" nodeId="38" castsShadows="true" receiveShadows="true" materialIds="33"/>
       </TransformGroup>
+    </TransformGroup>
   </Scene>
 
   <UserAttributes>
-    <UserAttribute nodeId="9">
+    <UserAttribute nodeId="38">
       <Attribute name="fillType" type="string" value="LIQUIDLIME"/>
       <Attribute name="materialIndex" type="string" value="1"/>
       <Attribute name="materialType" type="string" value="sprayer"/>

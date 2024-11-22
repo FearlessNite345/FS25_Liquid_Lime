@@ -6,7 +6,7 @@
     <en>Liquid Lime</en>
     <de>Flüssigkalk</de>
     <fr>Chaux Liquide</fr>
-    <cz>Tekuté vápno</cz>
+    <cz>Tekuté Vápno</cz>
   </title>
   
   <description>
@@ -19,12 +19,13 @@ Key Features:
   - Adds Liquid Lime to the game as a new material compatible with sprayers.  
 
 Items:  
-- Liquid Lime Tank:  
+- TrueEdge Liquid Lime Tank:  
   - Capacity: 2000 liters  
   - Price: $900  
-- Liquid Lime Silo:  
+- Meridian Liquid Lime Silo:  
   - Capacity: 140,000 liters  
   - Price: $46,500  
+  - Daily upkeep: 100
 
 Liquid Lime provides a practical and efficient solution for soil treatment, aiming to replicate the characteristics of real liquid lime as closely as possible.  
 
@@ -45,12 +46,13 @@ Hauptmerkmale:
   - Fügt Flüssigkalk als neues Material hinzu, das mit Sprühgeräten kompatibel ist.  
 
 Objekte:  
-- Flüssigkalk-Tank:  
+- TrueEdge Flüssigkalk-Tank:  
   - Kapazität: 2000 Liter  
   - Preis: 900 €  
-- Flüssigkalk-Silo:  
+- Meridian Flüssigkalk-Silo:  
   - Kapazität: 140.000 Liter  
   - Preis: 46.500 €  
+  - Täglicher Unterhalt: 100
 
 Flüssigkalk bietet eine praktische und effiziente Lösung zur Bodenbehandlung und wurde entwickelt, um die Eigenschaften von echtem Flüssigkalk so genau wie möglich nachzubilden.  
 
@@ -71,12 +73,13 @@ Caractéristiques clés :
   - Ajoute de la chaux liquide au jeu en tant que nouveau matériau compatible avec les pulvérisateurs.  
 
 Objets :  
-- Réservoir de chaux liquide :  
+- TrueEdge Réservoir de chaux liquide :  
   - Capacité : 2000 litres  
   - Prix : 900 €  
-- Silo à chaux liquide :  
+- Meridian Silo à chaux liquide :  
   - Capacité : 140 000 litres  
   - Prix : 46 500 €  
+  - Entretien quotidien:
 
 La chaux liquide offre une solution pratique et efficace pour le traitement des sols, reproduisant les caractéristiques de la véritable chaux liquide avec précision.  
 
@@ -99,7 +102,7 @@ Journal des modifications pour v1.2.2.0 :
       <en>Liquid Lime</en>
       <de>Flüssigkalk</de>
       <fr>Chaux Liquide</fr>
-      <cz>Tekuté vápno</cz>
+      <cz>Tekuté Vápno</cz>
     </text>
     <text name="function_liquidlimepallet">
       <en>Liquid Lime Tank allows you to fill sprayers with Liquid Lime.</en>
