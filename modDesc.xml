@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="92">
   <author>FearlessStudios</author>
-  <version>1.2.2.0</version>
+  <version>1.2.3.0</version>
   <title>
     <en>Liquid Lime</en>
     <de>Flüssigkalk</de>
@@ -28,6 +28,9 @@ Items:
   - Daily upkeep: 100
 
 Liquid Lime provides a practical and efficient solution for soil treatment, aiming to replicate the characteristics of real liquid lime as closely as possible.  
+
+Changelog for v1.2.3.0:  
+- Final i3D fixes for Official ModHub release.  
 
 Changelog for v1.2.2.0:  
 - Fixed mod icon.  
@@ -56,6 +59,9 @@ Objekte:
 
 Flüssigkalk bietet eine praktische und effiziente Lösung zur Bodenbehandlung und wurde entwickelt, um die Eigenschaften von echtem Flüssigkalk so genau wie möglich nachzubilden.  
 
+Änderungsprotokoll für v1.2.3.0:  
+- Letzte i3D-Korrekturen für die Veröffentlichung auf dem offiziellen ModHub.  
+
 Änderungsprotokoll für v1.2.2.0:  
 - Mod-Symbol behoben.  
 - Markenname zu TRUEEDGE aktualisiert.  
@@ -79,9 +85,12 @@ Objets :
 - Meridian Silo à chaux liquide :  
   - Capacité : 140 000 litres  
   - Prix : 46 500 €  
-  - Entretien quotidien:
+  - Entretien quotidien: 100
 
 La chaux liquide offre une solution pratique et efficace pour le traitement des sols, reproduisant les caractéristiques de la véritable chaux liquide avec précision.  
+
+Journal des modifications pour v1.2.3.0 :  
+- Derniers ajustements i3D pour la sortie officielle sur ModHub.  
 
 Journal des modifications pour v1.2.2.0 :  
 - Icône du mod corrigée.  
@@ -119,7 +128,7 @@ Journal des modifications pour v1.2.2.0 :
   </l10n>
 
   <extraSourceFiles>
-    <sourceFile filename="src/main.lua" />
+    <sourceFile filename="scripts/main.lua" />
   </extraSourceFiles>
 
   <storeItems>
