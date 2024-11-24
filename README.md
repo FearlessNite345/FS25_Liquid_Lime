@@ -7,6 +7,9 @@ Welcome to the **Liquid Lime Mod**! This mod introduces **Liquid Lime**, a spray
 
 ![fsScreen_2024_11_20_19_27_44](https://github.com/user-attachments/assets/369f874b-1533-4049-bd0c-478e5be199d1)
 
+## **Official Mod Hub**
+Currently this mod is being tested by Giants for the official ModHub
+
 ## **Features**  
 - **Liquid Lime Fill Type**:  
   - Adds Liquid Lime to the game as a new material compatible with sprayers.  
