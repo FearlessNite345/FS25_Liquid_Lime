@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="liquidLimeSilo.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.2"/>
+  </Asset>
+
+  <Files>
+    <File fileId="2" filename="$data/placeables/meridian/liquidFlatBottomTank1630/liquidFlatBottomTank1630_diffuse.png"/>
+    <File fileId="3" filename="$data/placeables/meridian/liquidFlatBottomTank1630/liquidFlatBottomTank1630_normal.png"/>
+    <File fileId="4" filename="$data/placeables/meridian/liquidFlatBottomTank1630/liquidFlatBottomTank1630_specular.png"/>
+    <File fileId="15" filename="$data/placeables/meridian/shared/meridianDecals_diffuse.png"/>
+    <File fileId="11" filename="$data/shaders/decalShader.xml"/>
+    <File fileId="5" filename="$data/shaders/placeableShader.xml"/>
+    <File fileId="8" filename="$data/shared/assets/assetLibraryDecals_diffuse.png"/>
+    <File fileId="9" filename="$data/shared/assets/assetLibraryDecals_normal.png"/>
+    <File fileId="10" filename="$data/shared/assets/assetLibraryDecals_vmask.png"/>
+    <File fileId="12" filename="$data/shared/clearGlass_diffuse.png"/>
+    <File fileId="13" filename="$data/shared/default_normal.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="assetLibraryDecals_mat" materialId="8" alphaBlending="true" customShaderId="11">
+      <Texture fileId="8"/>
+      <Normalmap fileId="9"/>
+      <Glossmap fileId="10"/>
+    </Material>
+    <Material name="clearGlass_mat" materialId="9" specularColor="1 1 0.25098" alphaBlending="true">
+      <Texture fileId="12"/>
+      <Normalmap fileId="13"/>
+    </Material>
+    <Material name="lambert1" materialId="5" diffuseColor="0.501961 0.501961 0.501961 1">
+    </Material>
+    <Material name="liquidFlatBottomTank1630_mat" materialId="6" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+    </Material>
+    <Material name="meridianDecals_mat" materialId="7" specularColor="0.501961 1 0.501961" alphaBlending="true" customShaderId="11">
+      <Texture fileId="15"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="liquidLimeSilo.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="liquidFlatBottomTank1630" clipDistance="500" nodeId="23">
+      <TransformGroup name="clearAreas" nodeId="24">
+        <TransformGroup name="clearAreaStart01" translation="-2.5 0 -2.5" nodeId="25">
+          <TransformGroup name="clearAreaWidth01" translation="3.6e-05 0 8.5" nodeId="26"/>
+          <TransformGroup name="clearAreaHeight01" translation="5 0 0" nodeId="27"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="levelAreas" nodeId="28">
+        <TransformGroup name="levelAreaStart01" translation="-3 0 -3" nodeId="29">
+          <TransformGroup name="levelAreaWidth01" translation="3.6e-05 0 9" nodeId="30"/>
+          <TransformGroup name="levelAreaHeight01" translation="6 0 0" nodeId="31"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="testAreas" nodeId="32">
+        <TransformGroup name="testAreaStart01" translation="-2.5 0 -2.5" nodeId="33">
+          <TransformGroup name="testAreaEnd01" translation="5 10 8.5" nodeId="34"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="tipOcclusionUpdateAreas" nodeId="35">
+        <TransformGroup name="tipOcclusionUpdateAreaStart01" translation="-3 0 -2.5" nodeId="36">
+          <TransformGroup name="tipOcclusionUpdateAreaEnd01" translation="6 0 8.5" nodeId="37"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="silo" nodeId="38">
+        <TransformGroup name="unloadingStation" nodeId="39">
+          <Shape name="exactFillRootNode" translation="0 -0.139137 4.49116" shapeId="1" static="true" collisionFilterGroup="0x40000000" collisionFilterMask="0x20000000" nodeId="40" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+          <TransformGroup name="unloadingStationAINode" translation="0 0 4.8" rotation="0 90 0" nodeId="41"/>
+        </TransformGroup>
+        <TransformGroup name="loadingStation" nodeId="42">
+          <Shape name="loadingTrigger" translation="0 2.06123 4.5" shapeId="2" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x40000000" nodeId="43" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+          <TransformGroup name="loadingTriggerAINode" translation="0 0 4.8" rotation="0 90 0" nodeId="44"/>
+        </TransformGroup>
+        <Shape name="refillPlayerTrigger" translation="3.12122 0 0" shapeId="3" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x100000" nodeId="45" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+        <TransformGroup name="refillMarker" translation="3.12122 0 0" nodeId="46"/>
+        <TransformGroup name="storage" nodeId="47"/>
+        <TransformGroup name="mapPosition" translation="5 0 10" nodeId="48"/>
+        <TransformGroup name="markerLoading" translation="0 0 4.0392" clipDistance="150" nodeId="49"/>
+        <Shape name="infoTrigger" shapeId="4" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x100000" nodeId="50" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+      </TransformGroup>
+      <TransformGroup name="visuals" nodeId="51">
+        <TransformGroup name="visuals_lod" lodDistance="0 70" nodeId="52">
+          <TransformGroup name="liquidFlatBottomTank1630_lod0" nodeId="53">
+            <Shape name="liquidFlatBottomTank1630_vis" shapeId="5" clipDistance="300" nodeId="54" castsShadows="true" receiveShadows="true" materialIds="6"/>
+            <Shape name="screwDecals" shapeId="6" clipDistance="35" nodeId="55" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="8"/>
+            <Shape name="glass" shapeId="7" clipDistance="30" nodeId="56" castsShadows="true" receiveShadows="true" materialIds="9"/>
+          </TransformGroup>
+          <TransformGroup name="liquidFlatBottomTank1630_lod1" nodeId="57">
+            <Shape name="liquidFlatBottomTank1630_vis" shapeId="8" nodeId="58" castsShadows="true" receiveShadows="true" materialIds="6"/>
+          </TransformGroup>
+        </TransformGroup>
+        <Shape name="meridianDecals" shapeId="9" clipDistance="120" nodeId="59" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="7"/>
+      </TransformGroup>
+      <TransformGroup name="collisions" nodeId="60">
+        <Shape name="collision" translation="0 3.3549 0" shapeId="10" static="true" collisionFilterGroup="0x1034" collisionFilterMask="0xfffffbff" nodeId="61" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+        <Shape name="tipCollision" translation="0 0 1.74942" shapeId="11" static="true" collisionFilterGroup="0x8" collisionFilterMask="0x1" nodeId="62" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+      </TransformGroup>
+      <Shape name="occluder" shapeId="12" clipDistance="200" nodeId="63" castsShadows="true" receiveShadows="true" nonRenderable="true" occluder="true" materialIds="5"/>
+      <TransformGroup name="indoorAreas" nodeId="65">
+        <TransformGroup name="indoorAreaStart01" translation="-2.5 0 -2.5" nodeId="66">
+          <TransformGroup name="indoorAreaWidth01" translation="3.6e-05 0 5" nodeId="67"/>
+          <TransformGroup name="indoorAreaHeight01" translation="5 0 0" nodeId="68"/>
+        </TransformGroup>
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

@@ -18,17 +18,12 @@
             <category>buildings</category>
             <tab>containers</tab>
         </brush>
-        <vertexBufferMemoryUsage>85504</vertexBufferMemoryUsage>
-        <indexBufferMemoryUsage>23296</indexBufferMemoryUsage>
-        <textureMemoryUsage>524288</textureMemoryUsage>
-        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
-        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
-        <audioMemoryUsage>0</audioMemoryUsage>
     </storeData>
 
     <base>
-        <filename>objects/LiquidLimeSilo/liquidLimeSilo.i3d</filename>
+        <filename>placeables/LiquidLimeSilo/liquidLimeSilo.i3d</filename>
         <canBeRenamed>true</canBeRenamed>
+        <boughtWithFarmland>false</boughtWithFarmland>
     </base>
 
     <placement useRandomYRotation="false" useManualYRotation="true"  >
@@ -51,7 +46,9 @@
         </levelAreas>
     </leveling>
 
-    <indoorAreas/>
+    <indoorAreas>
+        <indoorArea startNode="indoorAreaStart01" widthNode="indoorAreaWidth01" heightNode="indoorAreaHeight01" />
+    </indoorAreas>
 
     <tipOcclusionUpdateAreas>
         <tipOcclusionUpdateArea startNode="tipOcclusionUpdateAreaStart01" endNode="tipOcclusionUpdateAreaEnd01" />
@@ -94,6 +91,9 @@
         <i3dMapping id="clearAreaStart01" node="0>0|0" />
         <i3dMapping id="clearAreaWidth01" node="0>0|0|0" />
         <i3dMapping id="clearAreaHeight01" node="0>0|0|1" />
+        <i3dMapping id="indoorAreaStart01" node="0>8|0" />
+        <i3dMapping id="indoorAreaWidth01" node="0>8|0|0" />
+        <i3dMapping id="indoorAreaHeight01" node="0>8|0|1" />
         <i3dMapping id="levelAreaStart01" node="0>1|0" />
         <i3dMapping id="levelAreaWidth01" node="0>1|0|0" />
         <i3dMapping id="levelAreaHeight01" node="0>1|0|1" />
