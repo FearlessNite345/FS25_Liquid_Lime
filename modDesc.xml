@@ -40,7 +40,7 @@ Please report any issues you may have here: https://github.com/FearlessNite345/F
 Changelog v1.1.0.0:
 - Added a new production to produce Liquid Lime with Lime and Water. (This can bring cost savings)
 - Increased the Liquid Lime Silo storage capacity from 140,000 liters to 155,000 liters.
-- Added Liquid Lime to mks8 & mks32. (these are under my custom brand TrueEdge.)]]>
+- Added extra Trailer edits for trailers to carry Liquid Lime.]]>
     </en>
     <de><![CDATA[Flüssigkalk
 
@@ -72,7 +72,7 @@ Bitte melden Sie alle Probleme hier: https://github.com/FearlessNite345/FS25_Liq
 Änderungsprotokoll v1.1.0.0:
 - Neue Produktion hinzugefügt, um Liquid Lime mit Kalk und Wasser herzustellen. (Dies kann Kosteneinsparungen bringen)
 - Erhöhung der Lagerkapazität des Liquid Lime Silos von 140.000 Litern auf 155.000 Liter.
-- Liquid Lime zu mks8 und mks32 hinzugefügt. (Diese gehören zu meiner benutzerdefinierten Marke TrueEdge.)]]>
+- Zusätzliche Trailer-Bearbeitungen hinzugefügt, damit Anhänger Liquid Lime transportieren können.]]>
     </de>
     <fr><![CDATA[Chaux liquide
 
@@ -104,7 +104,7 @@ Veuillez signaler tout problème ici : https://github.com/FearlessNite345/FS25_L
 Journal des modifications v1.1.0.0 :
 - Ajout d'une nouvelle production pour produire du Liquid Lime avec de la chaux et de l'eau. (Cela peut générer des économies de coûts)
 - Augmentation de la capacité de stockage du silo Liquid Lime de 140 000 litres à 155 000 litres.
-- Ajout du Liquid Lime aux mks8 et mks32. (Ces derniers font partie de ma marque personnalisée TrueEdge.)]]>
+- Ajout d'éditions supplémentaires pour les remorques permettant de transporter du Liquid Lime.]]>
     </fr>
   </description>
   
@@ -156,6 +156,8 @@ Journal des modifications v1.1.0.0 :
     <storeItem xmlFilename="placeables/LiquidLimeProduction/liquidLimeProduction.xml" />
     <storeItem xmlFilename="vehicles/trueedge_mks8/trueedge_mks8.xml" />
     <storeItem xmlFilename="vehicles/trueedge_mks32/trueedge_mks32.xml" />
+    <storeItem xmlFilename="vehicles/abi_550/abi_550.xml" />
+    <storeItem xmlFilename="vehicles/abi_1600/abi_1600.xml" />
   </storeItems>
 
   <brands>
