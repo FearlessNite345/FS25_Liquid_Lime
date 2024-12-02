@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="waterTrailer" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>MKS 8</name>
+        <functions>
+            <function>$l10n_function_tank</function>
+        </functions>
+        <image>$data/vehicles/lizard/mks8/store_mks8.png</image>
+        <price>25000</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>TRUEEDGE</brand>
+        <category>barrels</category>
+        <shopTranslationOffset>0 -0.077 0</shopTranslationOffset>
+        <shopRotationOffset>0.045 0 0</shopRotationOffset>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_trailer</typeDesc>
+        <filename>$data/vehicles/lizard/mks8/mks8.i3d</filename>
+        <size width="2.3" length="7" height="3.45" lengthOffset="1.1"/>
+        <components maxMass="13000">
+            <component centerOfMass="0 0.6 -0.15"  solverIterationCount="10" mass="2700"/>
+            <component centerOfMass="0 -0.15 0.0" solverIterationCount="10" mass="1500"/>
+            <component                            solverIterationCount="10" mass="250"/>
+            <joint component1="1" component2="2" node="componentJointFront" rotLimit="0 120 0" transLimit="0 0 0"/>
+            <joint component1="2" component2="3" node="componentJointDrawbar" rotLimit="0 0 0" transLimit="0 0 0"/>
+            <collisionPair component1="1" component2="3" enabled="false"/>
+        </components>
+        <schemaOverlay attacherJointPosition="0 0" name="IMPLEMENT"/>
+        <mapHotspot type="TRAILER"/>
+    </base>
+
+    <wheels>
+        <wheelConfigurations>
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" saveId="DEFAULT">
+                <wheels>
+                    <wheel filename="$data/shared/wheels/tires/continental/contiCrossTracHS3/385_65R22_5.xml" configId="truckTrailer02" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" rotSpeed="0"  restLoad="1.5" repr="wheelFrontLeft"  forcePointRatio="0.2" initialCompression="27" suspTravel="0.07" spring="72" damper="35" frictionScale="2"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/continental/contiCrossTracHS3/385_65R22_5.xml" configId="truckTrailer02" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" rotSpeed="0"  restLoad="1.5" repr="wheelFrontRight" forcePointRatio="0.2" initialCompression="27" suspTravel="0.07" spring="72" damper="35" frictionScale="2"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/continental/contiCrossTracHS3/385_65R22_5.xml" configId="truckTrailer02" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" rotSpeed="0"  restLoad="0.9" repr="wheelBackLeft"   forcePointRatio="0.2" initialCompression="15" suspTravel="0.07" spring="75" damper="35" frictionScale="2"/>
+                        <wheelChock/>
+                        <wheelChock isInverted="true"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/continental/contiCrossTracHS3/385_65R22_5.xml" configId="truckTrailer02" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" rotSpeed="0"  restLoad="0.9" repr="wheelBackRight"  forcePointRatio="0.2" initialCompression="15" suspTravel="0.07" spring="75" damper="35" frictionScale="2"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+        </wheelConfigurations>
+    </wheels>
+
+    <attachable>
+        <inputAttacherJoints>
+            <inputAttacherJoint node="attacherJoint" jointType="trailer" rootNode="mks8_drawbar_component3" attacherHeight="0.874" />
+        </inputAttacherJoints>
+        <brakeForce force="0.4" maxForce="1.2" maxForceMass="13000"/>
+        <support animationName="lockDrawbarLimit"/>
+    </attachable>
+
+    <licensePlates>
+        <licensePlate node="licensePlateBack" position="BACK" preferedType="ELONGATED" placementArea="0.06 0.26 0.09 0.26"/>
+    </licensePlates>
+
+    <lights>
+        <sharedLight linkNode="rear5ChamberLight_02_Left"  filename="$data/shared/assets/lights/lizard/rearLight16_left.xml" />
+        <sharedLight linkNode="rear5ChamberLight_02_Right" filename="$data/shared/assets/lights/lizard/rearLight16_right.xml" />
+        <sharedLight linkNode="sideMarker_01Left"          filename="$data/shared/assets/lights/lizard/sideMarker01_left.xml" />
+        <sharedLight linkNode="sideMarker_01Right"         filename="$data/shared/assets/lights/lizard/sideMarker01_right.xml" />
+        <sharedLight linkNode="plateNumberLight01_left"    filename="$data/shared/assets/lights/lizard/plateNumberLight01.xml" lightTypes="0"/>
+        <sharedLight linkNode="plateNumberLight01_right"   filename="$data/shared/assets/lights/lizard/plateNumberLight01.xml" lightTypes="0"/>
+        <sharedLight linkNode="sideMarker16Orange_01"      filename="$data/shared/assets/lights/lizard/sideMarker16Orange.xml" lightTypes="0"/>
+        <sharedLight linkNode="sideMarker16Orange_02"      filename="$data/shared/assets/lights/lizard/sideMarker16Orange.xml" lightTypes="0"/>
+        <sharedLight linkNode="sideMarker16Orange_03"      filename="$data/shared/assets/lights/lizard/sideMarker16Orange.xml" lightTypes="0"/>
+        <sharedLight linkNode="sideMarker16Orange_04"      filename="$data/shared/assets/lights/lizard/sideMarker16Orange.xml" lightTypes="0"/>
+        <sharedLight linkNode="sideMarker16Orange_05"      filename="$data/shared/assets/lights/lizard/sideMarker16Orange.xml" lightTypes="0"/>
+        <sharedLight linkNode="sideMarker16Orange_06"      filename="$data/shared/assets/lights/lizard/sideMarker16Orange.xml" lightTypes="0"/>
+        <sharedLight linkNode="sideMarker16Orange_07"      filename="$data/shared/assets/lights/lizard/sideMarker16Orange.xml" lightTypes="0"/>
+        <sharedLight linkNode="sideMarker16Orange_08"      filename="$data/shared/assets/lights/lizard/sideMarker16Orange.xml" lightTypes="0"/>
+
+        <realLights>
+            <high>
+                <light node="backLightsHigh1"       lightTypes="0"/>
+                <light node="licensePlateLightHigh" lightTypes="0"/>
+                <brakeLight node="backLightsHigh1"/>
+                <turnLightLeft  node="turnLightLeftBack" />
+                <turnLightRight node="turnLightRightBack" />
+                <reverseLight node="reverseLightHigh1" />
+            </high>
+        </realLights>
+    </lights>
+
+    <connectionHoses>
+        <hose inputAttacherJointIndices="1" type="electric"  node="electric"  length="0.8" diameter="0.016" straighteningFactor="0.5" isTwoPointHose="true" adapterNode="electric_connector">
+            <objectChange node="electric_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="airDoubleRed"  node="hydraulicIn01"  length="0.8" diameter="0.016" straighteningFactor="0.5" isTwoPointHose="true" adapterNode="airRedConnector">
+            <objectChange node="hydraulicIn01_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="airDoubleYellow" node="hydraulicOut01" length="0.7" diameter="0.016" straighteningFactor="0.5" isTwoPointHose="true" adapterNode="airYellowConnector">
+            <objectChange node="hydraulicOut01_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <sounds>
+            <connect    type="airDoubleRed" template="hydraulicHosesAttach" volumeScale="0.7" linkNode="attacherJoint"/>
+            <connect    type="electric"     template="generalConnection"    volumeScale="0.7" linkNode="attacherJoint"/>
+            <disconnect type="airDoubleRed" template="hydraulicHosesDetach" volumeScale="0.7" linkNode="attacherJoint"/>
+            <disconnect type="electric"     template="generalConnection"    volumeScale="0.7" linkNode="attacherJoint"/>
+        </sounds>
+    </connectionHoses>
+
+    <animations>
+        <animation name="lockDrawbarLimit">
+            <part componentJointIndex="2" startTime="0.0" endTime="0.1" startRotLimit="60 0 0" endRotLimit="0 0 0"/>
+        </animation>
+    </animations>
+
+    <cylindered>
+        <movingParts>
+            <movingPart node="spring" referencePoint="springRef" referenceFrame="springRef" scaleZ="true" isActiveDirty="true" maxUpdateDistance="60"/>
+        </movingParts>
+        <sounds>
+            <hydraulic template="hydraulicOpen02" linkNode="mks8_main_component1"/>
+        </sounds>
+    </cylindered>
+
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits>
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypes="MILK BUFFALOMILK WATER LIQUIDFERTILIZER HERBICIDE LIQUIDLIME" capacity="8000" allowAILoading="true">
+                        <exactFillRootNode node="exactFillRootNode" />
+                    </fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit>
+
+    <fillTriggerVehicle triggerNode="fillTrigger" fillUnitIndex="1" litersPerSecond="350"/>
+
+    <dischargeable>
+        <dischargeNode node="dischargeNode" emptySpeed="450" fillUnitIndex="1" canDischargeToGround="false" allowAIDischarge="true">
+            <info width="1.0" length="0.5" zOffset="0.4" />
+            <trigger node="dischargeTrigger" />
+        </dischargeNode>
+    </dischargeable>
+
+    <waterTrailer fillUnitIndex="1" fillLitersPerSecond="450" fillNode="mks8_main_component1">
+        <sounds>
+            <refill template="defaultRefuelSound" linkNode="0>" />
+        </sounds>
+    </waterTrailer>
+
+    <foliageBending>
+        <bendingNode minX="-1.15" maxX="1.15" minZ="-2.3" maxZ="2.3" yOffset="0.6"/>
+        <bendingNode minX="-0.3" maxX="0.3" minZ="-0.5" maxZ="1.6" yOffset="-0.05" node="mks8_drawbar_component3"/>
+    </foliageBending>
+
+    <baseColorConfigurations>
+        <baseColorConfiguration materialTemplateName="chrome"/>
+        <baseColorConfiguration materialTemplateName="silverScratched"/>
+        <baseColorConfiguration materialTemplateName="SHARED_WHITE2"/>
+        <baseColorConfiguration materialTemplateName="SHARED_BLACK2"/>
+
+        <material materialSlotName="body_mat"/>
+    </baseColorConfigurations>
+
+    <rimColorConfigurations>
+        <rimColorConfiguration materialTemplateName="RIM_CONFIGURATION_CHROME" price="1000"/>
+        <rimColorConfiguration materialTemplateName="RIM_DEFAULT"/>
+        <rimColorConfiguration materialTemplateName="RIM_CONFIGURATION_WHITE"/>
+        <rimColorConfiguration materialTemplateName="RIM_CONFIGURATION_BLACK"/>
+    </rimColorConfigurations>
+
+    <ai>
+        <agentAttachment jointNode="attacherJoint" rotCenterWheelIndices="1 2" width="2.23" height="3.45" length="2" lengthOffset="0.3" hasCollision="false"/>
+        <agentAttachment jointNode="componentJointFront" rotCenterWheelIndices="3 4" width="2.23" height="3.45" length="3.2" lengthOffset="0.565"/>
+    </ai>
+
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="2" fieldMultiplier="2"/>
+
+    <i3dMappings>
+        <i3dMapping id="mks8_main_component1" node="0>" />
+        <i3dMapping id="mks8_vis" node="0>0" />
+        <i3dMapping id="wheelBackLeft" node="0>0|0|0" />
+        <i3dMapping id="wheelBackRight" node="0>0|0|1" />
+        <i3dMapping id="rear5ChamberLight_02_Left" node="0>0|1|0|0" />
+        <i3dMapping id="rear5ChamberLight_02_Right" node="0>0|1|0|1" />
+        <i3dMapping id="sideMarker_01Left" node="0>0|1|0|2" />
+        <i3dMapping id="sideMarker_01Right" node="0>0|1|0|3" />
+        <i3dMapping id="plateNumberLight01_left" node="0>0|1|0|4" />
+        <i3dMapping id="plateNumberLight01_right" node="0>0|1|0|5" />
+        <i3dMapping id="sideMarker16Orange_01" node="0>0|1|0|6" />
+        <i3dMapping id="sideMarker16Orange_02" node="0>0|1|0|7" />
+        <i3dMapping id="sideMarker16Orange_03" node="0>0|1|0|8" />
+        <i3dMapping id="sideMarker16Orange_04" node="0>0|1|0|9" />
+        <i3dMapping id="sideMarker16Orange_05" node="0>0|1|0|10" />
+        <i3dMapping id="sideMarker16Orange_06" node="0>0|1|0|11" />
+        <i3dMapping id="sideMarker16Orange_07" node="0>0|1|0|12" />
+        <i3dMapping id="sideMarker16Orange_08" node="0>0|1|0|13" />
+        <i3dMapping id="turnLightLeftBack" node="0>0|1|1|0" />
+        <i3dMapping id="turnLightRightBack" node="0>0|1|1|1" />
+        <i3dMapping id="backLightsHigh1" node="0>0|1|2|0" />
+        <i3dMapping id="licensePlateLightHigh" node="0>0|1|2|1" />
+        <i3dMapping id="reverseLightHigh1" node="0>0|1|3|0" />
+        <i3dMapping id="licensePlateBack" node="0>0|2" />
+        <i3dMapping id="exactFillRootNode" node="0>0|3|0" />
+        <i3dMapping id="fillTrigger" node="0>0|3|1" />
+        <i3dMapping id="dischargeNode" node="0>0|3|2" />
+        <i3dMapping id="dischargeTrigger" node="0>0|3|3" />
+        <i3dMapping id="mks8_dolly_component2" node="1>" />
+        <i3dMapping id="wheelFrontLeft" node="1>0" />
+        <i3dMapping id="wheelFrontRight" node="1>1" />
+        <i3dMapping id="componentJointFront" node="1>2" />
+        <i3dMapping id="dolly_vis" node="1>3" />
+        <i3dMapping id="spring" node="1>4" />
+        <i3dMapping id="mks8_drawbar_component3" node="2>" />
+        <i3dMapping id="componentJointDrawbar" node="2>0" />
+        <i3dMapping id="electric" node="2>1|0" />
+        <i3dMapping id="electric_detached" node="2>1|0|0" />
+        <i3dMapping id="electric_connector" node="2>1|0|0|0" />
+        <i3dMapping id="hydraulicIn01" node="2>1|1" />
+        <i3dMapping id="hydraulicOut01_detached" node="2>1|1|0" />
+        <i3dMapping id="airRedConnector" node="2>1|1|0|0" />
+        <i3dMapping id="hydraulicOut01" node="2>1|2" />
+        <i3dMapping id="hydraulicIn01_detached" node="2>1|2|0" />
+        <i3dMapping id="airYellowConnector" node="2>1|2|0|0" />
+        <i3dMapping id="drawbar_vis" node="2>2" />
+        <i3dMapping id="attacherJoint" node="2>2|0" />
+        <i3dMapping id="springRef" node="2>2|1" />
+    </i3dMappings>
+</vehicle>

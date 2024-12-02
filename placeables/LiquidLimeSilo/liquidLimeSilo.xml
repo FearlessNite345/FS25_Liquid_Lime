@@ -72,7 +72,7 @@
         </unloadingStation>
 
         <storages>
-            <storage node="storage" fillTypes="LIQUIDLIME" capacity="140000" isExtension="false">
+            <storage node="storage" fillTypes="LIQUIDLIME" capacity="155000" isExtension="false">
                 <startFillLevel fillType="LIQUIDLIME" fillLevel="0" />
             </storage>
         </storages>

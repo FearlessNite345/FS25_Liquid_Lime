@@ -1,30 +1,30 @@
-main = {}
+LiquidLime = {}
 
 modDirectory = g_currentModDirectory or ""
 modName = g_currentModName or "unknown"
 
-function main:loadMap()
-    main:Log("========================================")
-    main:Log("Initializing LiquidLime Mod")
-    main:Log("========================================")
+function LiquidLime:loadMap()
+    LiquidLime:Log("========================================")
+    LiquidLime:Log("Initializing LiquidLime Mod")
+    LiquidLime:Log("========================================")
 
     local XMLDir = modDirectory .. "xml/sprayTypes.xml"
 
     if fileExists(XMLDir) then
-        main:Log("Found sprayTypes.xml at: " .. XMLDir)
+        LiquidLime:Log("Found sprayTypes.xml at: " .. XMLDir)
         local xmlFile = loadXMLFile("sprayTypes", XMLDir)
 
         local i = 0
         while true do
-            main:Log("Processing XML entry at index: " .. i)
+            LiquidLime:Log("Processing XML entry at index: " .. i)
             local xmlKey = string.format("map.sprayTypes.sprayType(%d)", i)
 
             if not hasXMLProperty(xmlFile, xmlKey) then
-                main:Log("No further entries found. Stopping processing.")
+                LiquidLime:Log("No further entries found. Stopping processing.")
                 break
             end
 
-            main:Log("Extracting data for sprayType at: " .. xmlKey)
+            LiquidLime:Log("Extracting data for sprayType at: " .. xmlKey)
             local name = getXMLString(xmlFile, xmlKey .. "#name")
             local litersPerSecond = getXMLFloat(xmlFile, xmlKey .. "#litersPerSecond")
             local typeName = getXMLString(xmlFile, xmlKey .. "#type")
@@ -33,30 +33,30 @@ function main:loadMap()
             )
 
             if name and litersPerSecond and typeName and sprayGroundType then
-                main:Log("Adding SprayType - Name: " .. name .. ", Liters/Sec: " .. litersPerSecond .. ", Type: " .. typeName)
+                LiquidLime:Log("Adding SprayType - Name: " .. name .. ", Liters/Sec: " .. litersPerSecond .. ", Type: " .. typeName)
                 local isBaseType = true
                 g_sprayTypeManager:addSprayType(name, litersPerSecond, typeName, sprayGroundType, isBaseType)
 
                 local materialHolderPath = modDirectory .. "material_holders/liquidLime_materialHolder.i3d"
-                main:Log("Adding MaterialHolder at: " .. materialHolderPath)
+                LiquidLime:Log("Adding MaterialHolder at: " .. materialHolderPath)
                 g_materialManager:addModMaterialHolder(materialHolderPath)
             else
-                main:Log("ERROR: Missing or invalid data for sprayType at: " .. xmlKey)
+                LiquidLime:Log("ERROR: Missing or invalid data for sprayType at: " .. xmlKey)
             end
 
             i = i + 1
         end
     else
-        main:Log("ERROR: sprayTypes.xml not found at: " .. XMLDir)
+        LiquidLime:Log("ERROR: sprayTypes.xml not found at: " .. XMLDir)
     end
 
-    main:Log("========================================")
-    main:Log("LiquidLime Mod Initialization Complete")
-    main:Log("========================================")
+    LiquidLime:Log("========================================")
+    LiquidLime:Log("LiquidLime Mod Initialization Complete")
+    LiquidLime:Log("========================================")
 end
 
-function main:Log(msg)
+function LiquidLime:Log(msg)
     print(string.format("[%s] - %s", modName, msg))
 end
 
-addModEventListener(main)
+addModEventListener(LiquidLime)

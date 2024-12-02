@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="productionPoint" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>$l10n_name_liquidlimeproduction</name>
+        <functions>
+            <function>$l10n_function_liquidlimeproduction</function>
+        </functions>
+        <image>$data/placeables/brandless/productionPointsSmall/dairy/store_dairy.dds</image>
+        <price>42500</price>
+        <dailyUpkeep>100</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>TRUEEDGE</brand>
+        <species>PLACEABLE</species>
+        <category>productionPoints</category>
+        <brush>
+            <type>placeable</type>
+            <category>production</category>
+            <tab>factories</tab>
+        </brush>
+    </storeData>
+
+    <base>
+        <filename>placeables/LiquidLimeProduction/liquidLimeProduction.i3d</filename>
+        <canBeRenamed>true</canBeRenamed>
+        <boughtWithFarmland>false</boughtWithFarmland>
+    </base>
+
+    <placement useRandomYRotation="false" useManualYRotation="true" >
+        <testAreas>
+            <testArea startNode="testAreaStart01" endNode="testAreaEnd01" />
+        </testAreas>
+        <sounds>
+            <place template="smallImp"/>
+        </sounds>
+    </placement>
+
+    <clearAreas>
+        <clearArea startNode="clearAreaStart01" widthNode="clearAreaWidth01" heightNode="clearAreaHeight01"/>
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="10" maxSlope="75" maxEdgeAngle="30" >
+        <levelAreas>
+            <levelArea startNode="levelAreaStart01" widthNode="levelAreaWidth01" heightNode="levelAreaHeight01" groundType="asphalt"/>
+        </levelAreas>
+        <paintAreas>
+            <paintArea startNode="paintAreaStart01" widthNode="paintAreaWidth01" heightNode="paintAreaHeight01" groundType="asphalt"/>
+        </paintAreas>
+    </leveling>
+
+    <indoorAreas>
+        <indoorArea startNode="indoorAreaStart01" widthNode="indoorAreaWidth01" heightNode="indoorAreaHeight01" />
+    </indoorAreas>
+
+    <tipOcclusionUpdateAreas>
+        <tipOcclusionUpdateArea startNode="tipOcclusionUpdateAreaStart01" endNode="tipOcclusionUpdateAreaEnd01" />
+    </tipOcclusionUpdateAreas>
+
+    <ai>
+        <updateAreas>
+            <updateArea startNode="tipOcclusionUpdateAreaStart01" endNode="tipOcclusionUpdateAreaEnd01" />
+        </updateAreas>
+    </ai>
+
+    <infoTrigger triggerNode="infoTrigger"/>
+
+    <hotspots>
+        <hotspot type="PRODUCTION_POINT" linkNode="unloadTriggerMarker" teleportNode="playerTriggerMarker" />
+    </hotspots>
+
+    <dynamicallyLoadedParts>
+        <dynamicallyLoadedPart node="0" linkNode="lightSwitch01" filename="$data/shared/assets/lights/rudolfHormann/powerSwitch.i3d" />
+    </dynamicallyLoadedParts>
+
+    <triggerMarkers>
+        <triggerMarker node="warningStripes01"/>
+        <triggerMarker node="warningStripes02"/>
+        <triggerMarker node="unloadTriggerMarker" adjustToGround="true" filename="$data/shared/assets/marker/markerIconUnload.i3d"/>
+        <triggerMarker node="playerTriggerMarker" adjustToGround="true" filename="$data/shared/assets/marker/markerIconWrench.i3d"/>
+    </triggerMarkers>
+
+    <lights>
+        <sharedLight filename="$data/shared/assets/lights/terraLed/fluorescentTube50W.xml" linkNode="lightNode01" groupIndex="1"/>
+
+        <realLights>
+            <low>
+                <light node="realLightsLow" groupIndex="1"/>
+            </low>
+            <high>
+                <light node="realLightsHigh" groupIndex="1"/>
+            </high>
+        </realLights>
+
+        <group name="$l10n_action_placeableLightShed" triggerNode="lightTrigger01">
+            <sounds>
+                <toggle template="lizardFloodLight" innerRadius="3" outerRadius="15" volumeScale="0.2"/>
+            </sounds>
+        </group>
+    </lights>
+
+    <productionPoint>
+        <productions>
+            <production id="lime_water_liquidlime" name="%s" params="$l10n_filltype_liquidlime" cyclesPerHour="4" costsPerActiveHour="52">
+                <inputs>
+                    <input fillType="LIME" amount="80" />
+                    <input fillType="WATER" amount="140" />
+                </inputs>
+                <outputs>
+                    <output fillType="LIQUIDLIME" amount="200" />
+                </outputs>
+            </production>
+        </productions>
+
+        <storage isExtension="false" fillLevelSyncThreshold="50">
+            <capacity fillType="WATER"            capacity="20000" />
+            <capacity fillType="LIME"                capacity="20000" />
+            <capacity fillType="LIQUIDLIME"         capacity="10000" />
+        </storage>
+
+        <sellingStation node="sellingStation" supportsExtension="false" allowMissions="false">
+            <unloadTrigger exactFillRootNode="exactFillNode" aiNode="unloadTriggerAINode" fillTypes="WATER LIME"/>
+            <palletTrigger triggerNode="palletTrigger" fillTypes="LIME"/>
+        </sellingStation>
+
+        <palletSpawner>
+            <spawnPlaces>
+                <spawnPlace startNode="palletAreaStart01" endNode="palletAreaEnd01"/>
+            </spawnPlaces>
+        </palletSpawner>
+
+        <playerTrigger node="playerTrigger" />
+        <sounds>
+            <idle   template="placeableSmallIdleGeneric" linkNode="0>"/>
+            <active template="dairyWork" linkNode="0>" pitchScale="1.2" innerRadius="2" outerRadius="15" volumeScale="0.9"/>
+        </sounds>
+    </productionPoint>
+
+    <i3dMappings>
+        <i3dMapping id="clearAreaStart01" node="0>0|0" />
+        <i3dMapping id="clearAreaWidth01" node="0>0|0|0" />
+        <i3dMapping id="clearAreaHeight01" node="0>0|0|1" />
+        <i3dMapping id="levelAreaStart01" node="0>1|0" />
+        <i3dMapping id="levelAreaWidth01" node="0>1|0|0" />
+        <i3dMapping id="levelAreaHeight01" node="0>1|0|1" />
+        <i3dMapping id="paintAreaStart01" node="0>2|0" />
+        <i3dMapping id="paintAreaWidth01" node="0>2|0|0" />
+        <i3dMapping id="paintAreaHeight01" node="0>2|0|1" />
+        <i3dMapping id="indoorAreaStart01" node="0>3|0" />
+        <i3dMapping id="indoorAreaWidth01" node="0>3|0|0" />
+        <i3dMapping id="indoorAreaHeight01" node="0>3|0|1" />
+        <i3dMapping id="testAreaStart01" node="0>4|0" />
+        <i3dMapping id="testAreaEnd01" node="0>4|0|0" />
+        <i3dMapping id="tipOcclusionUpdateAreaStart01" node="0>5|0" />
+        <i3dMapping id="tipOcclusionUpdateAreaEnd01" node="0>5|0|0" />
+        <i3dMapping id="realLightsLow" node="0>6|0|0" />
+        <i3dMapping id="realLightsHigh" node="0>6|0|1" />
+        <i3dMapping id="lightNode01" node="0>6|1|0" />
+        <i3dMapping id="lightSwitch01" node="0>6|2" />
+        <i3dMapping id="lightTrigger01" node="0>6|3" />
+        <i3dMapping id="infoTrigger" node="0>7" />
+        <i3dMapping id="sellingStation" node="0>8" />
+        <i3dMapping id="exactFillNode" node="0>8|0" />
+        <i3dMapping id="palletTrigger" node="0>8|1" />
+        <i3dMapping id="unloadTriggerMarker" node="0>8|2" />
+        <i3dMapping id="unloadTriggerAINode" node="0>8|3" />
+        <i3dMapping id="playerTrigger" node="0>9|0" />
+        <i3dMapping id="playerTriggerMarker" node="0>9|1" />
+        <i3dMapping id="warningStripes01" node="0>10|0" />
+        <i3dMapping id="warningStripes02" node="0>10|1" />
+        <i3dMapping id="palletSpawner" node="0>11" />
+        <i3dMapping id="palletAreaStart01" node="0>11|0" />
+        <i3dMapping id="palletAreaEnd01" node="0>11|0|0" />
+    </i3dMappings>
+</placeable>

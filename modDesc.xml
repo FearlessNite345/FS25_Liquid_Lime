@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="92">
+<modDesc descVersion="93">
   <author>FearlessStudios</author>
-  <version>1.0.0.0</version>
+  <version>1.1.0.0</version>
   <title>
     <en>Liquid Lime</en>
     <de>Flüssigkalk</de>
@@ -14,6 +14,8 @@
 
 Revolutionize your farming experience with Liquid Lime, specially formulated for use with sprayers.
 
+NOTE: This is not working correctly with helpers so please do not use them with Liquid Lime. (Looking into a way to make them work correctly if it is possible)
+
 Key Features:
 - Liquid Lime Fill Type:
   - Adds Liquid Lime to the game as a new material compatible with sprayers.
@@ -23,15 +25,28 @@ Items:
   - Capacity: 2000 liters
   - Price: $900
 - Meridian Liquid Lime Silo:
-  - Capacity: 140,000 liters
+  - Capacity: 155,000 liters
   - Price: $46,500
   - Daily upkeep: $100
+- TrueEdge Liquid Lime Production:
+  - Price: $42,500
+  - Daily upkeep: $100
+  - Liquid Lime recipe: LIME and WATER
 
-Liquid Lime provides a practical and efficient solution for soil treatment, aiming to replicate the characteristics of real liquid lime as closely as possible.]]>
+Liquid Lime provides a practical and efficient solution for soil treatment, aiming to replicate the characteristics of real liquid lime as closely as possible.
+
+Please report any issues you may have here: https://github.com/FearlessNite345/FS25_Liquid_Lime/issues
+
+Changelog v1.1.0.0:
+- Added a new production to produce Liquid Lime with Lime and Water. (This can bring cost savings)
+- Increased the Liquid Lime Silo storage capacity from 140,000 liters to 155,000 liters.
+- Added Liquid Lime to mks8 & mks32. (these are under my custom brand TrueEdge.)]]>
     </en>
     <de><![CDATA[Flüssigkalk
 
 Revolutionieren Sie Ihr Farming-Erlebnis mit Flüssigkalk, speziell entwickelt für den Einsatz mit Sprühgeräten.
+
+HINWEIS: Dies funktioniert nicht korrekt mit Helfern, daher verwenden Sie diese bitte nicht mit Liquid Lime.
 
 Hauptmerkmale:
 - Flüssigkalk-Fülltyp:
@@ -42,15 +57,28 @@ Objekte:
   - Kapazität: 2000 Liter
   - Preis: 900 €
 - Meridian Flüssigkalk-Silo:
-  - Kapazität: 140.000 Liter
+  - Kapazität: 155.000 Liter
   - Preis: 46.500 €
   - Täglicher Unterhalt: 100 €
+-TrueEdge Flüssigkalkproduktion:
+  - Preis: 42.500 $
+  - Täglicher Unterhalt: 100 €
+  - Rezept für Flüssigkalk: KALK und WASSER
 
-Flüssigkalk bietet eine praktische und effiziente Lösung zur Bodenbehandlung und wurde entwickelt, um die Eigenschaften von echtem Flüssigkalk so genau wie möglich nachzubilden.]]>
+Flüssigkalk bietet eine praktische und effiziente Lösung zur Bodenbehandlung und wurde entwickelt, um die Eigenschaften von echtem Flüssigkalk so genau wie möglich nachzubilden.
+
+Bitte melden Sie alle Probleme hier: https://github.com/FearlessNite345/FS25_Liquid_Lime/issues
+
+Änderungsprotokoll v1.1.0.0:
+- Neue Produktion hinzugefügt, um Liquid Lime mit Kalk und Wasser herzustellen. (Dies kann Kosteneinsparungen bringen)
+- Erhöhung der Lagerkapazität des Liquid Lime Silos von 140.000 Litern auf 155.000 Liter.
+- Liquid Lime zu mks8 und mks32 hinzugefügt. (Diese gehören zu meiner benutzerdefinierten Marke TrueEdge.)]]>
     </de>
     <fr><![CDATA[Chaux liquide
 
 Révolutionnez votre expérience agricole avec de la chaux liquide, spécialement conçue pour les pulvérisateurs.
+
+REMARQUE: Cela ne fonctionne pas correctement avec les assistants, veuillez donc ne pas les utiliser avec le Liquid Lime.
 
 Caractéristiques clés :
 - Type de remplissage de chaux liquide :
@@ -61,11 +89,22 @@ Objets :
   - Capacité : 2000 litres
   - Prix : 900 €
 - Meridian Silo à chaux liquide :
-  - Capacité : 140 000 litres
+  - Capacité : 155 000 litres
   - Prix : 46 500 €
   - Entretien quotidien : 100 €
+- Production de chaux liquide TrueEdge :
+  - Prix : 42 500 $
+  - Entretien quotidien : 100 €
+  - Recette de chaux liquide : CHAUX et EAU
 
-La chaux liquide offre une solution pratique et efficace pour le traitement des sols, reproduisant les caractéristiques de la véritable chaux liquide avec précision.]]>
+La chaux liquide offre une solution pratique et efficace pour le traitement des sols, reproduisant les caractéristiques de la véritable chaux liquide avec précision.
+
+Veuillez signaler tout problème ici : https://github.com/FearlessNite345/FS25_Liquid_Lime/issues
+
+Journal des modifications v1.1.0.0 :
+- Ajout d'une nouvelle production pour produire du Liquid Lime avec de la chaux et de l'eau. (Cela peut générer des économies de coûts)
+- Augmentation de la capacité de stockage du silo Liquid Lime de 140 000 litres à 155 000 litres.
+- Ajout du Liquid Lime aux mks8 et mks32. (Ces derniers font partie de ma marque personnalisée TrueEdge.)]]>
     </fr>
   </description>
   
@@ -92,28 +131,31 @@ La chaux liquide offre une solution pratique et efficace pour le traitement des 
       <fr>Le silo à chaux liquide offre des capacités de stockage et de remplissage pour la chaux liquide.</fr>
       <cz>Silo na tekuté vápno poskytuje možnosti skladování a doplňování tekutého vápna.</cz>
     </text>
-    <text name="function_liquidlimefacility">
-      <en>Liquid Lime Production Facility allows the creation of Liquid Lime using water and stones.</en>
-      <de>Flüssigkalk-Produktionsanlage ermöglicht die Herstellung von Flüssigkalk aus Wasser und Steinen.</de>
-      <fr>L'installation de production de chaux liquide permet la création de chaux liquide en utilisant de l'eau et des pierres.</fr>
-      <cz>Zařízení na výrobu tekutého vápna umožňuje vytvořit tekuté vápno pomocí vody a kamenů.</cz>
+    <text name="function_liquidlimeproduction">
+      <en>You can make Liquid Lime or Lime using water and stones.</en>
+      <de>Sie können Flüssigkalk oder Kalk mit Wasser und Steinen herstellen.</de>
+      <fr>Vous pouvez fabriquer de la chaux liquide ou de la chaux avec de l'eau et des pierres.</fr>
+      <cz>Pomocí vody a kamenů můžete vyrobit tekuté vápno nebo vápno.</cz>
     </text>
     <text name="name_liquidlimeproduction">
-      <en>Liquid Lime Production Facility</en>
-      <de>Flüssigkalk-Produktionsanlage</de>
-      <fr>Installation de Production de Chaux Liquide</fr>
-      <cz>Zařízení na výrobu tekutého vápna</cz>
+      <en>Liquid Lime Production</en>
+      <de>Flüssigkalkproduktion</de>
+      <fr>Production de Chaux Liquide</fr>
+      <cz>Výroba tekutého vápna</cz>
     </text>
   </l10n>
 
   <extraSourceFiles>
-    <sourceFile filename="scripts/main.lua" />
+    <sourceFile filename="scripts/LiquidLime.lua" />
   </extraSourceFiles>
 
   <storeItems>
     <storeItem xmlFilename="objects/LiquidLimeTank/multiPurchaseLiquidTank_liquidLimeTank.xml" />
     <storeItem xmlFilename="objects/LiquidLimeTank/liquidLimeTank.xml" />
     <storeItem xmlFilename="placeables/LiquidLimeSilo/liquidLimeSilo.xml" />
+    <storeItem xmlFilename="placeables/LiquidLimeProduction/liquidLimeProduction.xml" />
+    <storeItem xmlFilename="vehicles/trueedge_mks8/trueedge_mks8.xml" />
+    <storeItem xmlFilename="vehicles/trueedge_mks32/trueedge_mks32.xml" />
   </storeItems>
 
   <brands>

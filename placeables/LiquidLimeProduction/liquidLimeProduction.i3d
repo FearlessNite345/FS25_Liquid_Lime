@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="liquidLimeProduction.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.3"/>
+  </Asset>
+
+  <Files>
+    <File fileId="11" filename="$data/placeables/brandless/productionPointsSmall/dairy/dairy_diffuse.png"/>
+    <File fileId="12" filename="$data/placeables/brandless/productionPointsSmall/dairy/dairy_normal.png"/>
+    <File fileId="13" filename="$data/placeables/brandless/productionPointsSmall/dairy/dairy_specular.png"/>
+    <File fileId="5" filename="$data/placeables/brandless/productionPointsSmall/productionPointsShed_diffuse.png"/>
+    <File fileId="6" filename="$data/placeables/brandless/productionPointsSmall/productionPointsShed_normal.png"/>
+    <File fileId="7" filename="$data/placeables/brandless/productionPointsSmall/productionPointsShed_specular.png"/>
+    <File fileId="8" filename="$data/shaders/placeableShader.xml"/>
+    <File fileId="2" filename="$data/shared/warningStripes_diffuse.png"/>
+    <File fileId="3" filename="$data/shared/warningStripes_normal.png"/>
+    <File fileId="4" filename="$data/shared/warningStripes_specular.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="dairy_mat" materialId="5">
+      <Texture fileId="11"/>
+      <Normalmap fileId="12"/>
+      <Glossmap fileId="13"/>
+    </Material>
+    <Material name="lambert1" materialId="6" diffuseColor="0.501961 0.501961 0.501961 1">
+    </Material>
+    <Material name="productionPointsShed_mat" materialId="7" customShaderId="8">
+      <Texture fileId="5"/>
+      <Normalmap fileId="6"/>
+      <Glossmap fileId="7"/>
+    </Material>
+    <Material name="warningStripes_mat" materialId="8">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="liquidLimeProduction.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="liquidLimeShed" lockedgroup="true" clipDistance="125" nodeId="21">
+      <TransformGroup name="clearAreas" nodeId="22">
+        <TransformGroup name="clearAreaStart01" translation="-4.25 0 -4" nodeId="23">
+          <TransformGroup name="clearAreaWidth01" translation="0 0 5.5" nodeId="24"/>
+          <TransformGroup name="clearAreaHeight01" translation="8.5 0 0" nodeId="25"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="levelAreas" nodeId="26">
+        <TransformGroup name="levelAreaStart01" translation="-4.25 0 -4" nodeId="27">
+          <TransformGroup name="levelAreaWidth01" translation="0 0 5.5" nodeId="28"/>
+          <TransformGroup name="levelAreaHeight01" translation="8.5 0 0" nodeId="29"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="paintAreas" nodeId="30">
+        <TransformGroup name="paintAreaStart01" translation="-4.25 0 -4" nodeId="31">
+          <TransformGroup name="paintAreaWidth01" translation="0 0 5.5" nodeId="32"/>
+          <TransformGroup name="paintAreaHeight01" translation="8.5 0 0" nodeId="33"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="indoorAreas" nodeId="34">
+        <TransformGroup name="indoorAreaStart01" translation="-4.25 0 -4" nodeId="35">
+          <TransformGroup name="indoorAreaWidth01" translation="0 0 5.5" nodeId="36"/>
+          <TransformGroup name="indoorAreaHeight01" translation="8.5 0 0" nodeId="37"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="testAreas" nodeId="38">
+        <TransformGroup name="testAreaStart01" translation="-4.25 0 -4" nodeId="39">
+          <TransformGroup name="testAreaEnd01" translation="8.5 3.5 5.5" nodeId="40"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="tipOcclusionUpdateAreas" nodeId="41">
+        <TransformGroup name="tipOcclusionUpdateAreaStart01" translation="-4.25 0 -4" nodeId="42">
+          <TransformGroup name="tipOcclusionUpdateAreaEnd01" translation="8.5 0 5.5" nodeId="43"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="lights" nodeId="44">
+        <TransformGroup name="realLights" nodeId="45">
+          <TransformGroup name="realLightsLow" nodeId="46">
+            <Light name="pointLightLow01" translation="0.015313 2.81613 -0.053123" clipDistance="75" nodeId="47" type="point" color="0.44 0.4 0.4" emitDiffuse="true" emitSpecular="true" range="7"/>
+          </TransformGroup>
+          <TransformGroup name="realLightsHigh" nodeId="48">
+            <Light name="spotLightHigh01" translation="0.015313 2.81613 -0.053123" rotation="-90 0 0" clipDistance="75" nodeId="49" type="spot" color="0.55 0.5 0.5" emitDiffuse="true" emitSpecular="true" range="18" coneAngle="120" dropOff="4"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="linkedLights" nodeId="50">
+          <TransformGroup name="lightNode01" translation="0.015313 2.81613 -0.053123" rotation="90 74.8 90" nodeId="51"/>
+        </TransformGroup>
+        <TransformGroup name="lightSwitch01" translation="0.019471 1.5 -1.40763" scale="0.5 0.5 0.5" static="true" collisionFilterMask="0xfffffbff" nodeId="52"/>
+        <Shape name="lightTrigger01" translation="0 1 -1.5" shapeId="1" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x110000" nodeId="53" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
+      </TransformGroup>
+      <Shape name="infoTrigger" translation="0 0 -1.25" shapeId="2" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x100000" nodeId="54" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
+      <TransformGroup name="sellingStation" nodeId="55">
+        <Shape name="exactFillNode" translation="-2.75 0.15 -2.75" shapeId="3" kinematic="true" compound="true" collisionFilterGroup="0x40000000" collisionFilterMask="0x20000000" nodeId="56" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
+        <Shape name="palletTrigger" translation="-2.75 2 -2.75" shapeId="4" kinematic="true" compound="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x10000" nodeId="57" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
+        <TransformGroup name="unloadTriggerMarker" translation="-2.75 0 -2.75" nodeId="58"/>
+        <TransformGroup name="unloadTriggerAINode" translation="-2.75 0 -2.75" nodeId="59"/>
+      </TransformGroup>
+      <TransformGroup name="productionPoint" nodeId="60">
+        <Shape name="playerTrigger" translation="3 1 0" shapeId="1" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x100000" nodeId="61" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
+        <TransformGroup name="playerTriggerMarker" translation="3 1 0" nodeId="62"/>
+      </TransformGroup>
+      <TransformGroup name="warningStripes" nodeId="63">
+        <Shape name="warningStripes01" translation="-2.75021 0.01 -2.77507" shapeId="5" clipDistance="200" nodeId="64" castsShadows="true" receiveShadows="true" nonRenderable="true" terrainDecal="true" materialIds="8"/>
+        <Shape name="warningStripes02" translation="1.49979 0.01 -2.77507" shapeId="6" clipDistance="200" nodeId="65" castsShadows="true" receiveShadows="true" nonRenderable="true" terrainDecal="true" materialIds="8"/>
+      </TransformGroup>
+      <TransformGroup name="palletSpawner" nodeId="66">
+        <TransformGroup name="palletAreaStart01" translation="-0.5 0 -2.75" rotation="0 90 0" nodeId="67">
+          <TransformGroup name="palletAreaEnd01" translation="0 0 4.5" nodeId="68"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="visuals" nodeId="69">
+        <Shape name="liquidLimeShed" shapeId="7" nodeId="70" castsShadows="true" receiveShadows="true" materialIds="7"/>
+        <TransformGroup name="liquidLime_lod" lockedgroup="true" translation="0 0.071546 0" lodDistance="0 20" lodBlending="false" clipDistance="85" nodeId="71">
+          <Shape name="liquidLime_lod0" shapeId="8" nodeId="72" castsShadows="true" receiveShadows="true" materialIds="5"/>
+          <Shape name="liquidLime_lod1" shapeId="9" nodeId="73" castsShadows="true" receiveShadows="true" materialIds="5"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="collisions" nodeId="74">
+        <Shape name="collision" shapeId="10" static="true" collisionFilterGroup="0x1034" collisionFilterMask="0xfffffbff" density="0.0001" nodeId="75" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
+        <Shape name="tipCollision" translation="0 0 -1.25" shapeId="11" static="true" collisionFilterGroup="0x8" collisionFilterMask="0x1" nodeId="76" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="6"/>
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+</i3D>
