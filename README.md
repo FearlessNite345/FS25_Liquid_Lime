@@ -2,6 +2,9 @@
 
 ![Github All Releases](https://img.shields.io/github/downloads/FearlessNite345/FS25_Liquid_Lime/total.svg?style=for-the-badge)
 ![GitHub Downloads (all assets, latest release)](https://img.shields.io/github/downloads/fearlessnite345/FS25_Liquid_Lime/latest/total?style=for-the-badge)
+![Github Issues](https://img.shields.io/gitea/issues/all/fearlessnite345/FS25_Liquid_Lime?style=for-the-badge
+)
+
 
 Welcome to the **Liquid Lime Mod**! This mod introduces **Liquid Lime**, a sprayer-compatible material designed to enhance your farming experience with added realism.  
 
