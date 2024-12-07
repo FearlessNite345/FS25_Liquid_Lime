@@ -9,7 +9,9 @@ Welcome to the **Liquid Lime Mod**! This mod introduces **Liquid Lime**, a spray
 
 ## Official ModHub  
 
-**Update:** The mod is now live on the official ModHub! You can find it here: [Official ModHub Link](https://www.farming-simulator.com/mod.php?mod_id=304579).   
+**Update:** The mod is now live on the official ModHub! You can find it here: [Official ModHub Link](https://www.farming-simulator.com/mod.php?mod_id=304579).
+
+**Important Info:** ModHub release was forced to reset version number back to 1.0.0.0
 
 Thank you for your patience and support during the submission process. I’ve worked hard to meet ModHub's standards, and I’m thrilled to share the finalized version with you.  
 
