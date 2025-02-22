@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="93">
+<modDesc descVersion="94">
   <author>FearlessStudios</author>
   <version>1.1.0.0</version>
   <title>
@@ -40,7 +40,7 @@ Please report any issues you may have here: https://github.com/FearlessNite345/F
 Changelog v1.1.0.0:
 - Added a new production to produce Liquid Lime with Lime and Water. (This can bring cost savings)
 - Increased the Liquid Lime Silo storage capacity from 140,000 liters to 155,000 liters.
-- Added extra Trailer edits for trailers to carry Liquid Lime.]]>
+- Added Liquid Lime to Slurry Tanks.]]>
     </en>
     <de><![CDATA[Flüssigkalk
 
@@ -69,10 +69,10 @@ Flüssigkalk bietet eine praktische und effiziente Lösung zur Bodenbehandlung u
 
 Bitte melden Sie alle Probleme hier: https://github.com/FearlessNite345/FS25_Liquid_Lime/issues
 
-Änderungsprotokoll v1.1.0.0:
-- Neue Produktion hinzugefügt, um Liquid Lime mit Kalk und Wasser herzustellen. (Dies kann Kosteneinsparungen bringen)
-- Erhöhung der Lagerkapazität des Liquid Lime Silos von 140.000 Litern auf 155.000 Liter.
-- Zusätzliche Trailer-Bearbeitungen hinzugefügt, damit Anhänger Liquid Lime transportieren können.]]>
+Changelog v1.1.0.0:
+- Eine neue Produktion hinzugefügt, um Flüssigkalk aus Kalk und Wasser herzustellen. (Dies kann Kosteneinsparungen bringen)  
+- Die Lagerkapazität des Flüssigkalk-Silos von 140.000 Litern auf 155.000 Liter erhöht.  
+- Flüssigkalk zu Güllebehältern hinzugefügt.]]>
     </de>
     <fr><![CDATA[Chaux liquide
 
@@ -101,10 +101,10 @@ La chaux liquide offre une solution pratique et efficace pour le traitement des 
 
 Veuillez signaler tout problème ici : https://github.com/FearlessNite345/FS25_Liquid_Lime/issues
 
-Journal des modifications v1.1.0.0 :
-- Ajout d'une nouvelle production pour produire du Liquid Lime avec de la chaux et de l'eau. (Cela peut générer des économies de coûts)
-- Augmentation de la capacité de stockage du silo Liquid Lime de 140 000 litres à 155 000 litres.
-- Ajout d'éditions supplémentaires pour les remorques permettant de transporter du Liquid Lime.]]>
+Changelog v1.1.0.0 :
+- Ajout d'une nouvelle production pour fabriquer de la chaux liquide avec de la chaux et de l'eau. (Cela peut réduire les coûts)  
+- Augmentation de la capacité de stockage du silo à chaux liquide de 140 000 litres à 155 000 litres.  
+- Ajout de la chaux liquide aux cuves à lisier.]]>
     </fr>
   </description>
   
@@ -154,10 +154,6 @@ Journal des modifications v1.1.0.0 :
     <storeItem xmlFilename="objects/LiquidLimeTank/liquidLimeTank.xml" />
     <storeItem xmlFilename="placeables/LiquidLimeSilo/liquidLimeSilo.xml" />
     <storeItem xmlFilename="placeables/LiquidLimeProduction/liquidLimeProduction.xml" />
-    <storeItem xmlFilename="vehicles/trueedge_mks8/trueedge_mks8.xml" />
-    <storeItem xmlFilename="vehicles/trueedge_mks32/trueedge_mks32.xml" />
-    <storeItem xmlFilename="vehicles/abi_550/abi_550.xml" />
-    <storeItem xmlFilename="vehicles/abi_1600/abi_1600.xml" />
   </storeItems>
 
   <brands>

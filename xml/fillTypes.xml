@@ -13,6 +13,7 @@
     <fillTypeCategories>      
         <fillTypeCategory name="SPRAYER">LIQUIDLIME</fillTypeCategory>
         <fillTypeCategory name="LIQUID">LIQUIDLIME</fillTypeCategory>
+        <fillTypeCategory name="SLURRYTANK">LIQUIDLIME</fillTypeCategory>
     </fillTypeCategories>
 
     <fillTypeSounds>
