@@ -28,7 +28,7 @@
   <Scene>
     <TransformGroup name="sprayerEffects" nodeId="36">
       <TransformGroup name="materials" nodeId="37">
-        <Shape name="liquidLime_materialHolder" shapeId="1" clipDistance="10" nodeId="38" castsShadows="true" receiveShadows="true" materialIds="33"/>
+        <Shape name="liquidLime_materialHolder" shapeId="1" clipDistance="10" nodeId="38" castsShadows="false" receiveShadows="false" nonRenderable="true" materialIds="33"/>
       </TransformGroup>
     </TransformGroup>
   </Scene>

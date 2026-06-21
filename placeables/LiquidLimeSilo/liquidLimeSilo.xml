@@ -69,6 +69,7 @@
 
         <unloadingStation supportsExtension="false" >
             <unloadTrigger exactFillRootNode="exactFillRootNode" aiNode="unloadingStationAINode" fillTypes="LIQUIDLIME"/>
+            <palletTrigger triggerNode="palletTrigger" fillTypes="LIQUIDLIME"/>
         </unloadingStation>
 
         <storages>
@@ -103,6 +104,7 @@
         <i3dMapping id="tipOcclusionUpdateAreaEnd01" node="0>3|0|0" />
         <i3dMapping id="exactFillRootNode" node="0>4|0|0" />
         <i3dMapping id="unloadingStationAINode" node="0>4|0|1" />
+        <i3dMapping id="palletTrigger" node="0>4|0|2" />
         <i3dMapping id="loadingTrigger" node="0>4|1|0" />
         <i3dMapping id="loadingTriggerAINode" node="0>4|1|1" />
         <i3dMapping id="refillPlayerTrigger" node="0>4|2" />
