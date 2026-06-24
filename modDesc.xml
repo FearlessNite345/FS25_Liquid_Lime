@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="109">
+<modDesc descVersion="110">
   <author>FearlessStudios</author>
   <version>1.2.0.0</version>
   <title>
@@ -7,6 +7,7 @@
     <de>Flüssigkalk</de>
     <fr>Chaux Liquide</fr>
     <cz>Tekuté Vápno</cz>
+    <it>Calce Liquida</it>
   </title>
 
   <description>
@@ -38,7 +39,7 @@ Liquid Lime provides a practical and efficient solution for soil treatment, aimi
 Please report any issues you may have here: https://github.com/FearlessNite345/FS25_Liquid_Lime/issues
 
 Changelog v1.2.0.0:
-- Added built-in Precision Farming support for Liquid Lime.
+- Added built-in Precision Farming support for Liquid Lime. ThundRFS Precision Farming Configurator is no longer required for Liquid Lime support.
 - Added Precision Farming pH usage-rate scaling so Liquid Lime respects its configured spray rate.
 - Added runtime Precision Farming lime mapping so Liquid Lime is treated as lime only while PF code is processing it.
 - Added Precision Farming sprayer flag handling, cleaner pH HUD labeling, usage statistics, and improved spray effect handling for Liquid Lime.
@@ -51,6 +52,7 @@ Changelog v1.2.0.0:
 - Fixed duplicate spray type registration when another mod registers Liquid Lime first.
 - Updated the Liquid Lime material holder setup to reduce graphics pipeline errors.
 - Reduced Liquid Lime usage rate for better sprayer balance while keeping the same price.
+- Removed the old PF Configurator-specific modDesc config because Precision Farming support is now built in.
 - Removed broad slurry tank category support so slurry-only equipment does not unintentionally accept Liquid Lime.
 - Split the Lua code into smaller runtime, vehicle, Precision Farming, helper auto-buy, and registration modules.
 - Added a Czech mod description.]]>
@@ -74,7 +76,7 @@ Objekte:
   - Preis: 46.500 €
   - Täglicher Unterhalt: 100 €
 -TrueEdge Flüssigkalkproduktion:
-  - Preis: 42.500 €
+  - Preis: 42.500 $
   - Täglicher Unterhalt: 100 €
   - Rezept für Flüssigkalk: KALK und WASSER
 
@@ -83,7 +85,7 @@ Flüssigkalk bietet eine praktische und effiziente Lösung zur Bodenbehandlung u
 Bitte melden Sie alle Probleme hier: https://github.com/FearlessNite345/FS25_Liquid_Lime/issues
 
 Changelog v1.2.0.0:
-- Integrierte Precision-Farming-Unterstuetzung fuer Fluessigkalk hinzugefuegt.
+- Integrierte Precision-Farming-Unterstuetzung fuer Fluessigkalk hinzugefuegt. ThundRFS Precision Farming Configurator ist fuer Fluessigkalk nicht mehr erforderlich.
 - PF-Sprühtyp-Registrierung und Zuordnung für Flüssigkalk hinzugefügt.
 - Precision-Farming-Fallback hinzugefügt, damit Flüssigkalk für die pH-Anwendung wie Kalk behandelt wird.
 - Precision-Farming-Sprueher-Flags, sauberere Fluessigkalk-pH-HUD-Beschriftung, Verbrauchsstatistiken und verbesserte Sprueheffekte fuer Fluessigkalk hinzugefuegt.
@@ -96,6 +98,7 @@ Changelog v1.2.0.0:
 - Doppelte Sprühtyp-Registrierung verhindert, wenn ein anderes Mod Flüssigkalk zuerst registriert.
 - Material-Holder für Flüssigkalk angepasst, um Grafik-Pipeline-Fehler zu reduzieren.
 - Verbrauchsrate von Flüssigkalk für eine bessere Sprühgeräte-Balance reduziert, ohne den Preis zu ändern.
+- Alte PF-Configurator-spezifische modDesc-Konfiguration entfernt, da Precision-Farming-Unterstuetzung jetzt integriert ist.
 - Breite Guellefass-Kategorieunterstuetzung entfernt, damit reine Guellegeraete Fluessigkalk nicht unbeabsichtigt akzeptieren.
 - Lua-Code in kleinere Module fuer Runtime, Fahrzeuge, Precision Farming, Helfer-Autokauf und Registrierung aufgeteilt.
 - Tschechische Mod-Beschreibung hinzugefuegt.]]>
@@ -119,7 +122,7 @@ Objets :
   - Prix : 46 500 €
   - Entretien quotidien : 100 €
 - Production de chaux liquide TrueEdge :
-  - Prix : 42 500 €
+  - Prix : 42 500 $
   - Entretien quotidien : 100 €
   - Recette de chaux liquide : CHAUX et EAU
 
@@ -128,7 +131,7 @@ La chaux liquide offre une solution pratique et efficace pour le traitement des 
 Veuillez signaler tout problème ici : https://github.com/FearlessNite345/FS25_Liquid_Lime/issues
 
 Changelog v1.2.0.0:
-- Prise en charge Precision Farming integree pour la chaux liquide.
+- Prise en charge Precision Farming integree pour la chaux liquide. ThundRFS Precision Farming Configurator n'est plus requis pour la chaux liquide.
 - Enregistrement et mappage du type de pulvérisation PF pour la chaux liquide ajoutés.
 - Ajout d'un fallback Precision Farming pour traiter la chaux liquide comme de la chaux pour l'application du pH.
 - Ajout de la gestion des flags de pulverisateur PF, d'un libelle HUD pH plus clair, des statistiques de consommation et d'une meilleure gestion des effets de pulverisation pour la chaux liquide.
@@ -141,6 +144,7 @@ Changelog v1.2.0.0:
 - Correction de l'enregistrement en double du type de pulvérisation lorsqu'un autre mod enregistre Liquid Lime en premier.
 - Configuration du material holder de chaux liquide ajustée pour réduire les erreurs de pipeline graphique.
 - Réduction du taux de consommation de la chaux liquide pour un meilleur équilibre des pulvérisateurs, sans changer le prix.
+- Suppression de l'ancienne configuration modDesc specifique au PF Configurator, car la prise en charge Precision Farming est maintenant integree.
 - Suppression de la categorie large des citernes a lisier afin que les equipements uniquement prevus pour le lisier n'acceptent pas la chaux liquide par erreur.
 - Separation du code Lua en modules plus petits pour le runtime, les vehicules, Precision Farming, l'achat automatique assistant et l'enregistrement.
 - Ajout d'une description tcheque du mod.]]>
@@ -158,14 +162,14 @@ Hlavní funkce:
 Položky:
 - TrueEdge nádrž na Tekuté vápno:
   - Kapacita: 2000 litrů
-  - Cena: 900 €
+  - Cena: 900 $
 - Meridian silo na Tekuté vápno:
   - Kapacita: 155 000 litrů
-  - Cena: 46 500 €
-  - Denní údržba: 100 €
+  - Cena: 46 500 $
+  - Denní údržba: 100 $
 - TrueEdge výroba Tekutého vápna:
-  - Cena: 42 500 €
-  - Denní údržba: 100 €
+  - Cena: 42 500 $
+  - Denní údržba: 100 $
   - Recept na Tekuté vápno: VÁPNO a VODA
 
 Tekuté vápno nabízí praktické a efektivní řešení pro úpravu půdy a snaží se co nejvěrněji napodobit vlastnosti skutečného tekutého vápna.
@@ -173,7 +177,7 @@ Tekuté vápno nabízí praktické a efektivní řešení pro úpravu půdy a sn
 Problémy prosím hlaste zde: https://github.com/FearlessNite345/FS25_Liquid_Lime/issues
 
 Changelog v1.2.0.0:
-- Přidána vestavěná podpora Precision Farming pro Tekuté vápno.
+- Přidána vestavěná podpora Precision Farming pro Tekuté vápno. ThundRFS Precision Farming Configurator již není pro Tekuté vápno potřeba.
 - Přidáno škálování spotřeby pH v Precision Farming, aby Tekuté vápno respektovalo nastavenou aplikační dávku.
 - Přidáno runtime mapování vápna pro Precision Farming, takže se Tekuté vápno při zpracování PF chová jako vápno.
 - Přidáno zpracování příznaků postřikovače v Precision Farming, čistší popisek pH HUD, statistiky spotřeby a lepší zpracování efektů postřiku pro Tekuté vápno.
@@ -186,10 +190,57 @@ Changelog v1.2.0.0:
 - Opravena duplicitní registrace typu postřiku, když jiný mod zaregistruje Tekuté vápno jako první.
 - Aktualizováno nastavení material holderu pro Tekuté vápno kvůli omezení grafických chyb.
 - Snížena spotřeba Tekutého vápna pro lepší vyvážení postřikovačů při zachování stejné ceny.
+- Odstraněna stará konfigurace modDesc pro PF Configurator, protože podpora Precision Farming je nyní vestavěná.
 - Odstraněna široká podpora kategorie cisteren na kejdu, aby vybavení určené pouze pro kejdu nepřijímalo Tekuté vápno omylem.
 - Lua kód rozdělen do menších modulů pro runtime, vozidla, Precision Farming, automatický nákup pomocníkem a registraci.
 - Přidán český popis modu.]]>
     </cz>
+    <it><![CDATA[Calce Liquida
+
+Rivoluziona la tua esperienza agricola con la Calce Liquida, appositamente formulata per l'uso con gli irroratori.
+
+L'acquisto automatico dell'aiutante funziona quando la Calce Liquida è il tipo di riempimento selezionato o utilizzato per ultimo. Se un irroratore multiprodotto vuoto passa automaticamente al fertilizzante, carica una volta la Calce Liquida prima di avviare l'aiutante.
+
+Caratteristiche principali:
+- Tipo di riempimento Calce Liquida:
+  - Aggiunge la Calce Liquida al gioco come nuovo materiale compatibile con gli irroratori.
+
+Oggetti:
+- Serbatoio Calce Liquida TrueEdge:
+  - Capacità: 2.000 litri
+  - Prezzo: 900 $
+- Silo Calce Liquida Meridian:
+  - Capacità: 155.000 litri
+  - Prezzo: 46.500 $
+  - Manutenzione giornaliera: 100 $
+- Produzione Calce Liquida TrueEdge:
+  - Prezzo: 42.500 $
+  - Manutenzione giornaliera: 100 $
+  - Ricetta Calce Liquida: CALCE e ACQUA
+
+La Calce Liquida offre una soluzione pratica ed efficiente per il trattamento del suolo, cercando di replicare il più fedelmente possibile le caratteristiche della vera calce liquida.
+
+Segnala eventuali problemi qui: https://github.com/FearlessNite345/FS25_Liquid_Lime/issues
+
+Changelog v1.2.0.0:
+- Aggiunto supporto integrato a Precision Farming per la Calce Liquida. ThundRFS Precision Farming Configurator non è più necessario per la Calce Liquida.
+- Aggiunto il ridimensionamento della frequenza di utilizzo del pH in Precision Farming, in modo che la Calce Liquida rispetti la propria portata di spruzzatura configurata.
+- Aggiunta la mappatura runtime della calce in Precision Farming, così la Calce Liquida viene trattata come calce solo mentre il codice PF la elabora.
+- Aggiunta la gestione dei flag degli irroratori in Precision Farming, etichette HUD del pH più chiare, statistiche di utilizzo e gestione migliorata degli effetti di spruzzatura per la Calce Liquida.
+- Aggiunto supporto all'acquisto automatico da parte dell'aiutante/lavoratore IA per la Calce Liquida quando è il tipo di riempimento attivo o usato per ultimo.
+- Aggiunto supporto Lua al tipo di riempimento Calce Liquida per ABI 550, ABI 1600, Lizard MKS 8 e Lizard MKS 32 senza includere XML dei veicoli modificati.
+- Aggiunto lo scarico diretto dei contenitori IBC di Calce Liquida nel Silo di Calce Liquida.
+- Aggiunto il carico su rimorchio della Calce Liquida immagazzinata nella Produzione di Calce Liquida.
+- Ribilanciate la ricetta e le spese operative della Produzione di Calce Liquida per il nuovo tasso di utilizzo.
+- Migliorata la compatibilità con i server dedicati saltando il caricamento dei materiali lato client.
+- Corretta la registrazione duplicata del tipo di spruzzatura quando un altro mod registra per primo la Calce Liquida.
+- Aggiornata la configurazione del material holder della Calce Liquida per ridurre gli errori nella pipeline grafica.
+- Ridotto il tasso di utilizzo della Calce Liquida per un migliore bilanciamento degli irroratori mantenendo lo stesso prezzo.
+- Rimossa la vecchia configurazione modDesc specifica per PF Configurator poiché il supporto a Precision Farming è ora integrato.
+- Rimossa l'ampia categoria di cisterne per liquami, così le attrezzature destinate solo ai liquami non accettano per errore la Calce Liquida.
+- Suddiviso il codice Lua in moduli più piccoli per runtime, veicoli, Precision Farming, acquisto automatico dell'aiutante e registrazione.
+- Aggiunta una descrizione ceca del mod.]]>
+    </it>
   </description>
 
   <iconFilename>icon_liquidLime.dds</iconFilename>
@@ -202,30 +253,35 @@ Changelog v1.2.0.0:
       <de>Flüssigkalk</de>
       <fr>Chaux Liquide</fr>
       <cz>Tekuté Vápno</cz>
+      <it>Calce Liquida</it>
     </text>
     <text name="function_liquidlimepallet">
       <en>Liquid Lime Tank allows you to fill sprayers with Liquid Lime.</en>
       <de>Flüssigkalk-Tank ermöglicht das Befüllen von Sprühgeräten mit Flüssigkalk.</de>
       <fr>Le réservoir de chaux liquide permet de remplir les pulvérisateurs avec de la chaux liquide.</fr>
       <cz>Nádrž na tekuté vápno umožňuje plnit postřikovače tekutým vápnem.</cz>
+      <it>Il serbatoio di Calce Liquida consente di riempire gli irroratori con Calce Liquida.</it>
     </text>
     <text name="function_liquidlimesilo">
       <en>Liquid Lime Silo provides storage and refill capabilities for Liquid Lime.</en>
       <de>Flüssigkalk-Silo bietet Lagerung und Nachfüllmöglichkeiten für Flüssigkalk.</de>
       <fr>Le silo à chaux liquide offre des capacités de stockage et de remplissage pour la chaux liquide.</fr>
       <cz>Silo na tekuté vápno poskytuje možnosti skladování a doplňování tekutého vápna.</cz>
+      <it>Il silo di Calce Liquida offre capacità di stoccaggio e rifornimento per la Calce Liquida.</it>
     </text>
     <text name="function_liquidlimeproduction">
       <en>Produce Liquid Lime from lime and water, then load the output into compatible trailers.</en>
       <de>Produziere Flüssigkalk aus Kalk und Wasser und lade die Ausgabe in kompatible Anhänger.</de>
       <fr>Produisez de la chaux liquide avec de la chaux et de l'eau, puis chargez la production dans des remorques compatibles.</fr>
       <cz>Vyrábějte tekuté vápno z vápna a vody a poté výstup naložte do kompatibilních přívěsů.</cz>
+      <it>Produci Calce Liquida da calce e acqua, poi carica il prodotto in rimorchi compatibili.</it>
     </text>
     <text name="name_liquidlimeproduction">
       <en>Liquid Lime Production</en>
       <de>Flüssigkalkproduktion</de>
       <fr>Production de Chaux Liquide</fr>
       <cz>Výroba tekutého vápna</cz>
+      <it>Produzione di Calce Liquida</it>
     </text>
   </l10n>
 
