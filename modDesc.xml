@@ -39,7 +39,7 @@ Liquid Lime provides a practical and efficient solution for soil treatment, aimi
 Please report any issues you may have here: https://github.com/FearlessNite345/FS25_Liquid_Lime/issues
 
 Changelog v1.2.0.0:
-- Added built-in Precision Farming support for Liquid Lime. ThundRFS Precision Farming Configurator is no longer required for Liquid Lime support.
+- Added built-in Precision Farming support for Liquid Lime.
 - Added Precision Farming pH usage-rate scaling so Liquid Lime respects its configured spray rate.
 - Added runtime Precision Farming lime mapping so Liquid Lime is treated as lime only while PF code is processing it.
 - Added Precision Farming sprayer flag handling, cleaner pH HUD labeling, usage statistics, and improved spray effect handling for Liquid Lime.
@@ -76,7 +76,7 @@ Objekte:
   - Preis: 46.500 €
   - Täglicher Unterhalt: 100 €
 -TrueEdge Flüssigkalkproduktion:
-  - Preis: 42.500 $
+  - Preis: 42.500 €
   - Täglicher Unterhalt: 100 €
   - Rezept für Flüssigkalk: KALK und WASSER
 
@@ -85,7 +85,7 @@ Flüssigkalk bietet eine praktische und effiziente Lösung zur Bodenbehandlung u
 Bitte melden Sie alle Probleme hier: https://github.com/FearlessNite345/FS25_Liquid_Lime/issues
 
 Changelog v1.2.0.0:
-- Integrierte Precision-Farming-Unterstuetzung fuer Fluessigkalk hinzugefuegt. ThundRFS Precision Farming Configurator ist fuer Fluessigkalk nicht mehr erforderlich.
+- Integrierte Precision-Farming-Unterstuetzung fuer Fluessigkalk hinzugefuegt.
 - PF-Sprühtyp-Registrierung und Zuordnung für Flüssigkalk hinzugefügt.
 - Precision-Farming-Fallback hinzugefügt, damit Flüssigkalk für die pH-Anwendung wie Kalk behandelt wird.
 - Precision-Farming-Sprueher-Flags, sauberere Fluessigkalk-pH-HUD-Beschriftung, Verbrauchsstatistiken und verbesserte Sprueheffekte fuer Fluessigkalk hinzugefuegt.
@@ -122,7 +122,7 @@ Objets :
   - Prix : 46 500 €
   - Entretien quotidien : 100 €
 - Production de chaux liquide TrueEdge :
-  - Prix : 42 500 $
+  - Prix : 42 500 €
   - Entretien quotidien : 100 €
   - Recette de chaux liquide : CHAUX et EAU
 
@@ -131,7 +131,7 @@ La chaux liquide offre une solution pratique et efficace pour le traitement des 
 Veuillez signaler tout problème ici : https://github.com/FearlessNite345/FS25_Liquid_Lime/issues
 
 Changelog v1.2.0.0:
-- Prise en charge Precision Farming integree pour la chaux liquide. ThundRFS Precision Farming Configurator n'est plus requis pour la chaux liquide.
+- Prise en charge Precision Farming integree pour la chaux liquide.
 - Enregistrement et mappage du type de pulvérisation PF pour la chaux liquide ajoutés.
 - Ajout d'un fallback Precision Farming pour traiter la chaux liquide comme de la chaux pour l'application du pH.
 - Ajout de la gestion des flags de pulverisateur PF, d'un libelle HUD pH plus clair, des statistiques de consommation et d'une meilleure gestion des effets de pulverisation pour la chaux liquide.
@@ -162,14 +162,14 @@ Hlavní funkce:
 Položky:
 - TrueEdge nádrž na Tekuté vápno:
   - Kapacita: 2000 litrů
-  - Cena: 900 $
+  - Cena: 900 €
 - Meridian silo na Tekuté vápno:
   - Kapacita: 155 000 litrů
-  - Cena: 46 500 $
-  - Denní údržba: 100 $
+  - Cena: 46 500 €
+  - Denní údržba: 100 €
 - TrueEdge výroba Tekutého vápna:
-  - Cena: 42 500 $
-  - Denní údržba: 100 $
+  - Cena: 42 500 €
+  - Denní údržba: 100 €
   - Recept na Tekuté vápno: VÁPNO a VODA
 
 Tekuté vápno nabízí praktické a efektivní řešení pro úpravu půdy a snaží se co nejvěrněji napodobit vlastnosti skutečného tekutého vápna.
@@ -177,7 +177,7 @@ Tekuté vápno nabízí praktické a efektivní řešení pro úpravu půdy a sn
 Problémy prosím hlaste zde: https://github.com/FearlessNite345/FS25_Liquid_Lime/issues
 
 Changelog v1.2.0.0:
-- Přidána vestavěná podpora Precision Farming pro Tekuté vápno. ThundRFS Precision Farming Configurator již není pro Tekuté vápno potřeba.
+- Přidána vestavěná podpora Precision Farming pro Tekuté vápno.
 - Přidáno škálování spotřeby pH v Precision Farming, aby Tekuté vápno respektovalo nastavenou aplikační dávku.
 - Přidáno runtime mapování vápna pro Precision Farming, takže se Tekuté vápno při zpracování PF chová jako vápno.
 - Přidáno zpracování příznaků postřikovače v Precision Farming, čistší popisek pH HUD, statistiky spotřeby a lepší zpracování efektů postřiku pro Tekuté vápno.
@@ -208,14 +208,14 @@ Caratteristiche principali:
 Oggetti:
 - Serbatoio Calce Liquida TrueEdge:
   - Capacità: 2.000 litri
-  - Prezzo: 900 $
+  - Prezzo: 900 €
 - Silo Calce Liquida Meridian:
   - Capacità: 155.000 litri
-  - Prezzo: 46.500 $
-  - Manutenzione giornaliera: 100 $
+  - Prezzo: 46.500 €
+  - Manutenzione giornaliera: 100 €
 - Produzione Calce Liquida TrueEdge:
-  - Prezzo: 42.500 $
-  - Manutenzione giornaliera: 100 $
+  - Prezzo: 42.500 €
+  - Manutenzione giornaliera: 100 €
   - Ricetta Calce Liquida: CALCE e ACQUA
 
 La Calce Liquida offre una soluzione pratica ed efficiente per il trattamento del suolo, cercando di replicare il più fedelmente possibile le caratteristiche della vera calce liquida.
@@ -223,7 +223,7 @@ La Calce Liquida offre una soluzione pratica ed efficiente per il trattamento de
 Segnala eventuali problemi qui: https://github.com/FearlessNite345/FS25_Liquid_Lime/issues
 
 Changelog v1.2.0.0:
-- Aggiunto supporto integrato a Precision Farming per la Calce Liquida. ThundRFS Precision Farming Configurator non è più necessario per la Calce Liquida.
+- Aggiunto supporto integrato a Precision Farming per la Calce Liquida.
 - Aggiunto il ridimensionamento della frequenza di utilizzo del pH in Precision Farming, in modo che la Calce Liquida rispetti la propria portata di spruzzatura configurata.
 - Aggiunta la mappatura runtime della calce in Precision Farming, così la Calce Liquida viene trattata come calce solo mentre il codice PF la elabora.
 - Aggiunta la gestione dei flag degli irroratori in Precision Farming, etichette HUD del pH più chiare, statistiche di utilizzo e gestione migliorata degli effetti di spruzzatura per la Calce Liquida.
