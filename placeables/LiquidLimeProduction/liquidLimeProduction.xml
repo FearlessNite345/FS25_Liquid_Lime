@@ -76,6 +76,7 @@
         <triggerMarker node="warningStripes01"/>
         <triggerMarker node="warningStripes02"/>
         <triggerMarker node="unloadTriggerMarker" adjustToGround="true" filename="$data/shared/assets/marker/markerIconUnload.i3d"/>
+        <triggerMarker node="loadTriggerMarker" adjustToGround="true" filename="$data/shared/assets/marker/markerIconLoad.i3d"/>
         <triggerMarker node="playerTriggerMarker" adjustToGround="true" filename="$data/shared/assets/marker/markerIconWrench.i3d"/>
     </triggerMarkers>
 
@@ -100,10 +101,10 @@
 
     <productionPoint>
         <productions>
-            <production id="lime_water_liquidlime" name="%s" params="$l10n_filltype_liquidlime" cyclesPerHour="4" costsPerActiveHour="52">
+            <production id="lime_water_liquidlime" name="%s" params="$l10n_filltype_liquidlime" cyclesPerHour="4" costsPerActiveHour="80">
                 <inputs>
-                    <input fillType="LIME" amount="80" />
-                    <input fillType="WATER" amount="140" />
+                    <input fillType="LIME" amount="160" />
+                    <input fillType="WATER" amount="60" />
                 </inputs>
                 <outputs>
                     <output fillType="LIQUIDLIME" amount="200" />
@@ -121,6 +122,10 @@
             <unloadTrigger exactFillRootNode="exactFillNode" aiNode="unloadTriggerAINode" fillTypes="WATER LIME"/>
             <palletTrigger triggerNode="palletTrigger" fillTypes="LIME"/>
         </sellingStation>
+
+        <loadingStation node="loadingStation" supportsExtension="false">
+            <loadTrigger triggerNode="loadingTrigger" aiNode="loadingTriggerAINode" fillLitersPerSecond="200" dischargeNode="dischargeNode" fillTypes="LIQUIDLIME"/>
+        </loadingStation>
 
         <palletSpawner>
             <spawnPlaces>
@@ -163,6 +168,11 @@
         <i3dMapping id="palletTrigger" node="0>8|1" />
         <i3dMapping id="unloadTriggerMarker" node="0>8|2" />
         <i3dMapping id="unloadTriggerAINode" node="0>8|3" />
+        <i3dMapping id="loadingStation" node="0>14" />
+        <i3dMapping id="loadingTrigger" node="0>14|0" />
+        <i3dMapping id="dischargeNode" node="0>14|1" />
+        <i3dMapping id="loadingTriggerAINode" node="0>14|2" />
+        <i3dMapping id="loadTriggerMarker" node="0>14|3" />
         <i3dMapping id="playerTrigger" node="0>9|0" />
         <i3dMapping id="playerTriggerMarker" node="0>9|1" />
         <i3dMapping id="warningStripes01" node="0>10|0" />

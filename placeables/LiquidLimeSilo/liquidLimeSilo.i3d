@@ -74,6 +74,7 @@
         <TransformGroup name="unloadingStation" nodeId="39">
           <Shape name="exactFillRootNode" translation="0 -0.139137 4.49116" shapeId="1" static="true" collisionFilterGroup="0x40000000" collisionFilterMask="0x20000000" nodeId="40" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
           <TransformGroup name="unloadingStationAINode" translation="0 0 4.8" rotation="0 90 0" nodeId="41"/>
+          <Shape name="palletTrigger" translation="0 2.06123 4.5" shapeId="2" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x10000" nodeId="64" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
         </TransformGroup>
         <TransformGroup name="loadingStation" nodeId="42">
           <Shape name="loadingTrigger" translation="0 2.06123 4.5" shapeId="2" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x40000000" nodeId="43" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
