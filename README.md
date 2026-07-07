@@ -1,4 +1,4 @@
-# **Liquid Lime Mod - v1.2.0.0**
+# **Liquid Lime Mod - v1.3.0.0**
 
 Welcome to the **Liquid Lime Mod**! This mod introduces **Liquid Lime**, a sprayer-compatible material designed to enhance your farming experience with added realism.  
 
@@ -8,8 +8,8 @@ Welcome to the **Liquid Lime Mod**! This mod introduces **Liquid Lime**, a spray
 
 [Official ModHub Link](https://www.farming-simulator.com/mod.php?mod_id=304579).
 
-**Pending ModHub Version:** v1.2.0.0<br>
-**Current ModHub Version:** v1.1.0.0
+**Pending ModHub Version:** v1.3.0.0<br>
+**Current ModHub Version:** v1.2.0.0
 
 Stay tuned for future updates and fixes as needed! Please check the future plans outlined below.
 

@@ -25,7 +25,7 @@
       <Normalmap fileId="12"/>
       <Glossmap fileId="13"/>
     </Material>
-    <Material name="lambert1" materialId="6" diffuseColor="0.501961 0.501961 0.501961 1">
+    <Material name="liquidLimeProductionCollision_mat" materialId="6" diffuseColor="0.501961 0.501961 0.501961 1">
     </Material>
     <Material name="productionPointsShed_mat" materialId="7" customShaderId="8">
       <Texture fileId="5"/>

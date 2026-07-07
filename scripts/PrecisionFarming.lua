@@ -378,7 +378,6 @@ function LiquidLime:patchPrecisionFarmingEffectFillType(state, vehicle, liquidLi
 
     patchFillUnitFunction("getFillUnitFillType")
     patchFillUnitFunction("getFillUnitLastValidFillType")
-    patchFillUnitFunction("getFillUnitFirstSupportedFillType")
 end
 
 function LiquidLime:applyPrecisionFarmingSprayerFlags(state, vehicle)
@@ -452,7 +451,7 @@ function LiquidLime:patchPrecisionFarmingHudHeadline(state, hud)
         return
     end
 
-    local title = LiquidLime:getLiquidLimeTitle()
+    local title = LiquidLime:getLiquidLimeApplicationTitle()
 
     if title == nil or title == "" then
         return
@@ -499,30 +498,66 @@ function LiquidLime:getPrecisionFarmingFillSource(vehicle)
     return ExtendedSprayer.getFillTypeSourceVehicle(vehicle)
 end
 
-function LiquidLime:getFillUnitDetectedFillType(sourceVehicle, fillUnitIndex)
+function LiquidLime:isKnownFillType(fillType)
+    return fillType ~= nil and (FillType == nil or fillType ~= FillType.UNKNOWN)
+end
+
+function LiquidLime:getFillUnitFillContext(sourceVehicle, fillUnitIndex, sourceName)
     if sourceVehicle == nil or fillUnitIndex == nil then
         return nil
     end
 
-    local fillType = nil
+    local context = {
+        sourceName = sourceName,
+        sourceVehicle = sourceVehicle,
+        fillUnitIndex = fillUnitIndex,
+        currentFillType = nil,
+        lastValidFillType = nil,
+        fillLevel = nil,
+        hasKnownCurrentFillType = false,
+        hasKnownLastValidFillType = false,
+        hasLoadedFill = true,
+        canUseLastValidFillType = true
+    }
 
     if sourceVehicle.getFillUnitFillType ~= nil then
-        fillType = sourceVehicle:getFillUnitFillType(fillUnitIndex)
-
-        if FillType == nil or fillType ~= FillType.UNKNOWN then
-            return fillType
-        end
+        context.currentFillType = sourceVehicle:getFillUnitFillType(fillUnitIndex)
+        context.hasKnownCurrentFillType = LiquidLime:isKnownFillType(context.currentFillType)
     end
 
     if sourceVehicle.getFillUnitLastValidFillType ~= nil then
-        local lastValidFillType = sourceVehicle:getFillUnitLastValidFillType(fillUnitIndex)
+        context.lastValidFillType = sourceVehicle:getFillUnitLastValidFillType(fillUnitIndex)
+        context.hasKnownLastValidFillType = LiquidLime:isKnownFillType(context.lastValidFillType)
+    end
 
-        if lastValidFillType ~= nil and (FillType == nil or lastValidFillType ~= FillType.UNKNOWN) then
-            return lastValidFillType
+    if sourceVehicle.getFillUnitFillLevel ~= nil then
+        context.fillLevel = sourceVehicle:getFillUnitFillLevel(fillUnitIndex)
+
+        if context.fillLevel ~= nil then
+            context.hasLoadedFill = context.fillLevel > 0
         end
     end
 
-    return fillType
+    context.canUseLastValidFillType = not context.hasKnownCurrentFillType or not context.hasLoadedFill
+
+    if context.hasKnownCurrentFillType then
+        context.detectedFillType = context.currentFillType
+        context.detectedSource = "current"
+    elseif context.canUseLastValidFillType and context.hasKnownLastValidFillType then
+        context.detectedFillType = context.lastValidFillType
+        context.detectedSource = "lastValid"
+    else
+        context.detectedFillType = context.currentFillType
+        context.detectedSource = "unknown"
+    end
+
+    return context
+end
+
+function LiquidLime:getFillUnitDetectedFillType(sourceVehicle, fillUnitIndex)
+    local context = LiquidLime:getFillUnitFillContext(sourceVehicle, fillUnitIndex)
+
+    return context ~= nil and context.detectedFillType or nil
 end
 
 function LiquidLime:getPrecisionFarmingSourceFillType(vehicle)
@@ -531,58 +566,108 @@ function LiquidLime:getPrecisionFarmingSourceFillType(vehicle)
     return LiquidLime:getFillUnitDetectedFillType(sourceVehicle, fillUnitIndex)
 end
 
-function LiquidLime:getPrecisionFarmingSprayerSourceFillType(vehicle)
-    local sprayerSpec = vehicle ~= nil and vehicle.spec_sprayer or nil
+function LiquidLime:addPrecisionFarmingFillContext(contexts, fallbackContexts, sourceVehicle, fillUnitIndex, sourceName)
+    local context = LiquidLime:getFillUnitFillContext(sourceVehicle, fillUnitIndex, sourceName)
 
-    if sprayerSpec == nil then
+    if context == nil then
         return nil
     end
 
-    if vehicle.getSprayerFillUnitIndex ~= nil then
+    table.insert(contexts, context)
+
+    if context.canUseLastValidFillType and context.hasKnownLastValidFillType then
+        table.insert(fallbackContexts, context)
+    end
+
+    return context
+end
+
+function LiquidLime:addPrecisionFarmingFillTypeSourceContexts(contexts, fallbackContexts, fillTypeSources, sourceName)
+    if fillTypeSources == nil then
+        return
+    end
+
+    for _, sourceData in ipairs(fillTypeSources) do
+        if sourceData ~= nil then
+            LiquidLime:addPrecisionFarmingFillContext(
+                contexts,
+                fallbackContexts,
+                sourceData.vehicle,
+                sourceData.fillUnitIndex,
+                sourceName
+            )
+        end
+    end
+end
+
+function LiquidLime:getPrecisionFarmingOrderedFillContexts(vehicle)
+    local contexts = {}
+    local fallbackContexts = {}
+
+    local sourceVehicle, fillUnitIndex = LiquidLime:getPrecisionFarmingFillSource(vehicle)
+    LiquidLime:addPrecisionFarmingFillContext(contexts, fallbackContexts, sourceVehicle, fillUnitIndex, "precisionFarmingSource")
+
+    if vehicle ~= nil and vehicle.getSprayerFillUnitIndex ~= nil then
         local sprayerFillUnitIndex = vehicle:getSprayerFillUnitIndex()
 
-        if sprayerFillUnitIndex ~= nil then
-            local fillLevel = nil
+        LiquidLime:addPrecisionFarmingFillContext(contexts, fallbackContexts, vehicle, sprayerFillUnitIndex, "sprayerFillUnit")
+    end
 
-            if vehicle.getFillUnitFillLevel ~= nil then
-                fillLevel = vehicle:getFillUnitFillLevel(sprayerFillUnitIndex)
+    local sprayerSpec = vehicle ~= nil and vehicle.spec_sprayer or nil
+
+    if sprayerSpec ~= nil and sprayerSpec.fillTypeSources ~= nil then
+        if sprayerSpec.supportedSprayTypes ~= nil and #sprayerSpec.supportedSprayTypes > 0 then
+            for supportedIndex = 1, #sprayerSpec.supportedSprayTypes do
+                local sprayTypeIndex = sprayerSpec.supportedSprayTypes[supportedIndex]
+
+                LiquidLime:addPrecisionFarmingFillTypeSourceContexts(
+                    contexts,
+                    fallbackContexts,
+                    sprayerSpec.fillTypeSources[sprayTypeIndex],
+                    "sprayerSource"
+                )
             end
-
-            if fillLevel == nil or fillLevel > 0 then
-                local fillType = LiquidLime:getFillUnitDetectedFillType(vehicle, sprayerFillUnitIndex)
-
-                if LiquidLime:isLiquidLimeFillType(fillType) then
-                    return fillType
-                end
+        else
+            for _, fillTypeSources in pairs(sprayerSpec.fillTypeSources) do
+                LiquidLime:addPrecisionFarmingFillTypeSourceContexts(contexts, fallbackContexts, fillTypeSources, "sprayerSource")
             end
         end
     end
 
-    if sprayerSpec.fillTypeSources ~= nil then
-        for _, fillTypeSources in pairs(sprayerSpec.fillTypeSources) do
-            if fillTypeSources ~= nil then
-                for _, sourceData in ipairs(fillTypeSources) do
-                    local sourceVehicle = sourceData.vehicle
-                    local fillUnitIndex = sourceData.fillUnitIndex
+    return contexts, fallbackContexts
+end
 
-                    if sourceVehicle ~= nil and fillUnitIndex ~= nil then
-                        local fillLevel = nil
+function LiquidLime:getPrecisionFarmingFillContexts(vehicle)
+    local contexts = LiquidLime:getPrecisionFarmingOrderedFillContexts(vehicle)
 
-                        if sourceVehicle.getFillUnitFillLevel ~= nil then
-                            fillLevel = sourceVehicle:getFillUnitFillLevel(fillUnitIndex)
-                        end
+    return contexts
+end
 
-                        if fillLevel == nil or fillLevel > 0 then
-                            local fillType = LiquidLime:getFillUnitDetectedFillType(sourceVehicle, fillUnitIndex)
+function LiquidLime:getPrecisionFarmingActiveFillContext(vehicle)
+    local contexts, fallbackContexts = LiquidLime:getPrecisionFarmingOrderedFillContexts(vehicle)
 
-                            if LiquidLime:isLiquidLimeFillType(fillType) then
-                                return fillType
-                            end
-                        end
-                    end
-                end
-            end
+    for _, context in ipairs(contexts) do
+        if context.hasKnownCurrentFillType and context.hasLoadedFill then
+            return context, nil
         end
+    end
+
+    return nil, fallbackContexts[1]
+end
+
+function LiquidLime:getPrecisionFarmingSprayerSourceFillType(vehicle)
+    local activeContext, fallbackContext = LiquidLime:getPrecisionFarmingActiveFillContext(vehicle)
+
+    if activeContext ~= nil
+        and activeContext.hasKnownCurrentFillType
+        and LiquidLime:isLiquidLimeFillType(activeContext.currentFillType) then
+        return activeContext.currentFillType
+    end
+
+    if fallbackContext ~= nil
+        and fallbackContext.hasKnownLastValidFillType
+        and LiquidLime:isLiquidLimeFillType(fallbackContext.lastValidFillType) then
+        return fallbackContext.lastValidFillType
     end
 
     return nil
@@ -598,25 +683,168 @@ function LiquidLime:getPrecisionFarmingWorkAreaFillType(vehicle)
     return sprayerSpec.workAreaParameters.sprayFillType
 end
 
-function LiquidLime:isPrecisionFarmingLiquidLimeActive(vehicle, fillType)
-    if LiquidLime:isLiquidLimeFillType(fillType) then
-        return true
+function LiquidLime:formatPrecisionFarmingFillContext(context)
+    if context == nil then
+        return "context=nil"
     end
 
-    if LiquidLime:isLiquidLimeFillType(LiquidLime:getPrecisionFarmingWorkAreaFillType(vehicle)) then
-        return true
+    return string.format(
+        "source=%s, fillUnit=%s, current=%s, lastValid=%s, fillLevel=%s, loaded=%s, detected=%s:%s",
+        tostring(context.sourceName),
+        tostring(context.fillUnitIndex),
+        LiquidLime:getFillTypeDebugName(context.currentFillType),
+        LiquidLime:getFillTypeDebugName(context.lastValidFillType),
+        tostring(context.fillLevel),
+        tostring(context.hasLoadedFill),
+        tostring(context.detectedSource),
+        LiquidLime:getFillTypeDebugName(context.detectedFillType)
+    )
+end
+
+function LiquidLime:logPrecisionFarmingLiquidLimeContext(vehicle, explicitFillType, context)
+    if context == nil then
+        return
     end
 
-    if LiquidLime:isLiquidLimeFillType(LiquidLime:getPrecisionFarmingSourceFillType(vehicle)) then
-        return true
+    local decision = "inactive"
+
+    if context.isActive then
+        decision = "active"
+    elseif context.blocksLiquidLime then
+        decision = "blocked"
     end
 
-    if LiquidLime:isLiquidLimeFillType(LiquidLime:getPrecisionFarmingSprayerSourceFillType(vehicle)) then
-        if not LiquidLime.precisionFarmingLiquidLimeDetectionLogged then
-            LiquidLime:Log("Precision Farming detected LIQUIDLIME through sprayer fill sources.")
-            LiquidLime.precisionFarmingLiquidLimeDetectionLogged = true
+    local contextFillType = context.fillType
+
+    if contextFillType == nil and context.context ~= nil then
+        contextFillType = context.context.detectedFillType
+    end
+
+    local sourceName = context.context ~= nil and context.context.sourceName or "none"
+    local key = string.format(
+        "pfLiquidLime:%s:%s:%s:%s:%s",
+        decision,
+        tostring(context.reason),
+        sourceName,
+        LiquidLime:getFillTypeDebugName(contextFillType),
+        LiquidLime:getFillTypeDebugName(explicitFillType)
+    )
+    local details = ""
+
+    if context.context ~= nil then
+        details = " (" .. LiquidLime:formatPrecisionFarmingFillContext(context.context) .. ")"
+    end
+
+    LiquidLime:LogOnce(key, string.format(
+        "Precision Farming Liquid Lime %s: reason=%s, vehicle=%s, resolvedFillType=%s, explicitFillType=%s%s.",
+        decision,
+        tostring(context.reason),
+        LiquidLime:getVehicleDebugName(vehicle),
+        LiquidLime:getFillTypeDebugName(contextFillType),
+        LiquidLime:getFillTypeDebugName(explicitFillType),
+        details
+    ))
+end
+
+function LiquidLime:getPrecisionFarmingLiquidLimeFillContext(vehicle, fillType, allowLastValidFillType)
+    local liquidLimeFillType = LiquidLime:getLiquidLimeFillTypeIndex()
+
+    if liquidLimeFillType == nil then
+        return {
+            isActive = false,
+            blocksLiquidLime = true,
+            reason = "missingLiquidLimeFillType"
+        }
+    end
+
+    if allowLastValidFillType == nil then
+        allowLastValidFillType = true
+    end
+
+    local explicitFillTypeIsKnown = LiquidLime:isKnownFillType(fillType)
+    local explicitFillTypeIsLiquidLime = fillType == liquidLimeFillType
+
+    local activeContext, fallbackContext = LiquidLime:getPrecisionFarmingActiveFillContext(vehicle)
+
+    if activeContext ~= nil and activeContext.hasKnownCurrentFillType then
+        if activeContext.currentFillType ~= liquidLimeFillType then
+            return {
+                isActive = false,
+                blocksLiquidLime = true,
+                fillType = activeContext.currentFillType,
+                reason = "currentFillType",
+                context = activeContext
+            }
         end
 
+        return {
+            isActive = true,
+            fillType = liquidLimeFillType,
+            reason = "currentFillType",
+            context = activeContext
+        }
+    end
+
+    if explicitFillTypeIsLiquidLime then
+        return {
+            isActive = true,
+            fillType = liquidLimeFillType,
+            reason = "explicitFillType"
+        }
+    end
+
+    if explicitFillTypeIsKnown then
+        return {
+            isActive = false,
+            blocksLiquidLime = true,
+            fillType = fillType,
+            reason = "explicitFillType"
+        }
+    end
+
+    if allowLastValidFillType and fallbackContext ~= nil and fallbackContext.hasKnownLastValidFillType then
+        if fallbackContext.lastValidFillType == liquidLimeFillType then
+            return {
+                isActive = true,
+                fillType = liquidLimeFillType,
+                reason = "lastValidFillType",
+                context = fallbackContext
+            }
+        end
+
+        return {
+            isActive = false,
+            blocksLiquidLime = true,
+            fillType = fallbackContext.lastValidFillType,
+            reason = "lastValidFillType",
+            context = fallbackContext
+        }
+    end
+
+    local workAreaFillType = LiquidLime:getPrecisionFarmingWorkAreaFillType(vehicle)
+
+    if LiquidLime:isKnownFillType(workAreaFillType) then
+        return {
+            isActive = workAreaFillType == liquidLimeFillType,
+            blocksLiquidLime = workAreaFillType ~= liquidLimeFillType,
+            fillType = workAreaFillType,
+            reason = "workAreaFillType"
+        }
+    end
+
+    return {
+        isActive = false,
+        blocksLiquidLime = false,
+        reason = "unknown"
+    }
+end
+
+function LiquidLime:isPrecisionFarmingLiquidLimeActive(vehicle, fillType)
+    local context = LiquidLime:getPrecisionFarmingLiquidLimeFillContext(vehicle, fillType)
+
+    LiquidLime:logPrecisionFarmingLiquidLimeContext(vehicle, fillType, context)
+
+    if context ~= nil and context.isActive then
         return true
     end
 

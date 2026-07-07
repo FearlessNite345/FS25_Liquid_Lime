@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="liquidLimeTankProp.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.13"/>
+  </Asset>
+
+  <Files>
+    <File fileId="2" filename="../../objects/LiquidLimeTank/liquidLimeTank_diffuse.dds"/>
+    <File fileId="5" filename="../../objects/LiquidLimeTank/trueEdgeDecal_diffuse.dds"/>
+    <File fileId="3" filename="$data/objects/pallets/liquidTank/fertilizerTank_normal.dds"/>
+    <File fileId="4" filename="$data/objects/pallets/liquidTank/fertilizerTank_specular.dds"/>
+    <File fileId="8" filename="$data/shaders/decalShader.xml"/>
+    <File fileId="6" filename="$data/shared/default_normal.dds"/>
+    <File fileId="7" filename="$data/shared/default_specular.dds"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="liquidLimeCollision_mat" materialId="8" diffuseColor="0.498039 0.498039 0.498039 1">
+    </Material>
+    <Material name="liquidLimeTank_mat" materialId="7">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+    </Material>
+    <Material name="trueEdgeDecal_mat" materialId="6" alphaBlending="true" customShaderId="8">
+      <Texture fileId="5"/>
+      <Normalmap fileId="6"/>
+      <Glossmap fileId="7"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="liquidLimeTankProp.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+        <Shape name="liquidLimeTank_collision" shapeId="1" static="true" collisionFilterGroup="0x1034" collisionFilterMask="0xfffffbff" staticFriction="1" dynamicFriction="1" clipDistance="200" nodeId="17" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="8">
+      <Shape name="liquidLimeTank_vis" shapeId="2" clipDistance="200" nodeId="18" castsShadows="true" receiveShadows="true" materialIds="7">
+        <Shape name="trueEdgeDecal" shapeId="3" clipDistance="60" nodeId="20" castsShadows="true" receiveShadows="true" decalLayer="1" materialIds="6"/>
+      </Shape>
+    </Shape>
+  </Scene>
+
+</i3D>

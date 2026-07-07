@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="sellingStation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/placeable.xsd">
+    <storeData>
+        <name>$l10n_name_liquidlimesellpoint</name>
+        <functions>
+            <function>$l10n_function_liquidlimesellpoint</function>
+        </functions>
+        <image>objects/LiquidLimeTank/store_liquidLimeTank.dds</image>
+        <price>10000</price>
+        <dailyUpkeep>0</dailyUpkeep>
+        <canBeSold>true</canBeSold>
+        <showInStore>true</showInStore>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>TRUEEDGE</brand>
+        <species>PLACEABLE</species>
+        <category>sellingPoints</category>
+        <brush>
+            <type>placeable</type>
+            <category>production</category>
+            <tab>sellingPoints</tab>
+        </brush>
+    </storeData>
+
+    <base>
+        <filename>placeables/LiquidLimeSellPoint/liquidLimeSellPoint.i3d</filename>
+        <canBeRenamed>true</canBeRenamed>
+        <boughtWithFarmland>false</boughtWithFarmland>
+    </base>
+
+    <placement useRandomYRotation="false" useManualYRotation="true">
+        <testAreas>
+            <testArea startNode="testAreaStart01" endNode="testAreaEnd01" />
+        </testAreas>
+        <sounds>
+            <place template="smallImp"/>
+        </sounds>
+    </placement>
+
+    <clearAreas>
+        <clearArea startNode="clearAreaStart01" widthNode="clearAreaWidth01" heightNode="clearAreaHeight01"/>
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="5" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+            <levelArea startNode="levelAreaStart01" widthNode="levelAreaWidth01" heightNode="levelAreaHeight01" groundType="asphalt"/>
+        </levelAreas>
+        <paintAreas>
+            <paintArea startNode="paintAreaStart01" widthNode="paintAreaWidth01" heightNode="paintAreaHeight01" groundType="asphalt"/>
+        </paintAreas>
+    </leveling>
+
+    <indoorAreas />
+
+    <tipOcclusionUpdateAreas>
+        <tipOcclusionUpdateArea startNode="tipOcclusionUpdateAreaStart01" endNode="tipOcclusionUpdateAreaEnd01" />
+    </tipOcclusionUpdateAreas>
+
+    <ai>
+        <updateAreas>
+            <updateArea startNode="tipOcclusionUpdateAreaStart01" endNode="tipOcclusionUpdateAreaEnd01" />
+        </updateAreas>
+    </ai>
+
+    <infoTrigger triggerNode="infoTrigger"/>
+
+    <hotspots>
+        <hotspot type="UNLOADING" linkNode="unloadTriggerMarker" teleportNode="unloadTriggerMarker" />
+    </hotspots>
+
+    <triggerMarkers>
+        <triggerMarker node="unloadTriggerMarker" filename="$data/shared/assets/marker/markerIconUnload.i3d" adjustToGround="true" />
+        <triggerMarker node="warningStripes01"/>
+    </triggerMarkers>
+
+    <sellingStation appearsOnStats="true" node="sellingStation" supportsExtension="false" litersForFullPriceDrop="200000" fullPriceRecoverHours="48" allowMissions="false">
+        <unloadTrigger exactFillRootNode="unloadTrigger" aiNode="unloadTriggerAINode" fillTypes="LIQUIDLIME" priceScale="1"/>
+        <palletTrigger autoUnload="true" autoUnloadStrapped="true" triggerNode="palletTrigger" aiNode="unloadTriggerAINode" fillTypes="LIQUIDLIME" priceScale="1"/>
+        <fillType name="LIQUIDLIME" priceScale="1" disablePriceDrop="false" supportsGreatDemand="false"/>
+    </sellingStation>
+
+    <i3dMappings>
+        <i3dMapping id="clearAreaStart01" node="0>0|0" />
+        <i3dMapping id="clearAreaWidth01" node="0>0|0|0" />
+        <i3dMapping id="clearAreaHeight01" node="0>0|0|1" />
+        <i3dMapping id="levelAreaStart01" node="0>1|0" />
+        <i3dMapping id="levelAreaWidth01" node="0>1|0|0" />
+        <i3dMapping id="levelAreaHeight01" node="0>1|0|1" />
+        <i3dMapping id="paintAreaStart01" node="0>2|0" />
+        <i3dMapping id="paintAreaWidth01" node="0>2|0|0" />
+        <i3dMapping id="paintAreaHeight01" node="0>2|0|1" />
+        <i3dMapping id="testAreaStart01" node="0>3|0" />
+        <i3dMapping id="testAreaEnd01" node="0>3|0|0" />
+        <i3dMapping id="tipOcclusionUpdateAreaStart01" node="0>4|0" />
+        <i3dMapping id="tipOcclusionUpdateAreaEnd01" node="0>4|0|0" />
+        <i3dMapping id="infoTrigger" node="0>5" />
+        <i3dMapping id="warningStripes01" node="0>8|0" />
+        <i3dMapping id="sellingStation" node="0>6" />
+        <i3dMapping id="unloadTrigger" node="0>6|3" />
+        <i3dMapping id="palletTrigger" node="0>6|2" />
+        <i3dMapping id="unloadTriggerMarker" node="0>6|0" />
+        <i3dMapping id="unloadTriggerAINode" node="0>6|1" />
+    </i3dMappings>
+</placeable>

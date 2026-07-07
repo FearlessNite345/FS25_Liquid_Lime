@@ -30,7 +30,7 @@
       <Texture fileId="12"/>
       <Normalmap fileId="13"/>
     </Material>
-    <Material name="lambert1" materialId="5" diffuseColor="0.501961 0.501961 0.501961 1">
+    <Material name="liquidLimeSiloCollision_mat" materialId="5" diffuseColor="0.501961 0.501961 0.501961 1">
     </Material>
     <Material name="liquidFlatBottomTank1630_mat" materialId="6" customShaderId="5">
       <Texture fileId="2"/>

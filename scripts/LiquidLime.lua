@@ -41,9 +41,12 @@ LiquidLime.precisionFarmingFunctionCopyPatchTimer = 0
 LiquidLime.precisionFarmingLiquidLimeDetectionLogged = false
 LiquidLime.precisionFarmingHudVisibilityActiveLogged = false
 LiquidLime.precisionFarmingHudDrawActiveLogged = false
+LiquidLime.debugLogKeys = {}
 LiquidLime.vehicleXmlPatchInstalled = false
 LiquidLime.originalLoadXMLFile = nil
+LiquidLime.patchedLoadXMLFile = nil
 LiquidLime.originalXMLFileLoad = nil
+LiquidLime.patchedXMLFileLoad = nil
 LiquidLime.vehicleXmlPatchLog = {}
 LiquidLime.vehicleXmlPatchWarningShown = false
 LiquidLime.helperFillPatchInstalled = false
@@ -207,11 +210,30 @@ function LiquidLime:getLiquidLimeUsageFactor()
         or baseLimeRate == nil
         or baseLimeRate <= 0 then
         LiquidLime.liquidLimeUsageFactor = 1
+        LiquidLime:LogOnce("pfUsageFactorDefault", "Precision Farming Liquid Lime usage factor defaulted to 1.0000 because the liquid lime or base lime spray rate was unavailable.")
     else
         LiquidLime.liquidLimeUsageFactor = math.max(liquidLimeRate / baseLimeRate, 0.001)
+        LiquidLime:LogOnce("pfUsageFactor", string.format(
+            "Precision Farming Liquid Lime usage factor set to %.4f (LIQUIDLIME %.4f L/s, LIME %.4f L/s).",
+            LiquidLime.liquidLimeUsageFactor,
+            liquidLimeRate,
+            baseLimeRate
+        ))
     end
 
     return LiquidLime.liquidLimeUsageFactor
+end
+
+function LiquidLime:getLocalizedText(textName, fallback)
+    if textName ~= nil and g_i18n ~= nil and g_i18n.getText ~= nil then
+        local text = g_i18n:getText(textName)
+
+        if text ~= nil and text ~= "" and text ~= textName then
+            return text
+        end
+    end
+
+    return fallback
 end
 
 function LiquidLime:getLiquidLimeTitle()
@@ -226,6 +248,84 @@ function LiquidLime:getLiquidLimeTitle()
     end
 
     return "Liquid Lime"
+end
+
+function LiquidLime:getLiquidLimeApplicationTitle()
+    local localizedTitle = LiquidLime:getLocalizedText("precisionfarming_liquidlime_application", nil)
+
+    if localizedTitle ~= nil and localizedTitle ~= "" then
+        return localizedTitle
+    end
+
+    local title = LiquidLime:getLiquidLimeTitle()
+
+    if title ~= nil and title ~= "" then
+        return string.format("%s Application", title)
+    end
+
+    return "Liquid Lime Application"
+end
+
+function LiquidLime:getFillTypeDebugName(fillType)
+    if fillType == nil then
+        return "nil"
+    end
+
+    if FillType ~= nil and FillType.UNKNOWN ~= nil and fillType == FillType.UNKNOWN then
+        return string.format("UNKNOWN(%s)", tostring(fillType))
+    end
+
+    if g_fillTypeManager ~= nil and g_fillTypeManager.getFillTypeByIndex ~= nil then
+        local fillTypeDesc = g_fillTypeManager:getFillTypeByIndex(fillType)
+
+        if fillTypeDesc ~= nil then
+            if fillTypeDesc.name ~= nil and fillTypeDesc.name ~= "" then
+                return string.format("%s(%s)", fillTypeDesc.name, tostring(fillType))
+            end
+
+            if fillTypeDesc.title ~= nil and fillTypeDesc.title ~= "" then
+                return string.format("%s(%s)", fillTypeDesc.title, tostring(fillType))
+            end
+        end
+    end
+
+    return tostring(fillType)
+end
+
+function LiquidLime:getVehicleDebugName(vehicle)
+    if vehicle == nil then
+        return "nil"
+    end
+
+    if vehicle.getName ~= nil then
+        local success, name = pcall(vehicle.getName, vehicle)
+
+        if success and name ~= nil and name ~= "" then
+            return name
+        end
+    end
+
+    if vehicle.configFileName ~= nil and vehicle.configFileName ~= "" then
+        return vehicle.configFileName
+    end
+
+    return tostring(vehicle)
+end
+
+function LiquidLime:LogOnce(key, msg)
+    if key == nil then
+        LiquidLime:Log(msg)
+        return
+    end
+
+    if LiquidLime.debugLogKeys == nil then
+        LiquidLime.debugLogKeys = {}
+    end
+
+    if not LiquidLime.debugLogKeys[key] then
+        LiquidLime.debugLogKeys[key] = true
+        LiquidLime:Log(msg)
+    end
 end
 
 function LiquidLime:update(dt)
@@ -292,6 +392,7 @@ function LiquidLime:update(dt)
             or Sprayer.getExternalFill ~= LiquidLime.patchedSprayerGetExternalFill) then
         LiquidLime:patchHelperExternalFill()
     end
+
 end
 
 function LiquidLime:deleteMap()
@@ -362,6 +463,7 @@ function LiquidLime:deleteMap()
     end
 
     LiquidLime:restoreHelperExternalFillCopyPatches()
+    LiquidLime:restoreVehicleXmlFillTypePatch()
     LiquidLime.precisionFarmingPatched = false
     LiquidLime.precisionFarmingOriginalGetCurrentSprayerMode = nil
     LiquidLime.precisionFarmingPatchedGetCurrentSprayerMode = nil
@@ -394,6 +496,7 @@ function LiquidLime:deleteMap()
     LiquidLime.precisionFarmingLiquidLimeDetectionLogged = false
     LiquidLime.precisionFarmingHudVisibilityActiveLogged = false
     LiquidLime.precisionFarmingHudDrawActiveLogged = false
+    LiquidLime.debugLogKeys = {}
     LiquidLime.precisionFarmingEnvironment = nil
     LiquidLime.globalEnvironment = nil
     LiquidLime.liquidLimeFillTypeIndex = nil

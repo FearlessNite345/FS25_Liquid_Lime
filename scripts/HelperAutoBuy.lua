@@ -137,18 +137,47 @@ function LiquidLime:shouldUseLiquidLimeExternalFill(vehicle, fillType)
         return false
     end
 
-    if fillType == liquidLimeFillType then
+    local liquidLimeFillContext = nil
+
+    if LiquidLime.getPrecisionFarmingLiquidLimeFillContext ~= nil then
+        liquidLimeFillContext = LiquidLime:getPrecisionFarmingLiquidLimeFillContext(vehicle, fillType, true)
+    end
+
+    if liquidLimeFillContext ~= nil and liquidLimeFillContext.blocksLiquidLime then
+        LiquidLime:LogOnce(
+            string.format(
+                "helperLiquidLimeBlocked:%s:%s",
+                tostring(liquidLimeFillContext.reason),
+                LiquidLime:getFillTypeDebugName(liquidLimeFillContext.fillType)
+            ),
+            string.format(
+                "Helper auto-buy Liquid Lime blocked: reason=%s, vehicle=%s, resolvedFillType=%s, requestedFillType=%s.",
+                tostring(liquidLimeFillContext.reason),
+                LiquidLime:getVehicleDebugName(vehicle),
+                LiquidLime:getFillTypeDebugName(liquidLimeFillContext.fillType),
+                LiquidLime:getFillTypeDebugName(fillType)
+            )
+        )
+        return false
+    end
+
+    if liquidLimeFillContext ~= nil
+        and liquidLimeFillContext.isActive
+        and liquidLimeFillContext.reason ~= "lastValidFillType" then
+        LiquidLime:LogOnce(
+            string.format("helperLiquidLimeActive:%s", tostring(liquidLimeFillContext.reason)),
+            string.format(
+                "Helper auto-buy using Liquid Lime: reason=%s, vehicle=%s, requestedFillType=%s.",
+                tostring(liquidLimeFillContext.reason),
+                LiquidLime:getVehicleDebugName(vehicle),
+                LiquidLime:getFillTypeDebugName(fillType)
+            )
+        )
         return true
     end
 
     if FillType == nil or fillType ~= FillType.UNKNOWN then
         return false
-    end
-
-    if LiquidLime:isLiquidLimeFillType(LiquidLime:getPrecisionFarmingWorkAreaFillType(vehicle))
-        or LiquidLime:isLiquidLimeFillType(LiquidLime:getPrecisionFarmingSourceFillType(vehicle))
-        or LiquidLime:isLiquidLimeFillType(LiquidLime:getPrecisionFarmingSprayerSourceFillType(vehicle)) then
-        return true
     end
 
     if vehicle.getSprayerFillUnitIndex == nil then
@@ -167,8 +196,29 @@ function LiquidLime:shouldUseLiquidLimeExternalFill(vehicle, fillType)
         return false
     end
 
+    if liquidLimeFillContext ~= nil
+        and liquidLimeFillContext.isActive
+        and liquidLimeFillContext.reason == "lastValidFillType" then
+        LiquidLime:LogOnce(
+            "helperLiquidLimeLastValidContext",
+            string.format(
+                "Helper auto-buy using Liquid Lime from last valid fill context: vehicle=%s.",
+                LiquidLime:getVehicleDebugName(vehicle)
+            )
+        )
+        return true
+    end
+
     if vehicle.getFillUnitLastValidFillType ~= nil
         and vehicle:getFillUnitLastValidFillType(fillUnitIndex) == liquidLimeFillType then
+        LiquidLime:LogOnce(
+            "helperLiquidLimeLastValidFillUnit",
+            string.format(
+                "Helper auto-buy using Liquid Lime from sprayer last valid fill unit: vehicle=%s, fillUnit=%s.",
+                LiquidLime:getVehicleDebugName(vehicle),
+                tostring(fillUnitIndex)
+            )
+        )
         return true
     end
 
@@ -199,7 +249,20 @@ function LiquidLime:shouldUseLiquidLimeExternalFill(vehicle, fillType)
         hasOtherHelperBuyFillType = true
     end
 
-    return not hasOtherHelperBuyFillType
+    local shouldUseLiquidLime = not hasOtherHelperBuyFillType
+
+    if shouldUseLiquidLime then
+        LiquidLime:LogOnce(
+            "helperLiquidLimeOnlySupportedFillType",
+            string.format(
+                "Helper auto-buy using Liquid Lime because no other helper-buy spray fill type is supported: vehicle=%s, fillUnit=%s.",
+                LiquidLime:getVehicleDebugName(vehicle),
+                tostring(fillUnitIndex)
+            )
+        )
+    end
+
+    return shouldUseLiquidLime
 end
 
 function LiquidLime:getLiquidLimeExternalFill(vehicle, dt)

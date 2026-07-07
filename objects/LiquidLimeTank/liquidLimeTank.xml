@@ -60,14 +60,15 @@
 
     <tensionBeltObject>
         <meshNodes>
-            <meshNode node="fertilizerTank_vis"/>
+            <meshNode node="liquidLimeTank_vis"/>
         </meshNodes>
     </tensionBeltObject>
 
     <i3dMappings>
         <i3dMapping id="dynamicMountTrigger" node="0>0|0" />
         <i3dMapping id="fillTrigger" node="0>0|1" />
-        <i3dMapping id="fertilizerTank_vis" node="0>2|0" />
-        <i3dMapping id="materialHerbicide" node="0>2|1" />
+        <i3dMapping id="floorCollision01" node="0>1|0" />
+        <i3dMapping id="floorCollision02" node="0>1|1" />
+        <i3dMapping id="liquidLimeTank_vis" node="0>2|0" />
     </i3dMappings>
 </vehicle>

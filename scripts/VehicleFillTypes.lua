@@ -2,36 +2,71 @@
 
 function LiquidLime:installVehicleXmlFillTypePatch()
     if loadXMLFile ~= nil and LiquidLime.originalLoadXMLFile == nil then
-        LiquidLime.originalLoadXMLFile = loadXMLFile
+        local originalLoadXMLFile = loadXMLFile
+        LiquidLime.originalLoadXMLFile = originalLoadXMLFile
 
-        loadXMLFile = function(...)
-            local xmlFile = LiquidLime.originalLoadXMLFile(...)
-            local filename = LiquidLime:findTargetVehicleXmlFilename(...)
+        local patchedLoadXMLFile = function(...)
+            local xmlFile = originalLoadXMLFile(...)
 
-            if filename ~= nil then
-                LiquidLime:patchVehicleXmlFillTypes(xmlFile, filename)
+            if LiquidLime.vehicleXmlPatchInstalled then
+                local filename = LiquidLime:findTargetVehicleXmlFilename(...)
+
+                if filename ~= nil then
+                    LiquidLime:patchVehicleXmlFillTypes(xmlFile, filename)
+                end
             end
 
             return xmlFile
         end
+
+        LiquidLime.patchedLoadXMLFile = patchedLoadXMLFile
+        loadXMLFile = patchedLoadXMLFile
     end
 
     if XMLFile ~= nil and XMLFile.load ~= nil and LiquidLime.originalXMLFileLoad == nil then
-        LiquidLime.originalXMLFileLoad = XMLFile.load
+        local originalXMLFileLoad = XMLFile.load
+        LiquidLime.originalXMLFileLoad = originalXMLFileLoad
 
-        XMLFile.load = function(...)
-            local xmlFile = LiquidLime.originalXMLFileLoad(...)
-            local filename = LiquidLime:findTargetVehicleXmlFilename(...)
+        local patchedXMLFileLoad = function(...)
+            local xmlFile = originalXMLFileLoad(...)
 
-            if filename ~= nil then
-                LiquidLime:patchVehicleXmlFillTypes(xmlFile, filename)
+            if LiquidLime.vehicleXmlPatchInstalled then
+                local filename = LiquidLime:findTargetVehicleXmlFilename(...)
+
+                if filename ~= nil then
+                    LiquidLime:patchVehicleXmlFillTypes(xmlFile, filename)
+                end
             end
 
             return xmlFile
         end
+
+        LiquidLime.patchedXMLFileLoad = patchedXMLFileLoad
+        XMLFile.load = patchedXMLFileLoad
     end
 
-    LiquidLime.vehicleXmlPatchInstalled = LiquidLime.originalLoadXMLFile ~= nil or LiquidLime.originalXMLFileLoad ~= nil
+    LiquidLime.vehicleXmlPatchInstalled = LiquidLime.patchedLoadXMLFile ~= nil or LiquidLime.patchedXMLFileLoad ~= nil
+end
+
+function LiquidLime:restoreVehicleXmlFillTypePatch()
+    if LiquidLime.patchedLoadXMLFile ~= nil
+        and loadXMLFile == LiquidLime.patchedLoadXMLFile
+        and LiquidLime.originalLoadXMLFile ~= nil then
+        loadXMLFile = LiquidLime.originalLoadXMLFile
+    end
+
+    if LiquidLime.patchedXMLFileLoad ~= nil
+        and XMLFile ~= nil
+        and XMLFile.load == LiquidLime.patchedXMLFileLoad
+        and LiquidLime.originalXMLFileLoad ~= nil then
+        XMLFile.load = LiquidLime.originalXMLFileLoad
+    end
+
+    LiquidLime.vehicleXmlPatchInstalled = false
+    LiquidLime.originalLoadXMLFile = nil
+    LiquidLime.patchedLoadXMLFile = nil
+    LiquidLime.originalXMLFileLoad = nil
+    LiquidLime.patchedXMLFileLoad = nil
 end
 
 function LiquidLime:findTargetVehicleXmlFilename(...)

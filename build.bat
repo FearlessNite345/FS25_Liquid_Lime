@@ -36,7 +36,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command ^
     "$stage = $env:BUILD_STAGE;" ^
     "$output = $env:BUILD_OUTPUT;" ^
     "$modName = $env:BUILD_MOD_NAME;" ^
-    "$excludedNames = @('.git', '.agents', '.codex', '.gitignore', '.gitattributes', 'build.bat', 'README.md', 'FS25_Liquid_Lime.zip', ($modName + '.zip'));" ^
+    "$excludedNames = @('.git', '.agents', '.codex', '.vscode', '.gitignore', '.gitattributes', 'build.bat', 'README.md', 'FS25_Liquid_Lime.zip', ($modName + '.zip'));" ^
     "if (Test-Path -LiteralPath $stage) { Remove-Item -LiteralPath $stage -Recurse -Force };" ^
     "New-Item -ItemType Directory -Path $stage | Out-Null;" ^
     "Get-ChildItem -LiteralPath $root -Force | Where-Object { $excludedNames -notcontains $_.Name -and $_.Extension -ne '.log' -and $_.Extension -ne '.zip' } | ForEach-Object { Copy-Item -LiteralPath $_.FullName -Destination $stage -Recurse -Force };" ^

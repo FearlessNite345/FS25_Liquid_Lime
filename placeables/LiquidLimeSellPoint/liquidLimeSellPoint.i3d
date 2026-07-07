@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="liquidLimeSellPoint.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.13"/>
+  </Asset>
+
+  <Files>
+    <File fileId="2" filename="liquidLimeTankProp.i3d"/>
+    <File fileId="3" filename="$data/shared/warningStripes_diffuse.png"/>
+    <File fileId="4" filename="$data/shared/warningStripes_normal.png"/>
+    <File fileId="5" filename="$data/shared/warningStripes_specular.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="sellPointTrigger_mat" materialId="5" diffuseColor="0.501961 0.501961 0.501961 1">
+    </Material>
+    <Material name="warningStripes_mat" materialId="6">
+      <Texture fileId="3"/>
+      <Normalmap fileId="4"/>
+      <Glossmap fileId="5"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="liquidLimeSellPoint.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="liquidLimeSellPoint" clipDistance="150" nodeId="11">
+      <TransformGroup name="clearAreas" nodeId="12">
+        <TransformGroup name="clearAreaStart01" translation="-4.5 0 -0.75" nodeId="13">
+          <TransformGroup name="clearAreaWidth01" translation="0 0 8.5" nodeId="14"/>
+          <TransformGroup name="clearAreaHeight01" translation="9 0 0" nodeId="15"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="levelAreas" nodeId="16">
+        <TransformGroup name="levelAreaStart01" translation="-4.5 0 -0.75" nodeId="17">
+          <TransformGroup name="levelAreaWidth01" translation="0 0 8.5" nodeId="18"/>
+          <TransformGroup name="levelAreaHeight01" translation="9 0 0" nodeId="19"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="paintAreas" nodeId="20">
+        <TransformGroup name="paintAreaStart01" translation="-4.5 0 -0.75" nodeId="21">
+          <TransformGroup name="paintAreaWidth01" translation="0 0 8.5" nodeId="22"/>
+          <TransformGroup name="paintAreaHeight01" translation="9 0 0" nodeId="23"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="testAreas" nodeId="24">
+        <TransformGroup name="testAreaStart01" translation="-4.5 0 -0.75" nodeId="25">
+          <TransformGroup name="testAreaEnd01" translation="9 4 8.5" nodeId="26"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="tipOcclusionUpdateAreas" nodeId="27">
+        <TransformGroup name="tipOcclusionUpdateAreaStart01" translation="-4.5 0 -0.75" nodeId="28">
+          <TransformGroup name="tipOcclusionUpdateAreaEnd01" translation="9 0 8.5" nodeId="29"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="infoTrigger" translation="0 1 0" nodeId="30"/>
+      <TransformGroup name="sellingStation" translation="0 0 4.716" nodeId="31">
+        <TransformGroup name="unloadTriggerMarker" nodeId="32"/>
+        <TransformGroup name="unloadTriggerAINode" translation="0 0 -1" rotation="0 180 0" nodeId="33"/>
+        <Shape name="palletTrigger" translation="0 2 0" rotation="0 90 0" shapeId="1" kinematic="true" compound="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x10000" nodeId="34" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+        <Shape name="unloadTrigger" translation="0 0.1 0" rotation="0 90 0" shapeId="2" kinematic="true" compound="true" collisionFilterGroup="0x40000000" collisionFilterMask="0x20000000" nodeId="35" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+      </TransformGroup>
+      <TransformGroup name="visuals" nodeId="36">
+        <TransformGroup name="ibcProps" nodeId="37">
+          <ReferenceNode name="liquidLimeTank_collision" translation="-1.5 0 1.1" rotation="0 8 0" referenceId="2" nodeId="45"/>
+          <ReferenceNode name="liquidLimeTankProp02" translation="0 0 1.05" referenceId="2" nodeId="48"/>
+          <ReferenceNode name="liquidLimeTankProp03" translation="1.5 0 1.1" rotation="0 -8 0" referenceId="2" nodeId="51"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="warningStripes" translation="3.21084e-07 0 4.716" rotation="0 90 0" nodeId="54">
+        <Shape name="warningStripes01" translation="-0.000141 0.01 0.000422" shapeId="3" clipDistance="200" nodeId="55" castsShadows="true" receiveShadows="true" nonRenderable="true" terrainDecal="true" materialIds="6"/>
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

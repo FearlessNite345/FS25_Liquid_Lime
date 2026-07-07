@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="110">
   <author>FearlessStudios</author>
-  <version>1.2.0.0</version>
+  <version>1.3.0.0</version>
   <title>
     <en>Liquid Lime</en>
     <de>Flüssigkalk</de>
@@ -33,10 +33,19 @@ Items:
   - Price: $42,500
   - Daily upkeep: $100
   - Liquid Lime recipe: LIME and WATER
+- Liquid Lime Sell Point:
+  - Sell loose Liquid Lime from production output and filled Liquid Lime tanks
+  - Price: $10,000
 
 Liquid Lime provides a practical and efficient solution for soil treatment, aiming to replicate the characteristics of real liquid lime as closely as possible.
 
 Please report any issues you may have here: https://github.com/FearlessNite345/FS25_Liquid_Lime/issues
+
+Changelog v1.3.0.0:
+- Added the Liquid Lime Sell Point for selling loose Liquid Lime from trailers, production output, and filled Liquid Lime IBC tanks.
+- Updated the Liquid Lime tank visuals by replacing the old floating decal mesh with texture-based Liquid Lime icon artwork on the tank.
+- Fixed Liquid Lime Precision Farming detection so loaded herbicide, liquid fertilizer, and other spray types no longer behave as Liquid Lime because of stale PF state.
+- Improved the Precision Farming application label and low-volume debug logging.
 
 Changelog v1.2.0.0:
 - Added built-in Precision Farming support for Liquid Lime.
@@ -79,10 +88,19 @@ Objekte:
   - Preis: 42.500 €
   - Täglicher Unterhalt: 100 €
   - Rezept für Flüssigkalk: KALK und WASSER
+- Flüssigkalk-Verkaufsstelle:
+  - Verkauft losen Flüssigkalk aus der Produktion und gefüllte Flüssigkalk-Tanks
+  - Preis: 10.000 €
 
 Flüssigkalk bietet eine praktische und effiziente Lösung zur Bodenbehandlung und wurde entwickelt, um die Eigenschaften von echtem Flüssigkalk so genau wie möglich nachzubilden.
 
 Bitte melden Sie alle Probleme hier: https://github.com/FearlessNite345/FS25_Liquid_Lime/issues
+
+Changelog v1.3.0.0:
+- Added the Liquid Lime Sell Point for selling loose Liquid Lime from trailers, production output, and filled Liquid Lime IBC tanks.
+- Updated the Liquid Lime tank visuals by replacing the old floating decal mesh with texture-based Liquid Lime icon artwork on the tank.
+- Fixed Liquid Lime Precision Farming detection so loaded herbicide, liquid fertilizer, and other spray types no longer behave as Liquid Lime because of stale PF state.
+- Improved the Precision Farming application label and low-volume debug logging.
 
 Changelog v1.2.0.0:
 - Integrierte Precision-Farming-Unterstuetzung fuer Fluessigkalk hinzugefuegt.
@@ -125,10 +143,19 @@ Objets :
   - Prix : 42 500 €
   - Entretien quotidien : 100 €
   - Recette de chaux liquide : CHAUX et EAU
+- Point de vente de chaux liquide :
+  - Vend la chaux liquide en vrac issue de la production et les réservoirs de chaux liquide remplis
+  - Prix : 10 000 €
 
 La chaux liquide offre une solution pratique et efficace pour le traitement des sols, reproduisant les caractéristiques de la véritable chaux liquide avec précision.
 
 Veuillez signaler tout problème ici : https://github.com/FearlessNite345/FS25_Liquid_Lime/issues
+
+Changelog v1.3.0.0:
+- Added the Liquid Lime Sell Point for selling loose Liquid Lime from trailers, production output, and filled Liquid Lime IBC tanks.
+- Updated the Liquid Lime tank visuals by replacing the old floating decal mesh with texture-based Liquid Lime icon artwork on the tank.
+- Fixed Liquid Lime Precision Farming detection so loaded herbicide, liquid fertilizer, and other spray types no longer behave as Liquid Lime because of stale PF state.
+- Improved the Precision Farming application label and low-volume debug logging.
 
 Changelog v1.2.0.0:
 - Prise en charge Precision Farming integree pour la chaux liquide.
@@ -171,10 +198,19 @@ Položky:
   - Cena: 42 500 €
   - Denní údržba: 100 €
   - Recept na Tekuté vápno: VÁPNO a VODA
+- Prodejní místo Tekutého vápna:
+  - Prodává tekuté vápno z výroby a naplněné nádrže s tekutým vápnem
+  - Cena: 10 000 €
 
 Tekuté vápno nabízí praktické a efektivní řešení pro úpravu půdy a snaží se co nejvěrněji napodobit vlastnosti skutečného tekutého vápna.
 
 Problémy prosím hlaste zde: https://github.com/FearlessNite345/FS25_Liquid_Lime/issues
+
+Changelog v1.3.0.0:
+- Added the Liquid Lime Sell Point for selling loose Liquid Lime from trailers, production output, and filled Liquid Lime IBC tanks.
+- Updated the Liquid Lime tank visuals by replacing the old floating decal mesh with texture-based Liquid Lime icon artwork on the tank.
+- Fixed Liquid Lime Precision Farming detection so loaded herbicide, liquid fertilizer, and other spray types no longer behave as Liquid Lime because of stale PF state.
+- Improved the Precision Farming application label and low-volume debug logging.
 
 Changelog v1.2.0.0:
 - Přidána vestavěná podpora Precision Farming pro Tekuté vápno.
@@ -217,10 +253,19 @@ Oggetti:
   - Prezzo: 42.500 €
   - Manutenzione giornaliera: 100 €
   - Ricetta Calce Liquida: CALCE e ACQUA
+- Punto vendita Calce Liquida:
+  - Vende Calce Liquida sfusa dalla produzione e serbatoi pieni di Calce Liquida
+  - Prezzo: 10.000 €
 
 La Calce Liquida offre una soluzione pratica ed efficiente per il trattamento del suolo, cercando di replicare il più fedelmente possibile le caratteristiche della vera calce liquida.
 
 Segnala eventuali problemi qui: https://github.com/FearlessNite345/FS25_Liquid_Lime/issues
+
+Changelog v1.3.0.0:
+- Added the Liquid Lime Sell Point for selling loose Liquid Lime from trailers, production output, and filled Liquid Lime IBC tanks.
+- Updated the Liquid Lime tank visuals by replacing the old floating decal mesh with texture-based Liquid Lime icon artwork on the tank.
+- Fixed Liquid Lime Precision Farming detection so loaded herbicide, liquid fertilizer, and other spray types no longer behave as Liquid Lime because of stale PF state.
+- Improved the Precision Farming application label and low-volume debug logging.
 
 Changelog v1.2.0.0:
 - Aggiunto supporto integrato a Precision Farming per la Calce Liquida.
@@ -255,6 +300,13 @@ Changelog v1.2.0.0:
       <cz>Tekuté Vápno</cz>
       <it>Calce Liquida</it>
     </text>
+    <text name="precisionfarming_liquidlime_application">
+      <en>Liquid Lime Application</en>
+      <de>Flüssigkalk-Anwendung</de>
+      <fr>Application de Chaux Liquide</fr>
+      <cz>Aplikace tekutého vápna</cz>
+      <it>Applicazione Calce Liquida</it>
+    </text>
     <text name="function_liquidlimepallet">
       <en>Liquid Lime Tank allows you to fill sprayers with Liquid Lime.</en>
       <de>Flüssigkalk-Tank ermöglicht das Befüllen von Sprühgeräten mit Flüssigkalk.</de>
@@ -283,6 +335,20 @@ Changelog v1.2.0.0:
       <cz>Výroba tekutého vápna</cz>
       <it>Produzione di Calce Liquida</it>
     </text>
+    <text name="function_liquidlimesellpoint">
+      <en>Sell loose Liquid Lime, including production output, or filled Liquid Lime tanks here.</en>
+      <de>Verkaufe hier losen Flüssigkalk aus der Produktion oder gefüllte Flüssigkalk-Tanks.</de>
+      <fr>Vendez ici de la chaux liquide en vrac issue de la production ou des réservoirs de chaux liquide remplis.</fr>
+      <cz>Zde prodávejte volné tekuté vápno z výroby nebo naplněné nádrže s tekutým vápnem.</cz>
+      <it>Vendi qui Calce Liquida sfusa dalla produzione o serbatoi di Calce Liquida pieni.</it>
+    </text>
+    <text name="name_liquidlimesellpoint">
+      <en>Liquid Lime Sell Point</en>
+      <de>Flüssigkalk-Verkaufsstelle</de>
+      <fr>Point de vente de Chaux Liquide</fr>
+      <cz>Prodejní místo tekutého vápna</cz>
+      <it>Punto vendita Calce Liquida</it>
+    </text>
   </l10n>
 
   <extraSourceFiles>
@@ -298,6 +364,7 @@ Changelog v1.2.0.0:
     <storeItem xmlFilename="objects/LiquidLimeTank/liquidLimeTank.xml" />
     <storeItem xmlFilename="placeables/LiquidLimeSilo/liquidLimeSilo.xml" />
     <storeItem xmlFilename="placeables/LiquidLimeProduction/liquidLimeProduction.xml" />
+    <storeItem xmlFilename="placeables/LiquidLimeSellPoint/liquidLimeSellPoint.xml" />
   </storeItems>
 
   <brands>
