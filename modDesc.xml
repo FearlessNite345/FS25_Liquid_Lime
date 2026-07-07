@@ -97,10 +97,10 @@ Flüssigkalk bietet eine praktische und effiziente Lösung zur Bodenbehandlung u
 Bitte melden Sie alle Probleme hier: https://github.com/FearlessNite345/FS25_Liquid_Lime/issues
 
 Changelog v1.3.0.0:
-- Added the Liquid Lime Sell Point for selling loose Liquid Lime from trailers, production output, and filled Liquid Lime IBC tanks.
-- Updated the Liquid Lime tank visuals by replacing the old floating decal mesh with texture-based Liquid Lime icon artwork on the tank.
-- Fixed Liquid Lime Precision Farming detection so loaded herbicide, liquid fertilizer, and other spray types no longer behave as Liquid Lime because of stale PF state.
-- Improved the Precision Farming application label and low-volume debug logging.
+- Flüssigkalk-Verkaufsstelle hinzugefügt, um losen Flüssigkalk aus Anhängern, der Produktionsausgabe und gefüllten Flüssigkalk-IBC-Tanks zu verkaufen.
+- Optik des Flüssigkalk-Tanks aktualisiert: Das alte schwebende Decal-Mesh wurde durch texturbasierte Flüssigkalk-Icon-Grafik auf dem Tank ersetzt.
+- Precision-Farming-Erkennung für Flüssigkalk korrigiert, damit geladene Herbizide, Flüssigdünger und andere Sprühtypen durch veralteten PF-Status nicht mehr als Flüssigkalk behandelt werden.
+- Precision-Farming-Anwendungsbeschriftung und Debug-Protokollierung bei geringer Ausbringungsmenge verbessert.
 
 Changelog v1.2.0.0:
 - Integrierte Precision-Farming-Unterstuetzung fuer Fluessigkalk hinzugefuegt.
@@ -152,10 +152,10 @@ La chaux liquide offre une solution pratique et efficace pour le traitement des 
 Veuillez signaler tout problème ici : https://github.com/FearlessNite345/FS25_Liquid_Lime/issues
 
 Changelog v1.3.0.0:
-- Added the Liquid Lime Sell Point for selling loose Liquid Lime from trailers, production output, and filled Liquid Lime IBC tanks.
-- Updated the Liquid Lime tank visuals by replacing the old floating decal mesh with texture-based Liquid Lime icon artwork on the tank.
-- Fixed Liquid Lime Precision Farming detection so loaded herbicide, liquid fertilizer, and other spray types no longer behave as Liquid Lime because of stale PF state.
-- Improved the Precision Farming application label and low-volume debug logging.
+- Ajout du point de vente de chaux liquide pour vendre la chaux liquide en vrac depuis les remorques, la production et les réservoirs IBC de chaux liquide remplis.
+- Mise à jour des visuels du réservoir de chaux liquide en remplaçant l'ancien maillage de décalcomanie flottant par une illustration d'icône de chaux liquide basée sur une texture sur le réservoir.
+- Correction de la détection Precision Farming de la chaux liquide afin que l'herbicide, l'engrais liquide et les autres types de pulvérisation chargés ne se comportent plus comme de la chaux liquide à cause d'un état PF obsolète.
+- Amélioration du libellé d'application Precision Farming et de la journalisation de débogage à faible volume.
 
 Changelog v1.2.0.0:
 - Prise en charge Precision Farming integree pour la chaux liquide.
@@ -207,10 +207,10 @@ Tekuté vápno nabízí praktické a efektivní řešení pro úpravu půdy a sn
 Problémy prosím hlaste zde: https://github.com/FearlessNite345/FS25_Liquid_Lime/issues
 
 Changelog v1.3.0.0:
-- Added the Liquid Lime Sell Point for selling loose Liquid Lime from trailers, production output, and filled Liquid Lime IBC tanks.
-- Updated the Liquid Lime tank visuals by replacing the old floating decal mesh with texture-based Liquid Lime icon artwork on the tank.
-- Fixed Liquid Lime Precision Farming detection so loaded herbicide, liquid fertilizer, and other spray types no longer behave as Liquid Lime because of stale PF state.
-- Improved the Precision Farming application label and low-volume debug logging.
+- Přidáno prodejní místo Tekutého vápna pro prodej volného Tekutého vápna z přívěsů, výstupu výroby a naplněných IBC nádrží s Tekutým vápnem.
+- Aktualizován vzhled nádrže na Tekuté vápno: starý plovoucí model obtisku byl nahrazen texturovanou grafikou ikony Tekutého vápna přímo na nádrži.
+- Opravena detekce Tekutého vápna v Precision Farming, aby se načtený herbicid, tekuté hnojivo a jiné typy postřiku kvůli zastaralému stavu PF už nechovaly jako Tekuté vápno.
+- Vylepšen popisek aplikace v Precision Farming a ladicí protokolování při nízkém objemu.
 
 Changelog v1.2.0.0:
 - Přidána vestavěná podpora Precision Farming pro Tekuté vápno.
@@ -262,10 +262,10 @@ La Calce Liquida offre una soluzione pratica ed efficiente per il trattamento de
 Segnala eventuali problemi qui: https://github.com/FearlessNite345/FS25_Liquid_Lime/issues
 
 Changelog v1.3.0.0:
-- Added the Liquid Lime Sell Point for selling loose Liquid Lime from trailers, production output, and filled Liquid Lime IBC tanks.
-- Updated the Liquid Lime tank visuals by replacing the old floating decal mesh with texture-based Liquid Lime icon artwork on the tank.
-- Fixed Liquid Lime Precision Farming detection so loaded herbicide, liquid fertilizer, and other spray types no longer behave as Liquid Lime because of stale PF state.
-- Improved the Precision Farming application label and low-volume debug logging.
+- Aggiunto il punto vendita per la Calce Liquida, per vendere Calce Liquida sfusa da rimorchi, dall’output di produzione e da serbatoi IBC di Calce Liquida riempiti.
+- Aggiornata la grafica del serbatoio della Calce Liquida, sostituendo la vecchia mesh della decal flottante con un’icona della Calce Liquida basata su texture applicata al serbatoio.
+- Corretta la rilevazione della Calce Liquida in Precision Farming, così erbicida, fertilizzante liquido e altri tipi di spray caricati non vengono più trattati come Calce Liquida a causa di uno stato PF residuo.
+- Migliorata l’etichetta di applicazione di Precision Farming e il logging di debug a basso volume.
 
 Changelog v1.2.0.0:
 - Aggiunto supporto integrato a Precision Farming per la Calce Liquida.
