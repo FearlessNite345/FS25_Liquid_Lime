@@ -2,7 +2,7 @@
 
 <i3D name="liquidLime_materialHolder.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
   <Asset>
-    <Export program="GIANTS Editor 64bit" version="10.0.1"/>
+    <Export program="GIANTS Editor 64bit" version="10.0.13"/>
   </Asset>
 
   <Files>
@@ -14,10 +14,11 @@
 
 
   <Materials>
-    <Material name="water_mat" materialId="33" alphaBlending="true" customShaderId="4">
+    <Material name="water_mat" materialId="12" alphaBlending="true" customShaderId="4">
       <Texture fileId="1"/>
       <Normalmap fileId="2"/>
       <Glossmap fileId="3"/>
+      <CustomParameter name="isFadeAboveTerrain" value="1"/>
     </Material>
   </Materials>
 
@@ -26,16 +27,16 @@
   </Shapes>
 
   <Scene>
-    <TransformGroup name="sprayerEffects" nodeId="36">
-      <TransformGroup name="materials" nodeId="37">
-        <Shape name="liquidLime_materialHolder" shapeId="1" clipDistance="10" nodeId="38" castsShadows="false" receiveShadows="false" nonRenderable="true" materialIds="33"/>
+    <TransformGroup name="sprayerEffects" nodeId="8">
+      <TransformGroup name="materials" nodeId="9">
+        <Shape name="liquidLime_materialHolder" shapeId="1" clipDistance="10" nodeId="15" castsShadows="true" receiveShadows="true" materialHolder="true" materialIds="12"/>
       </TransformGroup>
     </TransformGroup>
   </Scene>
 
   <UserAttributes>
-    <UserAttribute nodeId="38">
-      <Attribute name="fillType" type="string" value="LIQUIDLIME"/>
+    <UserAttribute nodeId="15">
+      <Attribute name="fillType" type="string" value="liquidFertilizer"/>
       <Attribute name="materialIndex" type="string" value="1"/>
       <Attribute name="materialType" type="string" value="sprayer"/>
       <Attribute name="onCreate" type="scriptCallback" value="MaterialUtil.onCreateMaterial"/>
