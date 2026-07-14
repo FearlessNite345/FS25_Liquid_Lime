@@ -76,7 +76,7 @@
     <sellingStation appearsOnStats="true" node="sellingStation" supportsExtension="false" litersForFullPriceDrop="200000" fullPriceRecoverHours="48" allowMissions="false">
         <unloadTrigger exactFillRootNode="unloadTrigger" aiNode="unloadTriggerAINode" fillTypes="LIQUIDLIME" priceScale="1"/>
         <palletTrigger autoUnload="true" autoUnloadStrapped="true" triggerNode="palletTrigger" aiNode="unloadTriggerAINode" fillTypes="LIQUIDLIME" priceScale="1"/>
-        <fillType name="LIQUIDLIME" priceScale="1" disablePriceDrop="false" supportsGreatDemand="false"/>
+        <fillType name="LIQUIDLIME" priceScale="0.23" disablePriceDrop="false" supportsGreatDemand="false"/>
     </sellingStation>
 
     <i3dMappings>

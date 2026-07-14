@@ -24,7 +24,7 @@ Key Features:
 Items:
 - TrueEdge Liquid Lime Tank:
   - Capacity: 2000 liters
-  - Price: $900
+  - Price: $1,100
 - Meridian Liquid Lime Silo:
   - Capacity: 155,000 liters
   - Price: $46,500
@@ -45,6 +45,9 @@ Changelog v1.3.0.0:
 - Added the Liquid Lime Sell Point for selling loose Liquid Lime from trailers, production output, and filled Liquid Lime IBC tanks.
 - Updated the Liquid Lime tank visuals by replacing the old floating decal mesh with texture-based Liquid Lime icon artwork on the tank.
 - Fixed the Liquid Lime sprayer material holder export so it no longer logs missing GS_ATTR_COLOR0 vertex attribute errors.
+- Fixed the Liquid Lime spray material registration so spray effects appear on compatible sprayers.
+- Rebalanced shop tank prices, production operating costs, and the Liquid Lime Sell Point payout to keep production profitable while preventing shop resale exploits.
+- Added seasonal Liquid Lime prices with stronger spring and autumn demand.
 - Fixed Liquid Lime Precision Farming detection so loaded herbicide, liquid fertilizer, and other spray types no longer behave as Liquid Lime because of stale PF state.
 - Improved the Precision Farming application label and low-volume debug logging.
 
@@ -80,7 +83,7 @@ Hauptmerkmale:
 Objekte:
 - TrueEdge Flüssigkalk-Tank:
   - Kapazität: 2000 Liter
-  - Preis: 900 €
+  - Preis: 1.100 €
 - Meridian Flüssigkalk-Silo:
   - Kapazität: 155.000 Liter
   - Preis: 46.500 €
@@ -101,6 +104,9 @@ Changelog v1.3.0.0:
 - Flüssigkalk-Verkaufsstelle hinzugefügt, um losen Flüssigkalk aus Anhängern, der Produktionsausgabe und gefüllten Flüssigkalk-IBC-Tanks zu verkaufen.
 - Optik des Flüssigkalk-Tanks aktualisiert: Das alte schwebende Decal-Mesh wurde durch texturbasierte Flüssigkalk-Icon-Grafik auf dem Tank ersetzt.
 - Export des Flüssigkalk-Sprühmaterialhalters korrigiert, sodass keine Fehler zu fehlenden GS_ATTR_COLOR0-Vertex-Attributen mehr protokolliert werden.
+- Registrierung des Flüssigkalk-Sprühmaterials korrigiert, damit Sprüheffekte auf kompatiblen Sprühgeräten angezeigt werden.
+- Preise der Ladentanks, Betriebskosten der Produktion und Auszahlung der Flüssigkalk-Verkaufsstelle neu ausbalanciert, damit die Produktion rentabel bleibt und Wiederverkaufsexploits mit Ladentanks verhindert werden.
+- Saisonale Flüssigkalkpreise mit stärkerer Nachfrage im Frühjahr und Herbst hinzugefügt.
 - Precision-Farming-Erkennung für Flüssigkalk korrigiert, damit geladene Herbizide, Flüssigdünger und andere Sprühtypen durch veralteten PF-Status nicht mehr als Flüssigkalk behandelt werden.
 - Precision-Farming-Anwendungsbeschriftung und Debug-Protokollierung bei geringer Ausbringungsmenge verbessert.
 
@@ -136,7 +142,7 @@ Caractéristiques clés :
 Objets :
 - TrueEdge Réservoir de chaux liquide :
   - Capacité : 2000 litres
-  - Prix : 900 €
+  - Prix : 1 100 €
 - Meridian Silo à chaux liquide :
   - Capacité : 155 000 litres
   - Prix : 46 500 €
@@ -157,6 +163,9 @@ Changelog v1.3.0.0:
 - Ajout du point de vente de chaux liquide pour vendre la chaux liquide en vrac depuis les remorques, la production et les réservoirs IBC de chaux liquide remplis.
 - Mise à jour des visuels du réservoir de chaux liquide en remplaçant l'ancien maillage de décalcomanie flottant par une illustration d'icône de chaux liquide basée sur une texture sur le réservoir.
 - Correction de l'export du material holder de pulvérisation de chaux liquide afin de supprimer les erreurs d'attribut de sommet GS_ATTR_COLOR0 manquant.
+- Correction de l'enregistrement du matériau de pulvérisation de la chaux liquide afin que les effets de pulvérisation apparaissent sur les pulvérisateurs compatibles.
+- Rééquilibrage du prix des réservoirs en magasin, des coûts d'exploitation de la production et du paiement du point de vente afin de maintenir la rentabilité de la production tout en empêchant la revente abusive des réservoirs achetés.
+- Ajout de prix saisonniers pour la chaux liquide, avec une demande plus forte au printemps et en automne.
 - Correction de la détection Precision Farming de la chaux liquide afin que l'herbicide, l'engrais liquide et les autres types de pulvérisation chargés ne se comportent plus comme de la chaux liquide à cause d'un état PF obsolète.
 - Amélioration du libellé d'application Precision Farming et de la journalisation de débogage à faible volume.
 
@@ -192,7 +201,7 @@ Hlavní funkce:
 Položky:
 - TrueEdge nádrž na Tekuté vápno:
   - Kapacita: 2000 litrů
-  - Cena: 900 €
+  - Cena: 1 100 €
 - Meridian silo na Tekuté vápno:
   - Kapacita: 155 000 litrů
   - Cena: 46 500 €
@@ -213,6 +222,9 @@ Changelog v1.3.0.0:
 - Přidáno prodejní místo Tekutého vápna pro prodej volného Tekutého vápna z přívěsů, výstupu výroby a naplněných IBC nádrží s Tekutým vápnem.
 - Aktualizován vzhled nádrže na Tekuté vápno: starý plovoucí model obtisku byl nahrazen texturovanou grafikou ikony Tekutého vápna přímo na nádrži.
 - Opraven export držáku postřikového materiálu Tekutého vápna, takže už neprotokoluje chyby chybějícího vertex atributu GS_ATTR_COLOR0.
+- Opravena registrace postřikového materiálu Tekutého vápna, aby se na kompatibilních postřikovačích zobrazovaly postřikové efekty.
+- Vyváženy ceny nádrží v obchodě, provozní náklady výroby a výkupní cena Tekutého vápna tak, aby výroba zůstala zisková a nebylo možné vydělávat přeprodejem zakoupených nádrží.
+- Přidány sezónní ceny Tekutého vápna s vyšší poptávkou na jaře a na podzim.
 - Opravena detekce Tekutého vápna v Precision Farming, aby se načtený herbicid, tekuté hnojivo a jiné typy postřiku kvůli zastaralému stavu PF už nechovaly jako Tekuté vápno.
 - Vylepšen popisek aplikace v Precision Farming a ladicí protokolování při nízkém objemu.
 
@@ -248,7 +260,7 @@ Caratteristiche principali:
 Oggetti:
 - Serbatoio Calce Liquida TrueEdge:
   - Capacità: 2.000 litri
-  - Prezzo: 900 €
+  - Prezzo: 1.100 €
 - Silo Calce Liquida Meridian:
   - Capacità: 155.000 litri
   - Prezzo: 46.500 €
@@ -269,6 +281,9 @@ Changelog v1.3.0.0:
 - Aggiunto il punto vendita per la Calce Liquida, per vendere Calce Liquida sfusa da rimorchi, dall’output di produzione e da serbatoi IBC di Calce Liquida riempiti.
 - Aggiornata la grafica del serbatoio della Calce Liquida, sostituendo la vecchia mesh della decal flottante con un’icona della Calce Liquida basata su texture applicata al serbatoio.
 - Corretto l'export del material holder di spruzzatura della Calce Liquida, così non registra più errori per l'attributo vertice GS_ATTR_COLOR0 mancante.
+- Corretta la registrazione del materiale di spruzzatura della Calce Liquida, così gli effetti di spruzzatura vengono visualizzati sugli irroratori compatibili.
+- Ribilanciati i prezzi dei serbatoi in negozio, i costi operativi della produzione e il pagamento del punto vendita per mantenere redditizia la produzione ed evitare profitti dalla rivendita dei serbatoi acquistati.
+- Aggiunti prezzi stagionali per la Calce Liquida, con una domanda più forte in primavera e in autunno.
 - Corretta la rilevazione della Calce Liquida in Precision Farming, così erbicida, fertilizzante liquido e altri tipi di spray caricati non vengono più trattati come Calce Liquida a causa di uno stato PF residuo.
 - Migliorata l’etichetta di applicazione di Precision Farming e il logging di debug a basso volume.
 

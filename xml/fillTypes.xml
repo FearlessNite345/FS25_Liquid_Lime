@@ -6,7 +6,22 @@
 			<physics massPerLiter="1.0" maxPhysicalSurfaceAngle="0" />
             <image hud     ="hud/liquidlime.dds" />
 			<pallet filename="objects/LiquidLimeTank/liquidLimeTank.xml" />
-			<economy pricePerLiter="0.45" />
+			<economy pricePerLiter="0.45">
+				<factors>
+					<factor period="1"  value="1.05" />
+					<factor period="2"  value="1.15" />
+					<factor period="3"  value="1.10" />
+					<factor period="4"  value="0.95" />
+					<factor period="5"  value="0.90" />
+					<factor period="6"  value="0.90" />
+					<factor period="7"  value="1.05" />
+					<factor period="8"  value="1.15" />
+					<factor period="9"  value="1.10" />
+					<factor period="10" value="0.95" />
+					<factor period="11" value="0.90" />
+					<factor period="12" value="0.95" />
+				</factors>
+			</economy>
 		</fillType>
     </fillTypes>
 

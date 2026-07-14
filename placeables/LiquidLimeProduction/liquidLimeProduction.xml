@@ -101,10 +101,10 @@
 
     <productionPoint>
         <productions>
-            <production id="lime_water_liquidlime" name="%s" params="$l10n_filltype_liquidlime" cyclesPerHour="4" costsPerActiveHour="80">
+            <production id="lime_water_liquidlime" name="%s" params="$l10n_filltype_liquidlime" cyclesPerHour="4" costsPerActiveHour="20">
                 <inputs>
-                    <input fillType="LIME" amount="160" />
-                    <input fillType="WATER" amount="60" />
+                    <input fillType="LIME" amount="100" />
+                    <input fillType="WATER" amount="100" />
                 </inputs>
                 <outputs>
                     <output fillType="LIQUIDLIME" amount="200" />

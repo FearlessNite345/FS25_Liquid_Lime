@@ -36,7 +36,7 @@
 
   <UserAttributes>
     <UserAttribute nodeId="15">
-      <Attribute name="fillType" type="string" value="liquidFertilizer"/>
+      <Attribute name="fillType" type="string" value="liquidLime"/>
       <Attribute name="materialIndex" type="string" value="1"/>
       <Attribute name="materialType" type="string" value="sprayer"/>
       <Attribute name="onCreate" type="scriptCallback" value="MaterialUtil.onCreateMaterial"/>

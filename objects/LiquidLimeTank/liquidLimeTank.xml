@@ -13,7 +13,7 @@
             <weight ignore="true"/>
         </specs>
         <image>objects/LiquidLimeTank/store_liquidLimeTank.dds</image>
-        <price>900</price>
+        <price>1100</price>
         <allowLeasing>false</allowLeasing>
         <canBeSold>false</canBeSold>
         <showInStore>false</showInStore>
