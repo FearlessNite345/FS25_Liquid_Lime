@@ -29,7 +29,7 @@ Stay tuned for future updates and fixes as needed! Please check the future plans
 ## **Items**  
 - **Liquid Lime Tank**:  
   - **Capacity**: 2000 liters  
-  - **Price**: $900  
+  - **Price**: $1,100  
   - Allows you to fill sprayers with Liquid Lime.  
 
 - **Liquid Lime Silo**:  
