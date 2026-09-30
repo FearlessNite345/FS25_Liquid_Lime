@@ -230,14 +230,6 @@ function LiquidLime:restorePrecisionFarmingLimeMapping(state)
         end
     end
 
-    if state.sourceVehicle ~= nil and state.sourceFillTypePatched then
-        if state.sourceHadOwnFillTypeFunction then
-            state.sourceVehicle.getFillUnitFillType = state.sourceOwnFillTypeFunction
-        else
-            state.sourceVehicle.getFillUnitFillType = nil
-        end
-    end
-
     for i = #state.values, 1, -1 do
         local valueState = state.values[i]
 
@@ -326,27 +318,29 @@ function LiquidLime:patchPrecisionFarmingSourceFillType(state, vehicle, liquidLi
 
     local currentFillType = sourceVehicle:getFillUnitFillType(fillUnitIndex)
     local lastValidFillType = sourceVehicle:getFillUnitLastValidFillType(fillUnitIndex)
+    local fillLevel = sourceVehicle.getFillUnitFillLevel ~= nil
+        and sourceVehicle:getFillUnitFillLevel(fillUnitIndex) or nil
 
+    -- History identifies the material, but must not make an empty tank look loaded.
     if FillType == nil
         or currentFillType ~= FillType.UNKNOWN
-        or lastValidFillType ~= liquidLimeFillType then
+        or lastValidFillType ~= liquidLimeFillType
+        or fillLevel == nil
+        or fillLevel <= 0 then
         return
     end
 
     local originalGetFillUnitFillType = sourceVehicle.getFillUnitFillType
 
-    state.sourceVehicle = sourceVehicle
-    state.sourceFillTypePatched = true
-    state.sourceHadOwnFillTypeFunction = rawget(sourceVehicle, "getFillUnitFillType") ~= nil
-    state.sourceOwnFillTypeFunction = rawget(sourceVehicle, "getFillUnitFillType")
-
-    sourceVehicle.getFillUnitFillType = function(vehicleObject, requestedFillUnitIndex, ...)
+    -- Unwind all temporary getters in reverse order, including nested wrappers.
+    -- Separate cleanup can accidentally reinstall a saved temporary override.
+    LiquidLime:storeTemporaryValue(state, sourceVehicle, "getFillUnitFillType", function(vehicleObject, requestedFillUnitIndex, ...)
         if requestedFillUnitIndex == fillUnitIndex then
             return liquidLimeFillType
         end
 
         return originalGetFillUnitFillType(vehicleObject, requestedFillUnitIndex, ...)
-    end
+    end)
 end
 
 function LiquidLime:patchPrecisionFarmingEffectFillType(state, vehicle, liquidLimeFillType)
@@ -376,7 +370,8 @@ function LiquidLime:patchPrecisionFarmingEffectFillType(state, vehicle, liquidLi
         end)
     end
 
-    patchFillUnitFunction("getFillUnitFillType")
+    -- Effects need a material for their visuals, not a fabricated tank content.
+    -- Keep UNKNOWN visible to empty-tank/refill checks, including nested calls.
     patchFillUnitFunction("getFillUnitLastValidFillType")
 end
 
