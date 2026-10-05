@@ -1,4 +1,4 @@
-# **Liquid Lime Mod - v1.3.0.0**
+# **Liquid Lime Mod - v1.3.0.1**
 
 Welcome to the **Liquid Lime Mod**! This mod introduces **Liquid Lime**, a sprayer-compatible material designed to enhance your farming experience with added realism.  
 
@@ -8,15 +8,25 @@ Welcome to the **Liquid Lime Mod**! This mod introduces **Liquid Lime**, a spray
 
 [Official ModHub Link](https://www.farming-simulator.com/mod.php?mod_id=304579).
 
-**Pending ModHub Version:** v1.3.0.0<br>
+**Pending ModHub Version:** v1.3.0.1 — planned for submission to GIANTS Software for ModHub testing; not yet submitted or approved.<br>
 **Current ModHub Version:** v1.3.0.0
 
 Stay tuned for future updates and fixes as needed! Please check the future plans outlined below.
+
+## **GitHub Release v1.3.0.1**
+
+- Fixed temporary Precision Farming fill-type overrides remaining after switching materials or unloading.
+- Fixed empty tanks being treated as if they still contained Liquid Lime, affecting refill detection.
+- Increased the Liquid Lime Sell Point multiplier from 0.23 to 0.50; buying prices are unchanged. Price, display and payout verification remains open in [#37](../../issues/37).
+- Community feedback supports closing #38, #39 and #40. The Condor Endurance stop/refill/resume test does not cover every equipment and mod combination; see `tests/README.md` for the remaining checks.
+
+This is the stable GitHub release. The earlier `v1.3.0.1-beta.1` remains available as a historical test build. Both display version `1.3.0.1` in game, so use the ZIP from the stable release when updating.
 
 ## **Install Notes**
 
 - Use the in-game ModHub version when possible.
 - If installing from GitHub, download the release zip and place it in `Documents/My Games/FarmingSimulator2025/mods`.
+- Replace the existing `FS25_Liquid_Lime.zip` and restart the game/server. Do not keep both builds installed; everyone on a multiplayer server needs the same ZIP.
 - Do not use GitHub's source-code zip directly unless you rename/repack it as a valid FS25 mod zip.
 - Precision Farming support for Liquid Lime is fully built in. ThundRFS Precision Farming Configurator is no longer required for Liquid Lime support.
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="110">
   <author>FearlessStudios</author>
-  <version>1.3.0.0</version>
+  <version>1.3.0.1</version>
   <title>
     <en>Liquid Lime</en>
     <de>Flüssigkalk</de>
@@ -40,6 +40,11 @@ Items:
 Liquid Lime provides a practical and efficient solution for soil treatment, aiming to replicate the characteristics of real liquid lime as closely as possible.
 
 Please report any issues you may have here: https://github.com/FearlessNite345/FS25_Liquid_Lime/issues
+
+Changelog v1.3.0.1:
+- Fixed temporary Precision Farming fill-type overrides remaining after switching materials or unloading.
+- Fixed empty tanks being treated as if they still contained Liquid Lime, affecting refill detection.
+- Increased the Liquid Lime Sell Point multiplier from 0.23 to 0.50. Buying prices are unchanged.
 
 Changelog v1.3.0.0:
 - Added the Liquid Lime Sell Point for selling loose Liquid Lime from trailers, production output, and filled Liquid Lime IBC tanks.

@@ -6,7 +6,17 @@ cleanup (including inherited methods, nested wrappers and errors), empty tanks,
 switching to fertilizer, attached sources and helper auto-buy selection.
 `build.bat` excludes this directory from the playable mod.
 
-## Required in-game checks before release
+## Community feedback for v1.3.0.1
+
+- [#38](https://github.com/FearlessNite345/FS25_Liquid_Lime/issues/38#issuecomment-5979282156): gesture1968 reported no more switching issues in `v1.3.0.1-beta.1`.
+- [#40](https://github.com/FearlessNite345/FS25_Liquid_Lime/issues/40#issuecomment-5923879258): NongDeChuanRen tested Test Build 1 with Precision Farming and reported that the stale unload prompt was gone.
+- [#39](https://github.com/FearlessNite345/FS25_Liquid_Lime/issues/39#issuecomment-5980123960): NongDeChuanRen reported successful Courseplay stop, refill and resume behaviour with the Condor Endurance. The original DT 2800H S5 was unavailable; the exact beta, Precision Farming and helper auto-buy settings were not explicitly reconfirmed in that reply.
+
+The maintainer accepted this feedback for closing #38, #39 and #40 and preparing
+the stable GitHub release. This is not a full gameplay test matrix. ModHub
+submission to GIANTS Software for testing is planned, not yet submitted or approved.
+
+## Remaining in-game verification
 
 Use a backup save and the latest FS25, Precision Farming and Courseplay versions.
 Record their version numbers and keep log.txt. Test single player and a dedicated
@@ -39,6 +49,7 @@ before water, operating costs, upkeep, transport and the building investment.
 Ten cycles at four per hour incur 50 in active production costs. Market movement,
 price drops, difficulty and map-specific costs still affect the result.
 
-These checks have not been run in FS25. The additional screenshot/display concern
-in #37 and map-specific interactions need in-game verification. Existing leaked
+Beyond the community feedback above, these checks have not been verified in FS25
+for this release. The price, payout and screenshot/display concerns in #37 remain
+open, and map-specific interactions need in-game verification. Existing leaked
 runtime getters are cleared by restarting the game/server with the updated mod.
