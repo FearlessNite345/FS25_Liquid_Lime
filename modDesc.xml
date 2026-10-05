@@ -4,9 +4,9 @@
   <version>1.3.0.1</version>
   <title>
     <en>Liquid Lime</en>
-    <de>Flüssigkalk</de>
+    <de>Fl�ssigkalk</de>
     <fr>Chaux Liquide</fr>
-    <cz>Tekuté Vápno</cz>
+    <cz>Tekut� V�pno</cz>
     <it>Calce Liquida</it>
   </title>
 
@@ -41,6 +41,11 @@ Liquid Lime provides a practical and efficient solution for soil treatment, aimi
 
 Please report any issues you may have here: https://github.com/FearlessNite345/FS25_Liquid_Lime/issues
 
+Changelog v1.3.0.1:
+- Fixed temporary Precision Farming fill-type overrides remaining after switching materials or unloading.
+- Fixed empty tanks being treated as if they still contained Liquid Lime, affecting refill detection.
+- Increased the Liquid Lime Sell Point multiplier from 0.23 to 0.50. Buying prices are unchanged.
+
 Changelog v1.3.0.0:
 - Added the Liquid Lime Sell Point for selling loose Liquid Lime from trailers, production output, and filled Liquid Lime IBC tanks.
 - Updated the Liquid Lime tank visuals by replacing the old floating decal mesh with texture-based Liquid Lime icon artwork on the tank.
@@ -70,60 +75,60 @@ Changelog v1.2.0.0:
 - Split the Lua code into smaller runtime, vehicle, Precision Farming, helper auto-buy, and registration modules.
 - Added a Czech mod description.]]>
     </en>
-    <de><![CDATA[Flüssigkalk
+    <de><![CDATA[Fl�ssigkalk
 
-Revolutionieren Sie Ihr Farming-Erlebnis mit Flüssigkalk, speziell entwickelt für den Einsatz mit Sprühgeräten.
+Revolutionieren Sie Ihr Farming-Erlebnis mit Fl�ssigkalk, speziell entwickelt f�r den Einsatz mit Spr�hger�ten.
 
 Helfer-Autokauf funktioniert jetzt, wenn Fluessigkalk der ausgewaehlte oder zuletzt verwendete Fuelltyp ist. Wenn ein leerer Mehrprodukt-Sprueher auf Duenger wechselt, laden Sie zuerst einmal Fluessigkalk.
 
 Hauptmerkmale:
-- Flüssigkalk-Fülltyp:
-  - Fügt Flüssigkalk als neues Material hinzu, das mit Sprühgeräten kompatibel ist.
+- Fl�ssigkalk-F�lltyp:
+  - F�gt Fl�ssigkalk als neues Material hinzu, das mit Spr�hger�ten kompatibel ist.
 
 Objekte:
-- TrueEdge Flüssigkalk-Tank:
-  - Kapazität: 2000 Liter
-  - Preis: 1.100 €
-- Meridian Flüssigkalk-Silo:
-  - Kapazität: 155.000 Liter
-  - Preis: 46.500 €
-  - Täglicher Unterhalt: 100 €
--TrueEdge Flüssigkalkproduktion:
-  - Preis: 42.500 €
-  - Täglicher Unterhalt: 100 €
-  - Rezept für Flüssigkalk: KALK und WASSER
-- Flüssigkalk-Verkaufsstelle:
-  - Verkauft losen Flüssigkalk aus der Produktion und gefüllte Flüssigkalk-Tanks
-  - Preis: 10.000 €
+- TrueEdge Fl�ssigkalk-Tank:
+  - Kapazit�t: 2000 Liter
+  - Preis: 1.100 ?
+- Meridian Fl�ssigkalk-Silo:
+  - Kapazit�t: 155.000 Liter
+  - Preis: 46.500 ?
+  - T�glicher Unterhalt: 100 ?
+-TrueEdge Fl�ssigkalkproduktion:
+  - Preis: 42.500 ?
+  - T�glicher Unterhalt: 100 ?
+  - Rezept f�r Fl�ssigkalk: KALK und WASSER
+- Fl�ssigkalk-Verkaufsstelle:
+  - Verkauft losen Fl�ssigkalk aus der Produktion und gef�llte Fl�ssigkalk-Tanks
+  - Preis: 10.000 ?
 
-Flüssigkalk bietet eine praktische und effiziente Lösung zur Bodenbehandlung und wurde entwickelt, um die Eigenschaften von echtem Flüssigkalk so genau wie möglich nachzubilden.
+Fl�ssigkalk bietet eine praktische und effiziente L�sung zur Bodenbehandlung und wurde entwickelt, um die Eigenschaften von echtem Fl�ssigkalk so genau wie m�glich nachzubilden.
 
 Bitte melden Sie alle Probleme hier: https://github.com/FearlessNite345/FS25_Liquid_Lime/issues
 
 Changelog v1.3.0.0:
-- Flüssigkalk-Verkaufsstelle hinzugefügt, um losen Flüssigkalk aus Anhängern, der Produktionsausgabe und gefüllten Flüssigkalk-IBC-Tanks zu verkaufen.
-- Optik des Flüssigkalk-Tanks aktualisiert: Das alte schwebende Decal-Mesh wurde durch texturbasierte Flüssigkalk-Icon-Grafik auf dem Tank ersetzt.
-- Export des Flüssigkalk-Sprühmaterialhalters korrigiert, sodass keine Fehler zu fehlenden GS_ATTR_COLOR0-Vertex-Attributen mehr protokolliert werden.
-- Registrierung des Flüssigkalk-Sprühmaterials korrigiert, damit Sprüheffekte auf kompatiblen Sprühgeräten angezeigt werden.
-- Preise der Ladentanks, Betriebskosten der Produktion und Auszahlung der Flüssigkalk-Verkaufsstelle neu ausbalanciert, damit die Produktion rentabel bleibt und Wiederverkaufsexploits mit Ladentanks verhindert werden.
-- Saisonale Flüssigkalkpreise mit stärkerer Nachfrage im Frühjahr und Herbst hinzugefügt.
-- Precision-Farming-Erkennung für Flüssigkalk korrigiert, damit geladene Herbizide, Flüssigdünger und andere Sprühtypen durch veralteten PF-Status nicht mehr als Flüssigkalk behandelt werden.
+- Fl�ssigkalk-Verkaufsstelle hinzugef�gt, um losen Fl�ssigkalk aus Anh�ngern, der Produktionsausgabe und gef�llten Fl�ssigkalk-IBC-Tanks zu verkaufen.
+- Optik des Fl�ssigkalk-Tanks aktualisiert: Das alte schwebende Decal-Mesh wurde durch texturbasierte Fl�ssigkalk-Icon-Grafik auf dem Tank ersetzt.
+- Export des Fl�ssigkalk-Spr�hmaterialhalters korrigiert, sodass keine Fehler zu fehlenden GS_ATTR_COLOR0-Vertex-Attributen mehr protokolliert werden.
+- Registrierung des Fl�ssigkalk-Spr�hmaterials korrigiert, damit Spr�heffekte auf kompatiblen Spr�hger�ten angezeigt werden.
+- Preise der Ladentanks, Betriebskosten der Produktion und Auszahlung der Fl�ssigkalk-Verkaufsstelle neu ausbalanciert, damit die Produktion rentabel bleibt und Wiederverkaufsexploits mit Ladentanks verhindert werden.
+- Saisonale Fl�ssigkalkpreise mit st�rkerer Nachfrage im Fr�hjahr und Herbst hinzugef�gt.
+- Precision-Farming-Erkennung f�r Fl�ssigkalk korrigiert, damit geladene Herbizide, Fl�ssigd�nger und andere Spr�htypen durch veralteten PF-Status nicht mehr als Fl�ssigkalk behandelt werden.
 - Precision-Farming-Anwendungsbeschriftung und Debug-Protokollierung bei geringer Ausbringungsmenge verbessert.
 
 Changelog v1.2.0.0:
 - Integrierte Precision-Farming-Unterstuetzung fuer Fluessigkalk hinzugefuegt.
-- PF-Sprühtyp-Registrierung und Zuordnung für Flüssigkalk hinzugefügt.
-- Precision-Farming-Fallback hinzugefügt, damit Flüssigkalk für die pH-Anwendung wie Kalk behandelt wird.
+- PF-Spr�htyp-Registrierung und Zuordnung f�r Fl�ssigkalk hinzugef�gt.
+- Precision-Farming-Fallback hinzugef�gt, damit Fl�ssigkalk f�r die pH-Anwendung wie Kalk behandelt wird.
 - Precision-Farming-Sprueher-Flags, sauberere Fluessigkalk-pH-HUD-Beschriftung, Verbrauchsstatistiken und verbesserte Sprueheffekte fuer Fluessigkalk hinzugefuegt.
 - Helfer-/KI-Arbeiter-Autokauf fuer Fluessigkalk hinzugefuegt, wenn Fluessigkalk der aktive oder zuletzt verwendete Fuelltyp ist.
-- Lua-basierte Flüssigkalk-Fülltyp-Unterstützung für ABI 550, ABI 1600, Lizard MKS 8 und Lizard MKS 32 hinzugefügt, ohne bearbeitete Fahrzeug-XMLs mitzuliefern.
-- Direktes Entladen von Flüssigkalk-IBC-Containern in das Flüssigkalk-Silo hinzugefügt.
-- Anhängerbeladung für in der Flüssigkalkproduktion gelagerten Flüssigkalk hinzugefügt.
-- Rezept und Betriebskosten der Flüssigkalkproduktion an die neue Verbrauchsrate angepasst.
-- Kompatibilität mit dedizierten Servern verbessert, indem clientseitiges Materialladen übersprungen wird.
-- Doppelte Sprühtyp-Registrierung verhindert, wenn ein anderes Mod Flüssigkalk zuerst registriert.
-- Material-Holder für Flüssigkalk angepasst, um Grafik-Pipeline-Fehler zu reduzieren.
-- Verbrauchsrate von Flüssigkalk für eine bessere Sprühgeräte-Balance reduziert, ohne den Preis zu ändern.
+- Lua-basierte Fl�ssigkalk-F�lltyp-Unterst�tzung f�r ABI 550, ABI 1600, Lizard MKS 8 und Lizard MKS 32 hinzugef�gt, ohne bearbeitete Fahrzeug-XMLs mitzuliefern.
+- Direktes Entladen von Fl�ssigkalk-IBC-Containern in das Fl�ssigkalk-Silo hinzugef�gt.
+- Anh�ngerbeladung f�r in der Fl�ssigkalkproduktion gelagerten Fl�ssigkalk hinzugef�gt.
+- Rezept und Betriebskosten der Fl�ssigkalkproduktion an die neue Verbrauchsrate angepasst.
+- Kompatibilit�t mit dedizierten Servern verbessert, indem clientseitiges Materialladen �bersprungen wird.
+- Doppelte Spr�htyp-Registrierung verhindert, wenn ein anderes Mod Fl�ssigkalk zuerst registriert.
+- Material-Holder f�r Fl�ssigkalk angepasst, um Grafik-Pipeline-Fehler zu reduzieren.
+- Verbrauchsrate von Fl�ssigkalk f�r eine bessere Spr�hger�te-Balance reduziert, ohne den Preis zu �ndern.
 - Alte PF-Configurator-spezifische modDesc-Konfiguration entfernt, da Precision-Farming-Unterstuetzung jetzt integriert ist.
 - Breite Guellefass-Kategorieunterstuetzung entfernt, damit reine Guellegeraete Fluessigkalk nicht unbeabsichtigt akzeptieren.
 - Lua-Code in kleinere Module fuer Runtime, Fahrzeuge, Precision Farming, Helfer-Autokauf und Registrierung aufgeteilt.
@@ -131,127 +136,127 @@ Changelog v1.2.0.0:
     </de>
     <fr><![CDATA[Chaux liquide
 
-Révolutionnez votre expérience agricole avec de la chaux liquide, spécialement conçue pour les pulvérisateurs.
+R�volutionnez votre exp�rience agricole avec de la chaux liquide, sp�cialement con�ue pour les pulv�risateurs.
 
 L'achat automatique par assistant fonctionne si la chaux liquide est le type de remplissage selectionne ou utilise en dernier. Si un pulverisateur multiproduit vide utilise de l'engrais par defaut, chargez d'abord une fois de la chaux liquide.
 
-Caractéristiques clés :
+Caract�ristiques cl�s :
 - Type de remplissage de chaux liquide :
-  - Ajoute de la chaux liquide au jeu en tant que nouveau matériau compatible avec les pulvérisateurs.
+  - Ajoute de la chaux liquide au jeu en tant que nouveau mat�riau compatible avec les pulv�risateurs.
 
 Objets :
-- TrueEdge Réservoir de chaux liquide :
-  - Capacité : 2000 litres
-  - Prix : 1 100 €
-- Meridian Silo à chaux liquide :
-  - Capacité : 155 000 litres
-  - Prix : 46 500 €
-  - Entretien quotidien : 100 €
+- TrueEdge R�servoir de chaux liquide :
+  - Capacit� : 2000 litres
+  - Prix : 1 100 ?
+- Meridian Silo � chaux liquide :
+  - Capacit� : 155 000 litres
+  - Prix : 46 500 ?
+  - Entretien quotidien : 100 ?
 - Production de chaux liquide TrueEdge :
-  - Prix : 42 500 €
-  - Entretien quotidien : 100 €
+  - Prix : 42 500 ?
+  - Entretien quotidien : 100 ?
   - Recette de chaux liquide : CHAUX et EAU
 - Point de vente de chaux liquide :
-  - Vend la chaux liquide en vrac issue de la production et les réservoirs de chaux liquide remplis
-  - Prix : 10 000 €
+  - Vend la chaux liquide en vrac issue de la production et les r�servoirs de chaux liquide remplis
+  - Prix : 10 000 ?
 
-La chaux liquide offre une solution pratique et efficace pour le traitement des sols, reproduisant les caractéristiques de la véritable chaux liquide avec précision.
+La chaux liquide offre une solution pratique et efficace pour le traitement des sols, reproduisant les caract�ristiques de la v�ritable chaux liquide avec pr�cision.
 
-Veuillez signaler tout problème ici : https://github.com/FearlessNite345/FS25_Liquid_Lime/issues
+Veuillez signaler tout probl�me ici : https://github.com/FearlessNite345/FS25_Liquid_Lime/issues
 
 Changelog v1.3.0.0:
-- Ajout du point de vente de chaux liquide pour vendre la chaux liquide en vrac depuis les remorques, la production et les réservoirs IBC de chaux liquide remplis.
-- Mise à jour des visuels du réservoir de chaux liquide en remplaçant l'ancien maillage de décalcomanie flottant par une illustration d'icône de chaux liquide basée sur une texture sur le réservoir.
-- Correction de l'export du material holder de pulvérisation de chaux liquide afin de supprimer les erreurs d'attribut de sommet GS_ATTR_COLOR0 manquant.
-- Correction de l'enregistrement du matériau de pulvérisation de la chaux liquide afin que les effets de pulvérisation apparaissent sur les pulvérisateurs compatibles.
-- Rééquilibrage du prix des réservoirs en magasin, des coûts d'exploitation de la production et du paiement du point de vente afin de maintenir la rentabilité de la production tout en empêchant la revente abusive des réservoirs achetés.
+- Ajout du point de vente de chaux liquide pour vendre la chaux liquide en vrac depuis les remorques, la production et les r�servoirs IBC de chaux liquide remplis.
+- Mise � jour des visuels du r�servoir de chaux liquide en rempla�ant l'ancien maillage de d�calcomanie flottant par une illustration d'ic�ne de chaux liquide bas�e sur une texture sur le r�servoir.
+- Correction de l'export du material holder de pulv�risation de chaux liquide afin de supprimer les erreurs d'attribut de sommet GS_ATTR_COLOR0 manquant.
+- Correction de l'enregistrement du mat�riau de pulv�risation de la chaux liquide afin que les effets de pulv�risation apparaissent sur les pulv�risateurs compatibles.
+- R��quilibrage du prix des r�servoirs en magasin, des co�ts d'exploitation de la production et du paiement du point de vente afin de maintenir la rentabilit� de la production tout en emp�chant la revente abusive des r�servoirs achet�s.
 - Ajout de prix saisonniers pour la chaux liquide, avec une demande plus forte au printemps et en automne.
-- Correction de la détection Precision Farming de la chaux liquide afin que l'herbicide, l'engrais liquide et les autres types de pulvérisation chargés ne se comportent plus comme de la chaux liquide à cause d'un état PF obsolète.
-- Amélioration du libellé d'application Precision Farming et de la journalisation de débogage à faible volume.
+- Correction de la d�tection Precision Farming de la chaux liquide afin que l'herbicide, l'engrais liquide et les autres types de pulv�risation charg�s ne se comportent plus comme de la chaux liquide � cause d'un �tat PF obsol�te.
+- Am�lioration du libell� d'application Precision Farming et de la journalisation de d�bogage � faible volume.
 
 Changelog v1.2.0.0:
 - Prise en charge Precision Farming integree pour la chaux liquide.
-- Enregistrement et mappage du type de pulvérisation PF pour la chaux liquide ajoutés.
+- Enregistrement et mappage du type de pulv�risation PF pour la chaux liquide ajout�s.
 - Ajout d'un fallback Precision Farming pour traiter la chaux liquide comme de la chaux pour l'application du pH.
 - Ajout de la gestion des flags de pulverisateur PF, d'un libelle HUD pH plus clair, des statistiques de consommation et d'une meilleure gestion des effets de pulverisation pour la chaux liquide.
 - Ajout de l'achat automatique assistant/ouvrier IA pour la chaux liquide si elle est le type actif ou utilise en dernier.
-- Ajout d'une prise en charge Lua du type de remplissage chaux liquide pour ABI 550, ABI 1600, Lizard MKS 8 et Lizard MKS 32 sans inclure de XML véhicule modifié.
-- Ajout du déchargement direct des conteneurs IBC de chaux liquide dans le silo de chaux liquide.
-- Ajout du chargement par remorque pour la chaux liquide stockée dans la production.
-- Recette et coûts de fonctionnement de la production de chaux liquide rééquilibrés pour le nouveau taux de consommation.
-- Compatibilité avec les serveurs dédiés améliorée en ignorant le chargement des matériaux côté client.
-- Correction de l'enregistrement en double du type de pulvérisation lorsqu'un autre mod enregistre Liquid Lime en premier.
-- Configuration du material holder de chaux liquide ajustée pour réduire les erreurs de pipeline graphique.
-- Réduction du taux de consommation de la chaux liquide pour un meilleur équilibre des pulvérisateurs, sans changer le prix.
+- Ajout d'une prise en charge Lua du type de remplissage chaux liquide pour ABI 550, ABI 1600, Lizard MKS 8 et Lizard MKS 32 sans inclure de XML v�hicule modifi�.
+- Ajout du d�chargement direct des conteneurs IBC de chaux liquide dans le silo de chaux liquide.
+- Ajout du chargement par remorque pour la chaux liquide stock�e dans la production.
+- Recette et co�ts de fonctionnement de la production de chaux liquide r��quilibr�s pour le nouveau taux de consommation.
+- Compatibilit� avec les serveurs d�di�s am�lior�e en ignorant le chargement des mat�riaux c�t� client.
+- Correction de l'enregistrement en double du type de pulv�risation lorsqu'un autre mod enregistre Liquid Lime en premier.
+- Configuration du material holder de chaux liquide ajust�e pour r�duire les erreurs de pipeline graphique.
+- R�duction du taux de consommation de la chaux liquide pour un meilleur �quilibre des pulv�risateurs, sans changer le prix.
 - Suppression de l'ancienne configuration modDesc specifique au PF Configurator, car la prise en charge Precision Farming est maintenant integree.
 - Suppression de la categorie large des citernes a lisier afin que les equipements uniquement prevus pour le lisier n'acceptent pas la chaux liquide par erreur.
 - Separation du code Lua en modules plus petits pour le runtime, les vehicules, Precision Farming, l'achat automatique assistant et l'enregistrement.
 - Ajout d'une description tcheque du mod.]]>
     </fr>
-    <cz><![CDATA[Tekuté vápno
+    <cz><![CDATA[Tekut� v�pno
 
-Vylepšete své farmaření s tekutým vápnem, které je určeno pro použití s postřikovači.
+Vylepsete sv� farmaren� s tekutym v�pnem, kter� je urceno pro pouzit� s postrikovaci.
 
-Automatický nákup pomocníkem funguje, když je Tekuté vápno vybraný nebo naposledy použitý typ náplně. Pokud se prázdný víceproduktový postřikovač přepne na hnojivo, nejdříve jednou naplňte Tekuté vápno.
+Automaticky n�kup pomocn�kem funguje, kdyz je Tekut� v�pno vybrany nebo naposledy pouzity typ n�plne. Pokud se pr�zdny v�ceproduktovy postrikovac prepne na hnojivo, nejdr�ve jednou naplnte Tekut� v�pno.
 
-Hlavní funkce:
-- Typ náplně Tekuté vápno:
-  - Přidává do hry Tekuté vápno jako nový materiál kompatibilní s postřikovači.
+Hlavn� funkce:
+- Typ n�plne Tekut� v�pno:
+  - Prid�v� do hry Tekut� v�pno jako novy materi�l kompatibiln� s postrikovaci.
 
-Položky:
-- TrueEdge nádrž na Tekuté vápno:
-  - Kapacita: 2000 litrů
-  - Cena: 1 100 €
-- Meridian silo na Tekuté vápno:
-  - Kapacita: 155 000 litrů
-  - Cena: 46 500 €
-  - Denní údržba: 100 €
-- TrueEdge výroba Tekutého vápna:
-  - Cena: 42 500 €
-  - Denní údržba: 100 €
-  - Recept na Tekuté vápno: VÁPNO a VODA
-- Prodejní místo Tekutého vápna:
-  - Prodává tekuté vápno z výroby a naplněné nádrže s tekutým vápnem
-  - Cena: 10 000 €
+Polozky:
+- TrueEdge n�drz na Tekut� v�pno:
+  - Kapacita: 2000 litru
+  - Cena: 1 100 ?
+- Meridian silo na Tekut� v�pno:
+  - Kapacita: 155 000 litru
+  - Cena: 46 500 ?
+  - Denn� �drzba: 100 ?
+- TrueEdge vyroba Tekut�ho v�pna:
+  - Cena: 42 500 ?
+  - Denn� �drzba: 100 ?
+  - Recept na Tekut� v�pno: VAPNO a VODA
+- Prodejn� m�sto Tekut�ho v�pna:
+  - Prod�v� tekut� v�pno z vyroby a naplnen� n�drze s tekutym v�pnem
+  - Cena: 10 000 ?
 
-Tekuté vápno nabízí praktické a efektivní řešení pro úpravu půdy a snaží se co nejvěrněji napodobit vlastnosti skutečného tekutého vápna.
+Tekut� v�pno nab�z� praktick� a efektivn� resen� pro �pravu pudy a snaz� se co nejverneji napodobit vlastnosti skutecn�ho tekut�ho v�pna.
 
-Problémy prosím hlaste zde: https://github.com/FearlessNite345/FS25_Liquid_Lime/issues
+Probl�my pros�m hlaste zde: https://github.com/FearlessNite345/FS25_Liquid_Lime/issues
 
 Changelog v1.3.0.0:
-- Přidáno prodejní místo Tekutého vápna pro prodej volného Tekutého vápna z přívěsů, výstupu výroby a naplněných IBC nádrží s Tekutým vápnem.
-- Aktualizován vzhled nádrže na Tekuté vápno: starý plovoucí model obtisku byl nahrazen texturovanou grafikou ikony Tekutého vápna přímo na nádrži.
-- Opraven export držáku postřikového materiálu Tekutého vápna, takže už neprotokoluje chyby chybějícího vertex atributu GS_ATTR_COLOR0.
-- Opravena registrace postřikového materiálu Tekutého vápna, aby se na kompatibilních postřikovačích zobrazovaly postřikové efekty.
-- Vyváženy ceny nádrží v obchodě, provozní náklady výroby a výkupní cena Tekutého vápna tak, aby výroba zůstala zisková a nebylo možné vydělávat přeprodejem zakoupených nádrží.
-- Přidány sezónní ceny Tekutého vápna s vyšší poptávkou na jaře a na podzim.
-- Opravena detekce Tekutého vápna v Precision Farming, aby se načtený herbicid, tekuté hnojivo a jiné typy postřiku kvůli zastaralému stavu PF už nechovaly jako Tekuté vápno.
-- Vylepšen popisek aplikace v Precision Farming a ladicí protokolování při nízkém objemu.
+- Prid�no prodejn� m�sto Tekut�ho v�pna pro prodej voln�ho Tekut�ho v�pna z pr�vesu, vystupu vyroby a naplnenych IBC n�drz� s Tekutym v�pnem.
+- Aktualizov�n vzhled n�drze na Tekut� v�pno: stary plovouc� model obtisku byl nahrazen texturovanou grafikou ikony Tekut�ho v�pna pr�mo na n�drzi.
+- Opraven export drz�ku postrikov�ho materi�lu Tekut�ho v�pna, takze uz neprotokoluje chyby chybej�c�ho vertex atributu GS_ATTR_COLOR0.
+- Opravena registrace postrikov�ho materi�lu Tekut�ho v�pna, aby se na kompatibiln�ch postrikovac�ch zobrazovaly postrikov� efekty.
+- Vyv�zeny ceny n�drz� v obchode, provozn� n�klady vyroby a vykupn� cena Tekut�ho v�pna tak, aby vyroba zustala ziskov� a nebylo mozn� vydel�vat preprodejem zakoupenych n�drz�.
+- Prid�ny sez�nn� ceny Tekut�ho v�pna s vyss� popt�vkou na jare a na podzim.
+- Opravena detekce Tekut�ho v�pna v Precision Farming, aby se nacteny herbicid, tekut� hnojivo a jin� typy postriku kvuli zastaral�mu stavu PF uz nechovaly jako Tekut� v�pno.
+- Vylepsen popisek aplikace v Precision Farming a ladic� protokolov�n� pri n�zk�m objemu.
 
 Changelog v1.2.0.0:
-- Přidána vestavěná podpora Precision Farming pro Tekuté vápno.
-- Přidáno škálování spotřeby pH v Precision Farming, aby Tekuté vápno respektovalo nastavenou aplikační dávku.
-- Přidáno runtime mapování vápna pro Precision Farming, takže se Tekuté vápno při zpracování PF chová jako vápno.
-- Přidáno zpracování příznaků postřikovače v Precision Farming, čistší popisek pH HUD, statistiky spotřeby a lepší zpracování efektů postřiku pro Tekuté vápno.
-- Přidána podpora automatického nákupu pomocníkem/AI pracovníkem, když je Tekuté vápno aktivní nebo naposledy použitý typ náplně.
-- Přidána Lua podpora typu náplně Tekuté vápno pro ABI 550, ABI 1600, Lizard MKS 8 a Lizard MKS 32 bez přibalených upravených XML vozidel.
-- Přidáno přímé vykládání IBC nádrže s Tekutým vápnem do sila na Tekuté vápno.
-- Přidáno nakládání Tekutého vápna uloženého ve výrobě do kompatibilních přívěsů.
-- Vyvážen recept a provozní náklady výroby Tekutého vápna pro novou spotřebu.
-- Vylepšena kompatibilita s dedikovanými servery přeskočením načítání materiálů pouze pro klienta.
-- Opravena duplicitní registrace typu postřiku, když jiný mod zaregistruje Tekuté vápno jako první.
-- Aktualizováno nastavení material holderu pro Tekuté vápno kvůli omezení grafických chyb.
-- Snížena spotřeba Tekutého vápna pro lepší vyvážení postřikovačů při zachování stejné ceny.
-- Odstraněna stará konfigurace modDesc pro PF Configurator, protože podpora Precision Farming je nyní vestavěná.
-- Odstraněna široká podpora kategorie cisteren na kejdu, aby vybavení určené pouze pro kejdu nepřijímalo Tekuté vápno omylem.
-- Lua kód rozdělen do menších modulů pro runtime, vozidla, Precision Farming, automatický nákup pomocníkem a registraci.
-- Přidán český popis modu.]]>
+- Prid�na vestaven� podpora Precision Farming pro Tekut� v�pno.
+- Prid�no sk�lov�n� spotreby pH v Precision Farming, aby Tekut� v�pno respektovalo nastavenou aplikacn� d�vku.
+- Prid�no runtime mapov�n� v�pna pro Precision Farming, takze se Tekut� v�pno pri zpracov�n� PF chov� jako v�pno.
+- Prid�no zpracov�n� pr�znaku postrikovace v Precision Farming, cists� popisek pH HUD, statistiky spotreby a leps� zpracov�n� efektu postriku pro Tekut� v�pno.
+- Prid�na podpora automatick�ho n�kupu pomocn�kem/AI pracovn�kem, kdyz je Tekut� v�pno aktivn� nebo naposledy pouzity typ n�plne.
+- Prid�na Lua podpora typu n�plne Tekut� v�pno pro ABI 550, ABI 1600, Lizard MKS 8 a Lizard MKS 32 bez pribalenych upravenych XML vozidel.
+- Prid�no pr�m� vykl�d�n� IBC n�drze s Tekutym v�pnem do sila na Tekut� v�pno.
+- Prid�no nakl�d�n� Tekut�ho v�pna ulozen�ho ve vyrobe do kompatibiln�ch pr�vesu.
+- Vyv�zen recept a provozn� n�klady vyroby Tekut�ho v�pna pro novou spotrebu.
+- Vylepsena kompatibilita s dedikovanymi servery preskocen�m nac�t�n� materi�lu pouze pro klienta.
+- Opravena duplicitn� registrace typu postriku, kdyz jiny mod zaregistruje Tekut� v�pno jako prvn�.
+- Aktualizov�no nastaven� material holderu pro Tekut� v�pno kvuli omezen� grafickych chyb.
+- Sn�zena spotreba Tekut�ho v�pna pro leps� vyv�zen� postrikovacu pri zachov�n� stejn� ceny.
+- Odstranena star� konfigurace modDesc pro PF Configurator, protoze podpora Precision Farming je nyn� vestaven�.
+- Odstranena sirok� podpora kategorie cisteren na kejdu, aby vybaven� urcen� pouze pro kejdu neprij�malo Tekut� v�pno omylem.
+- Lua k�d rozdelen do mens�ch modulu pro runtime, vozidla, Precision Farming, automaticky n�kup pomocn�kem a registraci.
+- Prid�n cesky popis modu.]]>
     </cz>
     <it><![CDATA[Calce Liquida
 
 Rivoluziona la tua esperienza agricola con la Calce Liquida, appositamente formulata per l'uso con gli irroratori.
 
-L'acquisto automatico dell'aiutante funziona quando la Calce Liquida è il tipo di riempimento selezionato o utilizzato per ultimo. Se un irroratore multiprodotto vuoto passa automaticamente al fertilizzante, carica una volta la Calce Liquida prima di avviare l'aiutante.
+L'acquisto automatico dell'aiutante funziona quando la Calce Liquida � il tipo di riempimento selezionato o utilizzato per ultimo. Se un irroratore multiprodotto vuoto passa automaticamente al fertilizzante, carica una volta la Calce Liquida prima di avviare l'aiutante.
 
 Caratteristiche principali:
 - Tipo di riempimento Calce Liquida:
@@ -259,51 +264,51 @@ Caratteristiche principali:
 
 Oggetti:
 - Serbatoio Calce Liquida TrueEdge:
-  - Capacità: 2.000 litri
-  - Prezzo: 1.100 €
+  - Capacit�: 2.000 litri
+  - Prezzo: 1.100 ?
 - Silo Calce Liquida Meridian:
-  - Capacità: 155.000 litri
-  - Prezzo: 46.500 €
-  - Manutenzione giornaliera: 100 €
+  - Capacit�: 155.000 litri
+  - Prezzo: 46.500 ?
+  - Manutenzione giornaliera: 100 ?
 - Produzione Calce Liquida TrueEdge:
-  - Prezzo: 42.500 €
-  - Manutenzione giornaliera: 100 €
+  - Prezzo: 42.500 ?
+  - Manutenzione giornaliera: 100 ?
   - Ricetta Calce Liquida: CALCE e ACQUA
 - Punto vendita Calce Liquida:
   - Vende Calce Liquida sfusa dalla produzione e serbatoi pieni di Calce Liquida
-  - Prezzo: 10.000 €
+  - Prezzo: 10.000 ?
 
-La Calce Liquida offre una soluzione pratica ed efficiente per il trattamento del suolo, cercando di replicare il più fedelmente possibile le caratteristiche della vera calce liquida.
+La Calce Liquida offre una soluzione pratica ed efficiente per il trattamento del suolo, cercando di replicare il pi� fedelmente possibile le caratteristiche della vera calce liquida.
 
 Segnala eventuali problemi qui: https://github.com/FearlessNite345/FS25_Liquid_Lime/issues
 
 Changelog v1.3.0.0:
-- Aggiunto il punto vendita per la Calce Liquida, per vendere Calce Liquida sfusa da rimorchi, dall’output di produzione e da serbatoi IBC di Calce Liquida riempiti.
-- Aggiornata la grafica del serbatoio della Calce Liquida, sostituendo la vecchia mesh della decal flottante con un’icona della Calce Liquida basata su texture applicata al serbatoio.
-- Corretto l'export del material holder di spruzzatura della Calce Liquida, così non registra più errori per l'attributo vertice GS_ATTR_COLOR0 mancante.
-- Corretta la registrazione del materiale di spruzzatura della Calce Liquida, così gli effetti di spruzzatura vengono visualizzati sugli irroratori compatibili.
+- Aggiunto il punto vendita per la Calce Liquida, per vendere Calce Liquida sfusa da rimorchi, dall'output di produzione e da serbatoi IBC di Calce Liquida riempiti.
+- Aggiornata la grafica del serbatoio della Calce Liquida, sostituendo la vecchia mesh della decal flottante con un'icona della Calce Liquida basata su texture applicata al serbatoio.
+- Corretto l'export del material holder di spruzzatura della Calce Liquida, cos� non registra pi� errori per l'attributo vertice GS_ATTR_COLOR0 mancante.
+- Corretta la registrazione del materiale di spruzzatura della Calce Liquida, cos� gli effetti di spruzzatura vengono visualizzati sugli irroratori compatibili.
 - Ribilanciati i prezzi dei serbatoi in negozio, i costi operativi della produzione e il pagamento del punto vendita per mantenere redditizia la produzione ed evitare profitti dalla rivendita dei serbatoi acquistati.
-- Aggiunti prezzi stagionali per la Calce Liquida, con una domanda più forte in primavera e in autunno.
-- Corretta la rilevazione della Calce Liquida in Precision Farming, così erbicida, fertilizzante liquido e altri tipi di spray caricati non vengono più trattati come Calce Liquida a causa di uno stato PF residuo.
-- Migliorata l’etichetta di applicazione di Precision Farming e il logging di debug a basso volume.
+- Aggiunti prezzi stagionali per la Calce Liquida, con una domanda pi� forte in primavera e in autunno.
+- Corretta la rilevazione della Calce Liquida in Precision Farming, cos� erbicida, fertilizzante liquido e altri tipi di spray caricati non vengono pi� trattati come Calce Liquida a causa di uno stato PF residuo.
+- Migliorata l'etichetta di applicazione di Precision Farming e il logging di debug a basso volume.
 
 Changelog v1.2.0.0:
 - Aggiunto supporto integrato a Precision Farming per la Calce Liquida.
 - Aggiunto il ridimensionamento della frequenza di utilizzo del pH in Precision Farming, in modo che la Calce Liquida rispetti la propria portata di spruzzatura configurata.
-- Aggiunta la mappatura runtime della calce in Precision Farming, così la Calce Liquida viene trattata come calce solo mentre il codice PF la elabora.
-- Aggiunta la gestione dei flag degli irroratori in Precision Farming, etichette HUD del pH più chiare, statistiche di utilizzo e gestione migliorata degli effetti di spruzzatura per la Calce Liquida.
-- Aggiunto supporto all'acquisto automatico da parte dell'aiutante/lavoratore IA per la Calce Liquida quando è il tipo di riempimento attivo o usato per ultimo.
+- Aggiunta la mappatura runtime della calce in Precision Farming, cos� la Calce Liquida viene trattata come calce solo mentre il codice PF la elabora.
+- Aggiunta la gestione dei flag degli irroratori in Precision Farming, etichette HUD del pH pi� chiare, statistiche di utilizzo e gestione migliorata degli effetti di spruzzatura per la Calce Liquida.
+- Aggiunto supporto all'acquisto automatico da parte dell'aiutante/lavoratore IA per la Calce Liquida quando � il tipo di riempimento attivo o usato per ultimo.
 - Aggiunto supporto Lua al tipo di riempimento Calce Liquida per ABI 550, ABI 1600, Lizard MKS 8 e Lizard MKS 32 senza includere XML dei veicoli modificati.
 - Aggiunto lo scarico diretto dei contenitori IBC di Calce Liquida nel Silo di Calce Liquida.
 - Aggiunto il carico su rimorchio della Calce Liquida immagazzinata nella Produzione di Calce Liquida.
 - Ribilanciate la ricetta e le spese operative della Produzione di Calce Liquida per il nuovo tasso di utilizzo.
-- Migliorata la compatibilità con i server dedicati saltando il caricamento dei materiali lato client.
+- Migliorata la compatibilit� con i server dedicati saltando il caricamento dei materiali lato client.
 - Corretta la registrazione duplicata del tipo di spruzzatura quando un altro mod registra per primo la Calce Liquida.
 - Aggiornata la configurazione del material holder della Calce Liquida per ridurre gli errori nella pipeline grafica.
 - Ridotto il tasso di utilizzo della Calce Liquida per un migliore bilanciamento degli irroratori mantenendo lo stesso prezzo.
-- Rimossa la vecchia configurazione modDesc specifica per PF Configurator poiché il supporto a Precision Farming è ora integrato.
-- Rimossa l'ampia categoria di cisterne per liquami, così le attrezzature destinate solo ai liquami non accettano per errore la Calce Liquida.
-- Suddiviso il codice Lua in moduli più piccoli per runtime, veicoli, Precision Farming, acquisto automatico dell'aiutante e registrazione.
+- Rimossa la vecchia configurazione modDesc specifica per PF Configurator poich� il supporto a Precision Farming � ora integrato.
+- Rimossa l'ampia categoria di cisterne per liquami, cos� le attrezzature destinate solo ai liquami non accettano per errore la Calce Liquida.
+- Suddiviso il codice Lua in moduli pi� piccoli per runtime, veicoli, Precision Farming, acquisto automatico dell'aiutante e registrazione.
 - Aggiunta una descrizione ceca del mod.]]>
     </it>
   </description>
@@ -315,58 +320,58 @@ Changelog v1.2.0.0:
   <l10n>
     <text name="filltype_liquidlime">
       <en>Liquid Lime</en>
-      <de>Flüssigkalk</de>
+      <de>Fl�ssigkalk</de>
       <fr>Chaux Liquide</fr>
-      <cz>Tekuté Vápno</cz>
+      <cz>Tekut� V�pno</cz>
       <it>Calce Liquida</it>
     </text>
     <text name="precisionfarming_liquidlime_application">
       <en>Liquid Lime Application</en>
-      <de>Flüssigkalk-Anwendung</de>
+      <de>Fl�ssigkalk-Anwendung</de>
       <fr>Application de Chaux Liquide</fr>
-      <cz>Aplikace tekutého vápna</cz>
+      <cz>Aplikace tekut�ho v�pna</cz>
       <it>Applicazione Calce Liquida</it>
     </text>
     <text name="function_liquidlimepallet">
       <en>Liquid Lime Tank allows you to fill sprayers with Liquid Lime.</en>
-      <de>Flüssigkalk-Tank ermöglicht das Befüllen von Sprühgeräten mit Flüssigkalk.</de>
-      <fr>Le réservoir de chaux liquide permet de remplir les pulvérisateurs avec de la chaux liquide.</fr>
-      <cz>Nádrž na tekuté vápno umožňuje plnit postřikovače tekutým vápnem.</cz>
+      <de>Fl�ssigkalk-Tank erm�glicht das Bef�llen von Spr�hger�ten mit Fl�ssigkalk.</de>
+      <fr>Le r�servoir de chaux liquide permet de remplir les pulv�risateurs avec de la chaux liquide.</fr>
+      <cz>N�drz na tekut� v�pno umoznuje plnit postrikovace tekutym v�pnem.</cz>
       <it>Il serbatoio di Calce Liquida consente di riempire gli irroratori con Calce Liquida.</it>
     </text>
     <text name="function_liquidlimesilo">
       <en>Liquid Lime Silo provides storage and refill capabilities for Liquid Lime.</en>
-      <de>Flüssigkalk-Silo bietet Lagerung und Nachfüllmöglichkeiten für Flüssigkalk.</de>
-      <fr>Le silo à chaux liquide offre des capacités de stockage et de remplissage pour la chaux liquide.</fr>
-      <cz>Silo na tekuté vápno poskytuje možnosti skladování a doplňování tekutého vápna.</cz>
-      <it>Il silo di Calce Liquida offre capacità di stoccaggio e rifornimento per la Calce Liquida.</it>
+      <de>Fl�ssigkalk-Silo bietet Lagerung und Nachf�llm�glichkeiten f�r Fl�ssigkalk.</de>
+      <fr>Le silo � chaux liquide offre des capacit�s de stockage et de remplissage pour la chaux liquide.</fr>
+      <cz>Silo na tekut� v�pno poskytuje moznosti skladov�n� a doplnov�n� tekut�ho v�pna.</cz>
+      <it>Il silo di Calce Liquida offre capacit� di stoccaggio e rifornimento per la Calce Liquida.</it>
     </text>
     <text name="function_liquidlimeproduction">
       <en>Produce Liquid Lime from lime and water, then load the output into compatible trailers.</en>
-      <de>Produziere Flüssigkalk aus Kalk und Wasser und lade die Ausgabe in kompatible Anhänger.</de>
+      <de>Produziere Fl�ssigkalk aus Kalk und Wasser und lade die Ausgabe in kompatible Anh�nger.</de>
       <fr>Produisez de la chaux liquide avec de la chaux et de l'eau, puis chargez la production dans des remorques compatibles.</fr>
-      <cz>Vyrábějte tekuté vápno z vápna a vody a poté výstup naložte do kompatibilních přívěsů.</cz>
+      <cz>Vyr�bejte tekut� v�pno z v�pna a vody a pot� vystup nalozte do kompatibiln�ch pr�vesu.</cz>
       <it>Produci Calce Liquida da calce e acqua, poi carica il prodotto in rimorchi compatibili.</it>
     </text>
     <text name="name_liquidlimeproduction">
       <en>Liquid Lime Production</en>
-      <de>Flüssigkalkproduktion</de>
+      <de>Fl�ssigkalkproduktion</de>
       <fr>Production de Chaux Liquide</fr>
-      <cz>Výroba tekutého vápna</cz>
+      <cz>Vyroba tekut�ho v�pna</cz>
       <it>Produzione di Calce Liquida</it>
     </text>
     <text name="function_liquidlimesellpoint">
       <en>Sell loose Liquid Lime, including production output, or filled Liquid Lime tanks here.</en>
-      <de>Verkaufe hier losen Flüssigkalk aus der Produktion oder gefüllte Flüssigkalk-Tanks.</de>
-      <fr>Vendez ici de la chaux liquide en vrac issue de la production ou des réservoirs de chaux liquide remplis.</fr>
-      <cz>Zde prodávejte volné tekuté vápno z výroby nebo naplněné nádrže s tekutým vápnem.</cz>
+      <de>Verkaufe hier losen Fl�ssigkalk aus der Produktion oder gef�llte Fl�ssigkalk-Tanks.</de>
+      <fr>Vendez ici de la chaux liquide en vrac issue de la production ou des r�servoirs de chaux liquide remplis.</fr>
+      <cz>Zde prod�vejte voln� tekut� v�pno z vyroby nebo naplnen� n�drze s tekutym v�pnem.</cz>
       <it>Vendi qui Calce Liquida sfusa dalla produzione o serbatoi di Calce Liquida pieni.</it>
     </text>
     <text name="name_liquidlimesellpoint">
       <en>Liquid Lime Sell Point</en>
-      <de>Flüssigkalk-Verkaufsstelle</de>
+      <de>Fl�ssigkalk-Verkaufsstelle</de>
       <fr>Point de vente de Chaux Liquide</fr>
-      <cz>Prodejní místo tekutého vápna</cz>
+      <cz>Prodejn� m�sto tekut�ho v�pna</cz>
       <it>Punto vendita Calce Liquida</it>
     </text>
   </l10n>
