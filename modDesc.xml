@@ -8,6 +8,7 @@
     <fr>Chaux Liquide</fr>
     <cz>Tekuté Vápno</cz>
     <it>Calce Liquida</it>
+    <cs>液体石灰</cs>
   </title>
 
   <description>
@@ -324,6 +325,7 @@ Changelog v1.2.0.0:
       <fr>Chaux Liquide</fr>
       <cz>Tekuté Vápno</cz>
       <it>Calce Liquida</it>
+      <cs>液体石灰</cs>
     </text>
     <text name="precisionfarming_liquidlime_application">
       <en>Liquid Lime Application</en>
@@ -331,6 +333,7 @@ Changelog v1.2.0.0:
       <fr>Application de Chaux Liquide</fr>
       <cz>Aplikace tekutého vápna</cz>
       <it>Applicazione Calce Liquida</it>
+      <cs>液体石灰施用</cs>
     </text>
     <text name="function_liquidlimepallet">
       <en>Liquid Lime Tank allows you to fill sprayers with Liquid Lime.</en>
@@ -338,6 +341,7 @@ Changelog v1.2.0.0:
       <fr>Le réservoir de chaux liquide permet de remplir les pulvérisateurs avec de la chaux liquide.</fr>
       <cz>Nádrž na tekuté vápno umožňuje plnit postřikovače tekutým vápnem.</cz>
       <it>Il serbatoio di Calce Liquida consente di riempire gli irroratori con Calce Liquida.</it>
+      <cs>液体石灰罐允许您向喷雾器加注液体石灰。</cs>
     </text>
     <text name="function_liquidlimesilo">
       <en>Liquid Lime Silo provides storage and refill capabilities for Liquid Lime.</en>
@@ -345,6 +349,7 @@ Changelog v1.2.0.0:
       <fr>Le silo à chaux liquide offre des capacités de stockage et de remplissage pour la chaux liquide.</fr>
       <cz>Silo na tekuté vápno poskytuje možnosti skladování a doplňování tekutého vápna.</cz>
       <it>Il silo di Calce Liquida offre capacità di stoccaggio e rifornimento per la Calce Liquida.</it>
+      <cs>液体石灰筒仓提供液体石灰的存储和加注功能。</cs>
     </text>
     <text name="function_liquidlimeproduction">
       <en>Produce Liquid Lime from lime and water, then load the output into compatible trailers.</en>
@@ -352,6 +357,7 @@ Changelog v1.2.0.0:
       <fr>Produisez de la chaux liquide avec de la chaux et de l'eau, puis chargez la production dans des remorques compatibles.</fr>
       <cz>Vyrábějte tekuté vápno z vápna a vody a poté výstup naložte do kompatibilních přívěsů.</cz>
       <it>Produci Calce Liquida da calce e acqua, poi carica il prodotto in rimorchi compatibili.</it>
+      <cs>用石灰和水生产液体石灰，然后将产出物装入兼容的拖车中。</cs>
     </text>
     <text name="name_liquidlimeproduction">
       <en>Liquid Lime Production</en>
@@ -359,6 +365,7 @@ Changelog v1.2.0.0:
       <fr>Production de Chaux Liquide</fr>
       <cz>Výroba tekutého vápna</cz>
       <it>Produzione di Calce Liquida</it>
+      <cs>液体石灰生产</cs>
     </text>
     <text name="function_liquidlimesellpoint">
       <en>Sell loose Liquid Lime, including production output, or filled Liquid Lime tanks here.</en>
@@ -366,6 +373,7 @@ Changelog v1.2.0.0:
       <fr>Vendez ici de la chaux liquide en vrac issue de la production ou des réservoirs de chaux liquide remplis.</fr>
       <cz>Zde prodávejte volné tekuté vápno z výroby nebo naplněné nádrže s tekutým vápnem.</cz>
       <it>Vendi qui Calce Liquida sfusa dalla produzione o serbatoi di Calce Liquida pieni.</it>
+      <cs>在此处出售散装液体石灰（包括生产产出物）或已加注的液体石灰罐。</cs>
     </text>
     <text name="name_liquidlimesellpoint">
       <en>Liquid Lime Sell Point</en>
@@ -373,6 +381,7 @@ Changelog v1.2.0.0:
       <fr>Point de vente de Chaux Liquide</fr>
       <cz>Prodejní místo tekutého vápna</cz>
       <it>Punto vendita Calce Liquida</it>
+      <cs>液体石灰销售点</cs>
     </text>
   </l10n>
 
