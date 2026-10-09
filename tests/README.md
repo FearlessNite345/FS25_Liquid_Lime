@@ -1,10 +1,73 @@
 # Liquid Lime regression checks
 
-From the repository root, run `lua tests/fill_state.lua` with Lua 5.1 or later.
+From the repository root, run `lua tests/fill_state.lua` and
+`lua tests/price_history.lua` with Lua 5.1 or later.
 The suite uses engine stubs and does not require FS25. It covers temporary getter
 cleanup (including inherited methods, nested wrappers and errors), empty tanks,
 switching to fertilizer, attached sources and helper auto-buy selection.
 `build.bat` excludes this directory from the playable mod.
+
+## Price-history correction in the refreshed release
+
+The new `PriceHistory.lua` module changes only LIQUIDLIME's native price-history
+values. It never changes fill-type base prices, seasonal factors, selling-point
+multipliers, helper costs, production revenue, purchases, or the Prices GUI.
+The version stays 1.3.0.1 and the stable release tag stays v1.3.0.1.
+
+On the server, after saved economy and placeables finish loading, it checks every
+LIQUIDLIME-accepting selling station (including hidden stations). A correction is
+allowed only when at least one exists, all are this mod's sell point, and their
+original per-litre prices agree. The initial twelve months then use that station
+baseline times the fill type's seasonal factors. With the current configuration,
+the starting Hard-difficulty range is 202.50–258.75 per 1,000 L. The normal GIANTS
+graph, difficulty scaling, hourly history averaging and save/network code continue
+to operate afterward. A historical/seasonal graph is not an exact current quote;
+use the station's displayed current price for a sale.
+
+Mixed or unknown sellers and malformed data leave history unchanged. If a first
+compatible station is placed later, the correction is deferred until its loading
+has completed and all twelve months are synchronized through GIANTS' native
+pricing-history events. Clients never perform the migration themselves.
+
+Before changing history, all twelve old values are copied in memory. On the next
+normal save they are retained under `economy.liquidLimePriceHistory.backup` in
+`economy.xml`, alongside a version marker. The backup is never replaced with newer
+history, and the marker prevents repeated corrections on reload. Any existing
+marker, including an unsupported or malformed one, blocks a second reset. Known
+backup values and marker attributes are retained; unknown future fields are not
+interpreted by this version. A full pre-install save backup is still recommended.
+
+For rollback, back up the save first, remove this refreshed release, and restore the
+pre-install save with the previous stable ZIP. If retaining later gameplay progress,
+the twelve backup values can instead restore LIQUIDLIME's native history entries
+(native entries store rounded price-per-litre × 1,000). This advanced recovery
+should be performed on a copy; never change other fill types or money values.
+
+The engine-independent suite checks the one-time correction, complete old-history
+backup, marker roundtrips, unchanged pricing inputs, malformed/foreign station
+guards, client behavior, late placement and sync retries, and hook cleanup across
+save loads. These tests do not establish actual FS25 gameplay compatibility.
+
+### Required in-game checks for this correction
+
+- Use a backup of the affected save and a fresh save. With the mod's sell point,
+  compare the graph, current station quote and a measured small sale before/after.
+  The quote and proceeds should remain unchanged under identical conditions.
+- Save, exit and reload. Confirm the marker and twelve original backup values
+  survive, and a subsequently recorded month's price is not reset again.
+- Check Hard, Normal and Easy, single player, hosted multiplayer and a dedicated
+  server. Confirm a joining client sees the corrected graph.
+- Start without the sell point, then place it. Verify the deferred correction and
+  existing-client synchronization. Test mixed map/mod sellers: no correction.
+- Verify fixed tank purchases, helper auto-buy and production direct-selling are
+  unchanged. Retain log.txt and record the exact FS25/PF/Courseplay versions.
+
+API behavior was inspected against FS25 1.24.0.0, source snapshot
+`3468a959481747ea9c60ecdb455c661e3b7762a5` in
+https://github.com/maxkra1985/FarmingSimulator25_dataS:
+`scripts/economy/EconomyManager.lua`, `scripts/objects/SellingStation.lua`,
+`scripts/FSBaseMission.lua`, `scripts/BaseMission.lua`, and the native pricing
+history events. Other game builds and actual gameplay have not been tested here.
 
 ## Community feedback for v1.3.0.1
 

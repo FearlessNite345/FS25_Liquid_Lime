@@ -63,6 +63,7 @@ LiquidLime.vehicleFillTypeTargets = {
 }
 
 function LiquidLime:loadMap()
+    LiquidLimePriceHistory:loadMap()
     LiquidLime:installVehicleXmlFillTypePatch()
 
     LiquidLime:Log("========================================")
@@ -329,6 +330,7 @@ function LiquidLime:LogOnce(key, msg)
 end
 
 function LiquidLime:update(dt)
+    LiquidLimePriceHistory:update(dt)
     local ExtendedSprayer = LiquidLime:getPrecisionFarmingExtendedSprayer()
     local ExtendedSprayerHUDExtension = LiquidLime:getPrecisionFarmingHUDExtension()
     local refreshPrecisionFarmingCopies = false
@@ -396,6 +398,7 @@ function LiquidLime:update(dt)
 end
 
 function LiquidLime:deleteMap()
+    LiquidLimePriceHistory:deleteMap()
     local ExtendedSprayer = LiquidLime:getPrecisionFarmingExtendedSprayer()
     local ExtendedSprayerHUDExtension = LiquidLime:getPrecisionFarmingHUDExtension()
 

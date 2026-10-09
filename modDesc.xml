@@ -390,6 +390,7 @@ Changelog v1.2.0.0:
     <sourceFile filename="scripts/VehicleFillTypes.lua" />
     <sourceFile filename="scripts/PrecisionFarming.lua" />
     <sourceFile filename="scripts/HelperAutoBuy.lua" />
+    <sourceFile filename="scripts/PriceHistory.lua" />
     <sourceFile filename="scripts/ModRegistration.lua" />
   </extraSourceFiles>
 
